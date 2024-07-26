@@ -1,7 +1,7 @@
 import { Inter, Open_Sans, Outfit} from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({ subsets: ["latin"], });
+const inter = Inter({ subsets: ["latin"], });
 
 export const metadata = {
   title: "PeraPinoy!",
@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={outfit.className}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
