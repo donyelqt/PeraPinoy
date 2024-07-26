@@ -4,11 +4,11 @@ import React from 'react';
 
 function Header() {
   return (
-    <div className='p-8 flex justify-between items-center'>
+    <div className='p-2 flex justify-between items-center border shadow-sm'>
       <Image
         src={'/PeraPinoy1.png'} // Note the leading slash
         alt='logo'
-        width={95}
+        width={100}
         height={80}
       />
       <Button>Get Started</Button>
