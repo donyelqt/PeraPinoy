@@ -1,5 +1,6 @@
 import { Inter, Outfit, Montserrat } from "next/font/google";
 import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -10,12 +11,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    <ClerkProvider>
     <html lang="en">
       <head>
         <link rel="icon" href="/PeraPinoy.png"/>
       </head>
       <body className={montserrat.className}>{children}</body>
     </html>
+    </ClerkProvider>
   );
 }
 
