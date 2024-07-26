@@ -1,10 +1,7 @@
-import { Inter, Open_Sans, Outfit, Roboto } from "next/font/google";
+import { Inter, Open_Sans, Outfit} from "next/font/google";
 import "./globals.css";
 
-const roboto = Roboto({ 
-  subsets: ["latin"], 
-  weights: ["400"],
-});
+const outfit = Outfit({ subsets: ["latin"], });
 
 export const metadata = {
   title: "Create Next App",
@@ -14,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={outfit.className}>{children}</body>
     </html>
   );
 }
