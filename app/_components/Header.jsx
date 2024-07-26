@@ -4,7 +4,7 @@ import React from 'react';
 
 function Header() {
   return (
-    <div className='p-4 flex justify-between items-center shadow-2xl bg-black'>
+    <div className='p-4 flex justify-between items-center shadow-2xl bg-dark'>
       <Image
         src={'/PeraPinoy1.png'} // Note the leading slash
         alt='logo'
