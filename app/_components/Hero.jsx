@@ -3,7 +3,7 @@ import React from 'react'
 
 function Hero() {
   return (
-    <section className="bg-dark flex items-center justify-center flex-col">
+    <section className="bg-gray-100 flex items-center justify-center flex-col">
   <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
     <div className="mx-auto max-w-xl text-center pb-20">
         <Image src="/PeraPinoy1.png" alt="logo"
