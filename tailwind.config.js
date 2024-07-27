@@ -18,7 +18,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
+        border: "#0038a7",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
@@ -40,7 +40,7 @@ module.exports = {
           foreground: "hsl(var(--tertiary-foreground))",
         },
         dark: {
-          DEFAULT: "#0a0a0a", // eerie black
+          DEFAULT: "#080808", // eerie black
           foreground: "hsl(var(--tertiary-foreground))",
         },
         destructive: {
