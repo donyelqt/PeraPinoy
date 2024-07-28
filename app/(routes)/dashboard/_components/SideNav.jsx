@@ -26,7 +26,7 @@ function SideNav() {
     }
   ]
   return (
-    <div className='h-screen p-4 border shadow-md text-gray-300'>
+    <div className='h-screen p-4 border shadow-md text-yellow-600'>
       <Image src={'/PeraPinoy1.png'} 
       alt='logo'
       width={100}
@@ -35,6 +35,7 @@ function SideNav() {
       <div>
         {menuList.map((menu,index)=>(
           <h2>
+            <menu.icon />
             {menu.name}
           </h2>
         ))}
