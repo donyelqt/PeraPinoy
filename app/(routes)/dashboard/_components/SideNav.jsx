@@ -49,7 +49,7 @@ function SideNav() {
           text-blue-600 font-medium 
           p-4 cursor-pointer rounded-lg
           hover:text-blue-600 hover:bg-blue-100
-          
+          ${path==menu.path&&'text-blue-600 bg-blue-100'}
           `}>
             <menu.icon />
             {menu.name}
