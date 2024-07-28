@@ -1,7 +1,7 @@
 
 export default {
-    schema: "./schema.ts",
-    dialect: 'postgresql',
+    schema: "./utils/schema.jsx",
+    driver: 'pg',
     dbCredentials: {
       url: process.env.DATABASE_URL,
     }
