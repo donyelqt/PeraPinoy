@@ -1,31 +1,41 @@
-import { UserButton } from '@clerk/nextjs'
-import { LayoutDashboard, LayoutGrid, LucideShieldPlus, PiggyBankIcon, ReceiptIcon } from 'lucide-react'
-import Image from 'next/image'
-import React from 'react'
-
+"use client"
+import { UserButton } from '@clerk/nextjs';
+import { LayoutDashboard, LayoutGrid, LucideShieldPlus, PiggyBankIcon, ReceiptIcon } from 'lucide-react';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import React, { useEffect } from 'react';
 function SideNav() {
   const menuList=[
     {
       id:1,
       name:'Dashboard',
-      icon:LayoutDashboard
+      icon:LayoutDashboard,
+      path:'/dashboard'
     },
     {
       id:2,
       name:'Budgets',
-      icon:PiggyBankIcon
+      icon:PiggyBankIcon,
+      path:'/dashboard/budget'
     },
     {
       id:3,
       name:'Expenses',
-      icon:ReceiptIcon
+      icon:ReceiptIcon,
+      path:'/dashboard/expenses'
     },
     {
       id:4,
       name:'Premium',
-      icon:LucideShieldPlus
+      icon:LucideShieldPlus,
+      path:'/dashboard/premium'
     }
   ]
+  const path=usePathname();
+
+  useEffect(()=>{
+    console.log(path)
+  },[path])
   return (
     <div className='h-screen p-4 border shadow-md text-blue-600'>
       <Image src={'/PeraPinoy1.png'} 
