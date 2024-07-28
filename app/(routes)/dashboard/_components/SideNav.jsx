@@ -2,6 +2,7 @@
 import { UserButton } from '@clerk/nextjs';
 import { LayoutDashboard, LayoutGrid, LucideShieldPlus, PiggyBankIcon, ReceiptIcon } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useEffect } from 'react';
 function SideNav() {
@@ -16,7 +17,7 @@ function SideNav() {
       id:2,
       name:'Budgets',
       icon:PiggyBankIcon,
-      path:'/dashboard/budget'
+      path:'/dashboard/budgets'
     },
     {
       id:3,
@@ -45,8 +46,10 @@ function SideNav() {
       />
       <div className='mt-5'>
         {menuList.map((menu,index)=>(
+          <Link href={menu.path}>
           <h2 className={`flex gap-2 items-center
-          text-blue-600 font-medium 
+          text-blue-600 font-medium
+          mb-2 
           p-4 cursor-pointer rounded-lg
           hover:text-blue-600 hover:bg-blue-100
           ${path==menu.path&&'text-blue-600 bg-blue-100'}
@@ -54,6 +57,7 @@ function SideNav() {
             <menu.icon />
             {menu.name}
           </h2>
+          </Link>
         ))}
       </div>
           <div className='fixed bottom-10 p-5 flex gap-2
