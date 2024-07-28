@@ -1,8 +1,8 @@
 
 export default {
-    schema: "./utils/schema.jsx",
-    driver: 'pg',
-    dbCredentials: {
-      connectionString: process.env.DATABASE_URL,
-    }
-  };
+  schema: "./utils/schema.jsx",
+  dialect: 'postgresql',
+  dbCredentials: {
+    url: 'postgresql://budget-planner_owner:m7sgJ3BUxNIF@ep-billowing-unit-a53qsyts.us-east-2.aws.neon.tech/budget-planner?sslmode=require',
+  }
+};
