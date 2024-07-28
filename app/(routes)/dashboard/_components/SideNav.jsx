@@ -45,11 +45,12 @@ function SideNav() {
       />
       <div className='mt-5'>
         {menuList.map((menu,index)=>(
-          <h2 className='flex gap-2 items-center
+          <h2 className={`flex gap-2 items-center
           text-blue-600 font-medium 
           p-4 cursor-pointer rounded-lg
           hover:text-blue-600 hover:bg-blue-100
-          '>
+          
+          `}>
             <menu.icon />
             {menu.name}
           </h2>
