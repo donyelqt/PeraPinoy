@@ -1,5 +1,6 @@
 import React from 'react'
 import SideNav from './_components/SideNav'
+import DashboardHeader from './_components/DashboardHeader'
 
 function DashboardLayout({children}) {
   return (
@@ -7,7 +8,8 @@ function DashboardLayout({children}) {
       <div className='fixed md:w-64 hidden md:block bg-black border'>
         <SideNav />
       </div>
-      <div className='md:ml-64 bg-secondary'>
+      <div className='md:ml-64 bg-dark'>
+        <DashboardHeader />
       {children}
       </div>
       </div>
