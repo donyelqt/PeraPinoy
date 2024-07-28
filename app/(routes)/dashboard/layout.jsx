@@ -4,10 +4,10 @@ import SideNav from './_components/SideNav'
 function DashboardLayout({children}) {
   return (
     <div> 
-      <div>
+      <div className='fixed md:w-64 hidden md:block bg-black border'>
         <SideNav />
       </div>
-      <div>
+      <div className='md:ml-64 bg-secondary'>
       {children}
       </div>
       </div>
