@@ -26,7 +26,7 @@ function SideNav() {
     }
   ]
   return (
-    <div className='h-screen p-4 border shadow-md'>
+    <div className='h-screen p-4 border shadow-md text-gray-300'>
       <Image src={'/PeraPinoy1.png'} 
       alt='logo'
       width={100}
