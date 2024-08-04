@@ -1,37 +1,40 @@
 "use client"
-import React, { useEffect } from 'react'
-import SideNav from './_components/SideNav'
-import DashboardHeader from './_components/DashboardHeader'
-import { db } from '@/utils/dbConfig'
-import { Budgets } from '../../../utils/schema'
-import { useUser } from '@clerk/nextjs'
+import React, { useEffect } from 'react';
+import SideNav from './_components/SideNav';
+import DashboardHeader from './_components/DashboardHeader';
+import { db } from '../../../utils/dbConfig';
+import { Budgets } from '../../../utils/schema';
+import { useUser } from '@clerk/nextjs';
+import { eq } from 'drizzle-orm';
 
-function DashboardLayout({children}) {
+function DashboardLayout({ children }) {
+  const { user } = useUser();
 
-  const {user}=useUser();
+  useEffect(() => {
+    if (user) {
+      checkUserBudget();
+    }
+  }, [user]);
 
-  useEffect(()=>{
-     user&&checkUserBudget();
-  },[user])
-  
-  const checkUserBudget=async()=>{
-    const result=await db.select()
-    .from(Budgets)
-    .where(eq(Budgets.createdBy,user?.primaryEmailAddress.emailAddress))
+  const checkUserBudget = async () => {
+    const result = await db.select()
+      .from(Budgets)
+      .where(eq(Budgets.createdBy, user?.primaryEmailAddress?.emailAddress));
 
     console.log(result);
   }
+
   return (
-    <div> 
+    <div>
       <div className='fixed md:w-64 hidden md:block bg-black border'>
         <SideNav />
       </div>
       <div className='md:ml-64 bg-dark'>
         <DashboardHeader />
-      {children}
+        {children}
       </div>
-      </div>
-  )
+    </div>
+  );
 }
 
-export default DashboardLayout
+export default DashboardLayout;
