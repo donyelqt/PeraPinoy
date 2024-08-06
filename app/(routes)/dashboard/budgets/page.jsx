@@ -2,7 +2,7 @@ import React from 'react'
 
 function Budget() {
   return (
-    <div className='text-gray-300'>Budgets</div>
+    <div className='text-gray-300'>Budgetss</div>
   )
 }
 
