@@ -3,7 +3,7 @@ import CreateBudget from './CreateBudget'
 
 function BudgetList() {
   return (
-    <div>
+    <div className='mt-10'>
       <CreateBudget />
     </div>
   )
