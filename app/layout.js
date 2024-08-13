@@ -1,6 +1,7 @@
 import { Inter, Outfit, Montserrat } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Toaster, toast } from 'sonner'
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -16,7 +17,9 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/PeraPinoy.png"/>
       </head>
-      <body className={outfit.className}>{children}</body>
+      <body className={outfit.className}>
+        <Toaster />
+        {children}</body>
     </html>
     </ClerkProvider>
   );
