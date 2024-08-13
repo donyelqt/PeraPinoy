@@ -48,7 +48,7 @@ function CreateBudget() {
   return (
     <div>
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogTrigger className="rounded p-10 hover:bg-blue-500 hover:text-black bg-slate-300" asChild>
+        <DialogTrigger className="rounded p-10 hover:bg-blue-500 hover:text-black bg-slate-900" asChild>
           <div className='bg-slate-200 p-10 rounded-md items-center 
             flex flex-col border-2 cursor-pointer hover:bg-blue-500 hover:text-black'>
             <h2 className='text-3xl text-black-600'>+</h2>

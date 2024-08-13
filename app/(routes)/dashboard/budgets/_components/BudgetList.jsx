@@ -2,6 +2,11 @@ import React from 'react'
 import CreateBudget from './CreateBudget'
 
 function BudgetList() {
+
+  const getBudgetList=async()=>{
+    
+  }
+
   return (
     <div className='mt-10'>
       <div className='grid grid-cols-1
