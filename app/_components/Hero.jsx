@@ -29,9 +29,9 @@ function Hero() {
 
         <a
           className="block w-full rounded-lg bg-secondary px-12 py-3 text-sm font-medium text-white shadow hover:bg-tertiary focus:outline-none focus:ring active:text-red-500 sm:w-auto"
-          href="#"
+          href="/dashboard"
         >
-          Learn More
+          Go to Dashboard
         </a>
       </div>
     </div>

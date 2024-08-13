@@ -6,16 +6,22 @@ import { DialogContent } from "@radix-ui/react-dialog";
 import { DialogTitle } from "@radix-ui/react-dialog";
 import { DialogDescription } from "@radix-ui/react-dialog";
 import { CrossIcon, XIcon } from "lucide-react";
+import EmojiPicker from "emoji-picker-react";
+
+
 
 function CreateBudget() {
+
+  const [emojiIcon,setEmojiIcon]=useState('😊');
+  const [openEmojiPicker,setOpenEmojiPicker]=useState(false)
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogTrigger className="rounded p-10 hover:bg-blue-500 hover:text-black bg-slate-300" asChild>
-          <div className='bg-slate-300 p-10 rounded-md items-center 
-            flex flex-col border-2 border-dashed cursor-pointer hover:bg-blue-500 hover:text-black'>
+          <div className='bg-slate-200 p-10 rounded-md items-center 
+            flex flex-col border-2 cursor-pointer hover:bg-blue-500 hover:text-black'>
             <h2 className='text-3xl text-black-600'>+</h2>
             <h2>Create New Budget</h2>
           </div>
@@ -26,13 +32,20 @@ function CreateBudget() {
               <DialogTitle className="fixed text-lg font-bold text-blue-600 bg-white mb-2 max-w-lg">Create New Budget</DialogTitle>
               <DialogDescription>
                 <div className="flex justify-end mb-2">
-                  <button className="text-gray-500 hover:text-gray-600" onClick={() => setIsOpen(false)}>
+                  <button className="text-gray-500 hover:text-gray-800" onClick={() => setIsOpen(false)}>
                     <XIcon className="w-5 h-5" />
                   </button>
                 </div>
-                <h2 className="text-md text-gray-600">
-                  
-                </h2>
+                <div className="mt-5">
+                <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium bg-transparent border border-input text-* hover:bg-accent hover:text-accent-foreground p-2"
+                onClick={()=>setOpenEmojiPicker(!openEmojiPicker)}
+                >{emojiIcon}</button>
+                <div className="">
+                  <EmojiPicker 
+                  open={openEmojiPicker}
+                  />
+                </div>
+                </div>
               </DialogDescription>
             </DialogContent>
           </DialogOverlay>
