@@ -51,8 +51,8 @@ function SideNav() {
           text-blue-600 font-medium
           mb-2 
           p-4 cursor-pointer rounded-lg
-          hover:text-blue-600 hover:bg-blue-100
-          ${path==menu.path&&'text-blue-600 bg-blue-100'}
+          hover:text-blue-600 hover:bg-slate-900
+          ${path==menu.path&&'text-blue-600 bg-slate-900'}
           `}>
             <menu.icon />
             {menu.name}

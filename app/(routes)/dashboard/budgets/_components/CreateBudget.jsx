@@ -13,6 +13,8 @@ import { Budgets } from "../../../../../utils/schema";
 import { useUser } from "@clerk/nextjs";
 import { toast } from "sonner";
 import Budget from "../page";
+import Image from "next/image";
+import { adddocs } from "../../../../../public";
 
 
 
@@ -48,11 +50,13 @@ function CreateBudget() {
   return (
     <div>
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogTrigger className="rounded p-10 hover:bg-blue-500 hover:text-black bg-slate-900" asChild>
+        <DialogTrigger className="rounded p-10 hover:bg-slate-900 hover:text-blue-500 bg-transparent" asChild>
           <div className='bg-slate-200 p-10 rounded-md items-center 
-            flex flex-col border-2 cursor-pointer hover:bg-blue-500 hover:text-black'>
-            <h2 className='text-3xl text-black-600'>+</h2>
-            <h2>Create New Budget</h2>
+            flex flex-col border-2 cursor-pointer hover:slate-900 hover:text-black'>
+            <h2 className='text-3xl text-black-600'><Image className="w-10 h-10 object-contain"
+            src={adddocs}
+            alt="donieleaimockup"/></h2>
+            <h2 className="text-yellow-400">Create New Budget</h2>
           </div>
         </DialogTrigger>
         <DialogPortal>
