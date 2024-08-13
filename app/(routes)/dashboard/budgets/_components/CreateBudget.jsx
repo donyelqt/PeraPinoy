@@ -37,13 +37,29 @@ function CreateBudget() {
                   </button>
                 </div>
                 <div className="mt-5">
-                <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium bg-transparent border border-input text-* hover:bg-accent hover:text-accent-foreground p-2"
+                <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium bg-transparent border-2 border-input text-* hover:bg-accent hover:text-accent-foreground p-2 h-11 px-8"
                 onClick={()=>setOpenEmojiPicker(!openEmojiPicker)}
                 >{emojiIcon}</button>
-                <div className="">
+                <div className="absolute">
                   <EmojiPicker 
                   open={openEmojiPicker}
+                  onEmojiClick={(e)=>{
+                    setEmojiIcon(e.emoji)
+                    setOpenEmojiPicker(false)
+                  }}
                   />
+                </div>
+                <div className="mt-2">
+                  <h2 className="text-blue-600 font-medium my-1">Budget Category</h2>
+                  <input className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+                  disabled:cursor-not-allowed disabled:opacity-50"
+                  placeholder="e.g. Allowance"/>
+                </div>
+                <div className="mt-2">
+                  <h2 className="text-blue-600 font-medium my-1">Budget Amount</h2>
+                  <input className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+                  disabled:cursor-not-allowed disabled:opacity-50"
+                  placeholder="e.g. PHP1,000"/>
                 </div>
                 </div>
               </DialogDescription>
