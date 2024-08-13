@@ -69,8 +69,9 @@ function CreateBudget() {
                 <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium bg-transparent border-2 border-input text-* hover:bg-blue-400 hover:text-accent-foreground p-2 h-11 px-8"
                 onClick={()=>setOpenEmojiPicker(!openEmojiPicker)}
                 >{emojiIcon}</button>
-                <div className="absolute">
-                  <EmojiPicker 
+                <div className="sticky">
+                  <EmojiPicker
+                  theme="dark" 
                   open={openEmojiPicker}
                   onEmojiClick={(e)=>{
                     setEmojiIcon(e.emoji)
