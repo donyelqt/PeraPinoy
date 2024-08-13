@@ -5,6 +5,7 @@ import { db } from '../../../../../utils/dbConfig'
 import { eq, getTableColumns, sql } from 'drizzle-orm'
 import { Budgets, Expenses } from '../../../../../utils/schema'
 import { useUser } from '@clerk/nextjs'
+import BudgetItem from './BudgetItem'
 
 function BudgetList() {
 
@@ -33,10 +34,13 @@ function BudgetList() {
   return (
     <div className='mt-10'>
       <div className='grid grid-cols-1
-      md:grid-cols-2 lg:grid-cols-3'>
+      md:grid-cols-2 lg:grid-cols-3 gap-10'>
       <CreateBudget />
+      {budgetList.map((budget,index)=>(
+        <BudgetItem budget={budget} />
+      ))}
       </div>
-      
+
     </div>
   )
 }
