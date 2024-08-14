@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { db } from '../../../../../utils/dbConfig';
 import { Budgets, Expenses } from '../../../../../utils/schema';
 import { eq, getTableColumns, sql } from 'drizzle-orm';
@@ -7,6 +7,7 @@ import { useUser } from '@clerk/nextjs';
 
 function ExpensesScreen({params}) {
     const {user}=useUser();
+    const [budgetInfo,setbudgetInfo]=useState();
     useEffect(()=>{
         
         user&&getBudgetInfo();
@@ -23,8 +24,7 @@ function ExpensesScreen({params}) {
          .where(eq(Budgets.id,params.id))
          .groupBy(Budgets.id)
 
-         console.log(result);
-         
+         setbudgetInfo(result[0]);
     }
     
   return (
