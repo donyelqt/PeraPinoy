@@ -4,6 +4,7 @@ import { db } from '../../../../../utils/dbConfig';
 import { Budgets, Expenses } from '../../../../../utils/schema';
 import { eq, getTableColumns, sql } from 'drizzle-orm';
 import { useUser } from '@clerk/nextjs';
+import BudgetItem from '../../budgets/_components/BudgetItem';
 
 function ExpensesScreen({params}) {
     const {user}=useUser();
@@ -30,6 +31,12 @@ function ExpensesScreen({params}) {
   return (
     <div className='text-blue-600 p-10'>
         <h2 className='text-2xl font-bold'>My Expenses</h2>
+        <div className='grid grid-cols-1 md:grid-cols-2'>
+            <BudgetItem 
+            budget={budgetInfo}
+            />
+
+        </div>
     </div>
   )
 }
