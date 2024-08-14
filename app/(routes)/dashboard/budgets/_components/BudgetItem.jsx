@@ -1,9 +1,10 @@
+import Link from 'next/link'
 import React from 'react'
 
 function BudgetItem({budget}) {
 
   return (
-    <div className='p-5 border rounded-lg hover:bg-slate-900 cursor-pointer'>
+    <Link href={'/dashboard/expenses/'+budget.id} className='p-5 border rounded-lg hover:bg-slate-900 cursor-pointer'>
         <div className='flex gap-2 items-center justify-between'>
         <div className='flex gap-2 items-center'>
             <h2 className='text-2xl p-3 px-4 
@@ -32,7 +33,7 @@ function BudgetItem({budget}) {
                 </div>
             </div>
         </div>
-    </div>
+    </Link>
   )
 }
 

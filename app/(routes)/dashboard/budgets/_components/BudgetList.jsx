@@ -24,7 +24,7 @@ function BudgetList() {
        totalItem:sql `count(${Expenses.id})`.mapWith(Number)
     }).from(Budgets)
     .leftJoin(Expenses,eq(Budgets.id,Expenses.budgetId))
-    .where(eq(Budgets.createdBy,user.primaryEmailAddress?.emailAddress))
+    .where(eq(Budgets.createdBy,user?.primaryEmailAddress?.emailAddress))
     .groupBy(Budgets.id)
     .orderBy(desc(Budgets.id))
     ;
