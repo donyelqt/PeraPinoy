@@ -21,6 +21,7 @@ function AddExpense() {
                     placeholder="e.g. 1000"
                     onChange={(e) => setAmount(e.target.value)} />
             </div>
+            <button disabled={!(name&&amount)} className='rounded-lg bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-tertiary focus:outline-none focus:ring w-full mt-3'>Add New Expenses</button>
         </div>
     )
 }
