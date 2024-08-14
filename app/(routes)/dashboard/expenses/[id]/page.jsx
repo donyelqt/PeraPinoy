@@ -48,6 +48,7 @@ function ExpensesScreen({ params }) {
                     </div>}
                 <AddExpense budgetId={params.id} 
                 user={user}
+                refreshData={()=>getBudgetInfo()}
                 />
             </div>
         </div>

@@ -5,7 +5,7 @@ import { Budgets, Expenses } from '../../../../../../utils/schema';
 import { toast } from 'sonner';
 
 
-function AddExpense({budgetId,user}) {
+function AddExpense({budgetId,user,refreshData}) {
 
     const [name, setName] = useState();
     const [amount, setAmount] = useState();
@@ -21,6 +21,7 @@ function AddExpense({budgetId,user}) {
         console.log(result);
         if(result)
         {
+            refreshData()
             toast.success('New Expenses Added!')
         }
     }

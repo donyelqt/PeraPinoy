@@ -4,6 +4,11 @@ import React from 'react';
 function BudgetItem({ budget }) {
     if (!budget) return null; // or return a loading indicator, etc.
 
+    const calculateProgressPerc = () => {
+        // (spend/total)*100
+        const perc = (budget.totalSpend / budget.amount) * 100;
+        return perc.toFixed(2);
+    }
     return (
         <Link href={`/dashboard/expenses/${budget.id}`} className='p-5 border rounded-lg hover:bg-slate-900 cursor-pointer h-[170px]'>
             <div className='flex gap-2 items-center justify-between'>
@@ -23,7 +28,13 @@ function BudgetItem({ budget }) {
                     <h2 className='text-xs text-slate-400'>₱{budget.amount - budget.totalSpend} Remaining</h2>
                 </div>
                 <div className='w-full bg-slate-300 h-2 rounded-full'>
-                    <div className='w-[40%] bg-blue-600 h-2 rounded-full'></div>
+                    <div className=' bg-blue-600 h-2 rounded-full'
+                        style={{
+                            width: `${calculateProgressPerc()}%`
+                        }}
+                    >
+
+                    </div>
                 </div>
             </div>
         </Link>
