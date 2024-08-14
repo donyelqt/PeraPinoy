@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/PeraPinoy.png"/>
       </head>
       <body className={outfit.className}>
-        <Toaster />
+        <Toaster className=""/>
         {children}</body>
     </html>
     </ClerkProvider>

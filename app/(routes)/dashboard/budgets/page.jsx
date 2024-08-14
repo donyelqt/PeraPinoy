@@ -1,10 +1,17 @@
 import React from 'react'
 import BudgetList from './_components/BudgetList'
+import Image from 'next/image'
+import calcu from '../../../../public/calcu.png'
 
 function Budget() {
   return (
     <div className='text-blue-600 p-10'>
-      <h2 className='text-bold text-3xl'>My Budgets</h2>
+      <div className='flex items-center'>
+        <h2 className='font-bold text-5xl'>Budgets</h2>
+        <Image className="w-10 h-10 object-contain ml-4"
+          src={calcu}
+          alt="calculator" />
+      </div>
       <BudgetList />
     </div>
   )

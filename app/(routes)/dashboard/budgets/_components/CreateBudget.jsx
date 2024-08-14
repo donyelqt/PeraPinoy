@@ -42,7 +42,7 @@ function CreateBudget({refreshData}) {
     if(result)
     {
       refreshData()
-      toast('New Budget Created!')
+      toast.success('New Budget Created!')
     }
   }
 
@@ -56,8 +56,8 @@ function CreateBudget({refreshData}) {
             flex flex-col border-2 cursor-pointer hover:slate-900 hover:text-black'>
             <h2 className='text-3xl text-black-600'><Image className="w-10 h-10 object-contain"
             src={adddocs}
-            alt="donieleaimockup"/></h2>
-            <h2 className="text-yellow-400">Create New Budget</h2>
+            alt="adddocs"/></h2>
+            <h2 className="text-yellow-400">Create New</h2>
           </div>
         </DialogTrigger>
         <DialogPortal>
