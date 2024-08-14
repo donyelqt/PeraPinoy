@@ -19,7 +19,7 @@ import { adddocs } from "../../../../../public";
 
 
 
-function CreateBudget() {
+function CreateBudget({refreshData}) {
 
   const [emojiIcon,setEmojiIcon]=useState('😊');
   const [openEmojiPicker,setOpenEmojiPicker]=useState(false)
@@ -41,6 +41,7 @@ function CreateBudget() {
 
     if(result)
     {
+      refreshData()
       toast('New Budget Created!')
     }
   }
