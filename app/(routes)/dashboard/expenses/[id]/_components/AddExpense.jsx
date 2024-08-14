@@ -1,9 +1,29 @@
+"use client"
 import React, { useState } from 'react'
+import { db } from '../../../../../../utils/dbConfig';
+import { Budgets, Expenses } from '../../../../../../utils/schema';
+import { toast } from 'sonner';
 
-function AddExpense() {
 
-    const [name,setName]=useState();
-    const [amount,setAmount]=useState();
+function AddExpense({budgetId,user}) {
+
+    const [name, setName] = useState();
+    const [amount, setAmount] = useState();
+
+    const addNewExpense=async()=>{
+        const result=await db.insert(Expenses).values({
+            name:name,
+            amount:amount,
+            budgetId:budgetId,
+            createdAt:user?.primaryEmailAddress?.emailAddress
+        }).returning({insertedId:Budgets.id});
+
+        console.log(result);
+        if(result)
+        {
+            toast.success('New Expenses Added!')
+        }
+    }
     return (
         <div className='border p-5 rounded-lg'>
             <h2 className='font-bold text-lg'>Add your expenses here! 👇</h2>
@@ -21,7 +41,9 @@ function AddExpense() {
                     placeholder="e.g. 1000"
                     onChange={(e) => setAmount(e.target.value)} />
             </div>
-            <button disabled={!(name&&amount)} className='rounded-lg bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-tertiary focus:outline-none focus:ring w-full mt-3'>Add New Expenses</button>
+            <button disabled={!(name && amount)}
+            onClick={()=>addNewExpense()}
+                className='rounded-lg bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-tertiary focus:outline-none focus:ring w-full mt-3'>Add Your New Expenses</button>
         </div>
     )
 }

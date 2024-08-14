@@ -46,7 +46,9 @@ function ExpensesScreen({ params }) {
                     <div className='h-[150px] w-full bg-slate-900 
             rounded-lg animate-pulse'>
                     </div>}
-                <AddExpense />
+                <AddExpense budgetId={params.id} 
+                user={user}
+                />
             </div>
         </div>
     )
