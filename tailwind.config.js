@@ -47,6 +47,10 @@ module.exports = {
           DEFAULT: "#141414", // matt black
           foreground: "hsl(var(--tertiary-foreground))",
         },
+        dark2: {
+          DEFAULT: "#121212", // matt black
+          foreground: "hsl(var(--tertiary-foreground))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",

@@ -38,7 +38,7 @@ function SideNav() {
     console.log(path)
   },[path])
   return (
-    <div className='h-screen p-4 border shadow-md text-blue-600'>
+    <div className='h-screen p-4 border shadow-md text-blue-600 bg-dark2'>
       <Image src={'/PeraPinoy1.png'} 
       alt='logo'
       width={100}
