@@ -53,7 +53,7 @@ function CreateBudget({ refreshData }) {
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogTrigger className="rounded p-10 hover:bg-slate-900 hover:text-blue-500 bg-transparent" asChild>
           <div className='bg-slate-200 p-10 rounded-md items-center 
-            flex flex-col border-2 cursor-pointer hover:slate-900 hover:text-black'>
+            flex flex-col border-2 border-dotted h-[160px] cursor-pointer hover:slate-900 hover:text-black'>
             <h2 className='text-3xl text-black-600'><Image className="w-10 h-10 object-contain"
               src={adddocs}
               alt="adddocs" /></h2>
@@ -62,8 +62,8 @@ function CreateBudget({ refreshData }) {
         </DialogTrigger>
         <DialogPortal>
           <DialogOverlay className="fixed inset-0 bg-black/50">
-            <DialogContent className="fixed left-1/2 top-1/2 w-full -translate-x-1/2 p-4 -translate-y-1/2 rounded-md text-gray-900 shadow max-w-lg bg-dark1">
-              <DialogTitle className="fixed text-lg font-bold text-blue-600 bg-dark1 mb-2 max-w-lg">Create New Budget</DialogTitle>
+            <DialogContent className="fixed left-1/2 top-1/2 w-full -translate-x-1/2 p-4 -translate-y-1/2 rounded-md text-gray-900 shadow max-w-lg bg-dark2">
+              <DialogTitle className="fixed text-lg font-bold text-blue-600 bg-dark2 mb-2 max-w-lg">Create New Budget</DialogTitle>
               <DialogDescription>
                 <div className="flex justify-end mb-2">
                   <button className="text-gray-500 hover:text-red-700" onClick={() => setIsOpen(false)}>
@@ -110,7 +110,7 @@ function CreateBudget({ refreshData }) {
                 <button
                   disabled={!(name && amount)}
                   onClick={() => onCreateBudget()}
-                  className="rounded-lg bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-tertiary focus:outline-none focus:ring w-full mt-5">Create Budget</button>
+                  className="rounded-lg bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring w-full mt-5">Create Budget</button>
               </DialogClose>
             </DialogContent>
           </DialogOverlay>

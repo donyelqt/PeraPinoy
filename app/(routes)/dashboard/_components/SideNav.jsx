@@ -38,7 +38,7 @@ function SideNav() {
     console.log(path)
   },[path])
   return (
-    <div className='h-screen p-4 border shadow-md text-blue-600 bg-dark2'>
+    <div className='h-screen p-4 border shadow-md text-blue-600 bg-gray-900'>
       <Image src={'/PeraPinoy1.png'} 
       alt='logo'
       width={100}
@@ -51,8 +51,8 @@ function SideNav() {
           text-blue-600 font-medium
           mb-2 
           p-4 cursor-pointer rounded-lg
-          hover:text-blue-600 hover:bg-slate-900
-          ${path==menu.path&&'text-blue-600 bg-slate-900'}
+          hover:text-blue-600 hover:bg-dark
+          ${path==menu.path&&'text-blue-600 bg-dark'}
           `}>
             <menu.icon />
             {menu.name}

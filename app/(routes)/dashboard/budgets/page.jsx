@@ -7,7 +7,7 @@ function Budget() {
   return (
     <div className='text-blue-600 p-10'>
       <div className='flex items-center'>
-        <h2 className='font-bold text-5xl'>Budgets</h2>
+        <h2 className='font-bold text-6xl'>Budgets</h2>
         <Image className="w-10 h-10 object-contain ml-4"
           src={calcu}
           alt="calculator" />
