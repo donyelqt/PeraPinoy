@@ -14,7 +14,7 @@ function Hero() {
       <h1 className="text-4xl font-extrabold sm:text-4xl text-primary">
        {/* text */}
       </h1>
-      <h2 className="font-extrabold text-4xl sm:text-5xl text-primary"> Welcome to the Pinoy Finance App </h2>
+      <h2 className="font-extrabold text-4xl sm:text-5xl text-primary">Empower Your Finances with PeraPinoy</h2>
       <p className="mt-4 sm:text-md/relaxed text-tertiary">
       Are you ready to take control of your finances? Look no further! The Pinoy Finance App is designed specifically for Filipino users, combining cutting-edge technology with local expertise.
       </p>

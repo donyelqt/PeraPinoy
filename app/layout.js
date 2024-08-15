@@ -1,9 +1,9 @@
-import { Inter, Outfit, Montserrat } from "next/font/google";
+import { Inter, Outfit, Montserrat, Roboto, Open_Sans } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster, toast } from 'sonner'
 
-const outfit = Outfit({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: "PeraPinoy!",
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/PeraPinoy.png"/>
       </head>
-      <body className={outfit.className}>
+      <body className={montserrat.className}>
         <Toaster className=""/>
         {children}</body>
     </html>
