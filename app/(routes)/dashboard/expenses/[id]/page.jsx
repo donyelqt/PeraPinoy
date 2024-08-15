@@ -17,6 +17,8 @@ function ExpensesScreen({ params }) {
         user && getBudgetInfo();
     }, [user]);
 
+
+    // get budget info
     const getBudgetInfo = async () => {
         const result = await db.select({
             ...getTableColumns(Budgets),
@@ -29,6 +31,13 @@ function ExpensesScreen({ params }) {
             .groupBy(Budgets.id)
 
         setbudgetInfo(result[0]);
+    }
+
+
+    // get latest expenses
+    const getExpensesList=async()=>{
+        const result=await db.select().from(Expenses)
+        .where(eq(Expenses))
     }
 
     return (

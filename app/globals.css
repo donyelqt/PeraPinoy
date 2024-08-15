@@ -69,5 +69,22 @@
 }
 
 
+.emoji-picker {
+  width: 300px; /* default width */
+}
+
+@media (min-width: 768px) {
+  .emoji-picker {
+    width: 600px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .emoji-picker {
+    width: 900px;
+  }
+}
+
+
 
 

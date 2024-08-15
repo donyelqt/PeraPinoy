@@ -19,28 +19,28 @@ import { adddocs } from "../../../../../public";
 
 
 
-function CreateBudget({refreshData}) {
 
-  const [emojiIcon,setEmojiIcon]=useState('😊');
-  const [openEmojiPicker,setOpenEmojiPicker]=useState(false)
+function CreateBudget({ refreshData }) {
 
-  const [name,setName]=useState();
-  const [amount, setAmount]=useState();
+  const [emojiIcon, setEmojiIcon] = useState('😊');
+  const [openEmojiPicker, setOpenEmojiPicker] = useState(false)
 
-  const {user}=useUser();
+  const [name, setName] = useState();
+  const [amount, setAmount] = useState();
+
+  const { user } = useUser();
 
   // used to creat a new budget
-  const onCreateBudget=async()=>{
-    const result=await db.insert(Budgets)
-    .values({
-      name:name,
-      amount:amount,
-      createdBy:user?.primaryEmailAddress?.emailAddress,
-      icon:emojiIcon
-    }).returning({insertedId:Budgets.id})
+  const onCreateBudget = async () => {
+    const result = await db.insert(Budgets)
+      .values({
+        name: name,
+        amount: amount,
+        createdBy: user?.primaryEmailAddress?.emailAddress,
+        icon: emojiIcon
+      }).returning({ insertedId: Budgets.id })
 
-    if(result)
-    {
+    if (result) {
       refreshData()
       toast.success('New Budget Created!')
     }
@@ -55,8 +55,8 @@ function CreateBudget({refreshData}) {
           <div className='bg-slate-200 p-10 rounded-md items-center 
             flex flex-col border-2 cursor-pointer hover:slate-900 hover:text-black'>
             <h2 className='text-3xl text-black-600'><Image className="w-10 h-10 object-contain"
-            src={adddocs}
-            alt="adddocs"/></h2>
+              src={adddocs}
+              alt="adddocs" /></h2>
             <h2 className="text-yellow-400">Create New</h2>
           </div>
         </DialogTrigger>
@@ -71,43 +71,46 @@ function CreateBudget({refreshData}) {
                   </button>
                 </div>
                 <div className="mt-5">
-                <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium bg-transparent border-2 border-input text-* hover:bg-blue-400 hover:text-accent-foreground p-2 h-11 px-8"
-                onClick={()=>setOpenEmojiPicker(!openEmojiPicker)}
-                >{emojiIcon}</button>
-                <div className="absolute z-10">
-                  <EmojiPicker
-                  theme="dark" 
-                  open={openEmojiPicker}
-                  onEmojiClick={(e)=>{
-                    setEmojiIcon(e.emoji)
-                    setOpenEmojiPicker(false)
-                  }}
-                  />
-                </div>
-                <div className="mt-2 text-blue-600">
-                  <h2 className="text-blue-600 font-medium my-1">Budget Category</h2>
-                  <input className="flex h-10 w-full rounded-md border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-blue-600 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+                  <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium bg-transparent border-2 border-input text-* hover:bg-blue-400 hover:text-accent-foreground p-2 h-11 px-8"
+                    onClick={() => setOpenEmojiPicker(!openEmojiPicker)}
+                  >{emojiIcon}</button>
+                  <div className="absolute z-10">
+                    <EmojiPicker
+                      theme="dark"
+                      open={openEmojiPicker}
+                      onEmojiClick={(e) => {
+                        setEmojiIcon(e.emoji)
+                        setOpenEmojiPicker(false)
+                      }}
+                      style={{
+                        width: '65vw'
+                      }}
+                    />
+                  </div>
+                  <div className="mt-2 text-blue-600">
+                    <h2 className="text-blue-600 font-medium my-1">Budget Category</h2>
+                    <input className="flex h-10 w-full rounded-md border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-blue-600 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
                   disabled:cursor-not-allowed disabled:opacity-50"
-                  placeholder="e.g. Emergency Funds"
-                  onChange={(e)=>setName(e.target.value)} />
-                </div>
-                <div className="mt-2 text-blue-600">
-                  <h2 className="text-blue-600 font-medium my-1">Allocated Funds</h2>
-                  <input className="flex h-10 w-full rounded-md border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-blue-600 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+                      placeholder="e.g. Emergency Funds"
+                      onChange={(e) => setName(e.target.value)} />
+                  </div>
+                  <div className="mt-2 text-blue-600">
+                    <h2 className="text-blue-600 font-medium my-1">Allocated Funds</h2>
+                    <input className="flex h-10 w-full rounded-md border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-blue-600 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
                   disabled:cursor-not-allowed disabled:opacity-50"
-                  type="number"
-                  placeholder="e.g. PHP1,000"
-                  onChange={(e)=>setAmount(e.target.value)} />
-                </div>
+                      type="number"
+                      placeholder="e.g. PHP1,000"
+                      onChange={(e) => setAmount(e.target.value)} />
+                  </div>
 
-                
+
                 </div>
               </DialogDescription>
               <DialogClose asChild>
-                <button 
-                disabled={!(name&&amount)}
-                onClick={()=>onCreateBudget()}
-                className="rounded-lg bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-tertiary focus:outline-none focus:ring w-full mt-5">Create Budget</button>
+                <button
+                  disabled={!(name && amount)}
+                  onClick={() => onCreateBudget()}
+                  className="rounded-lg bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-tertiary focus:outline-none focus:ring w-full mt-5">Create Budget</button>
               </DialogClose>
             </DialogContent>
           </DialogOverlay>
