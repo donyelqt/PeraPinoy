@@ -18,7 +18,7 @@ function Header() {
       {isSignedIn?
       <UserButton /> :
       <Link href={'/sign-in'}>
-      <btn className='w-full rounded-lg bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-tertiary focus:outline-none focus:ring sm:w-auto'>Get Started</btn>
+      <btn className='w-full rounded-lg bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring sm:w-auto'>Get Started</btn>
       </Link> 
     }
     </div>
