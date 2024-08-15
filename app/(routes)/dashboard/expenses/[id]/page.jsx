@@ -2,19 +2,22 @@
 import React, { useEffect, useState } from 'react'
 import { db } from '../../../../../utils/dbConfig';
 import { Budgets, Expenses } from '../../../../../utils/schema';
-import { eq, getTableColumns, sql } from 'drizzle-orm';
+import { desc, eq, getTableColumns, sql } from 'drizzle-orm';
 import { useUser } from '@clerk/nextjs';
 import BudgetItem from '../../budgets/_components/BudgetItem';
 import AddExpense from './_components/AddExpense';
-import { expense } from '../../../../../public';
+import { coins, expense, accounting } from '../../../../../public';
 import Image from 'next/image';
+import ExpenseListTable from './_components/ExpenseListTable'
 
 function ExpensesScreen({ params }) {
     const { user } = useUser();
     const [budgetInfo, setbudgetInfo] = useState();
+    const [expensesList,setExpensesList]=useState([]);
     useEffect(() => {
 
         user && getBudgetInfo();
+        
     }, [user]);
 
 
@@ -31,18 +34,31 @@ function ExpensesScreen({ params }) {
             .groupBy(Budgets.id)
 
         setbudgetInfo(result[0]);
+        getExpensesList();
     }
 
 
     // get latest expenses
     const getExpensesList=async()=>{
         const result=await db.select().from(Expenses)
-        .where(eq(Expenses))
+        .where(eq(Expenses.budgetId,params.id))
+        .orderBy(desc(Expenses.id));
+        setExpensesList(result);
+        console.log(result)
     }
 
     return (
         <div className='text-blue-600 p-10'>
+            <div className='mt-4'>
             <div className='flex items-center'>
+                <h2 className='font-bold text-5xl'>Recent Expenses</h2>
+                <Image className="w-10 h-10 object-contain ml-4"
+                    src={accounting}
+                    alt="accounting" />
+            </div>
+                <ExpenseListTable expensesList={expensesList} />
+            </div>
+            <div className='flex items-center mt-10'>
                 <h2 className='font-bold text-5xl'>Expenses</h2>
                 <Image className="w-10 h-10 object-contain ml-4"
                     src={expense}
