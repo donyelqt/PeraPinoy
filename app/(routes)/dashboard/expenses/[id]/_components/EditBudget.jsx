@@ -14,7 +14,7 @@ import { Budgets } from '../../../../../../utils/schema';
 import { eq } from 'drizzle-orm';
 import { toast } from 'sonner';
 
-function EditBudget({budgetInfo}) {
+function EditBudget({budgetInfo, refreshData}) {
     const [emojiIcon, setEmojiIcon] = useState(budgetInfo?.icon);
     const [openEmojiPicker, setOpenEmojiPicker] = useState(false)
 
@@ -33,6 +33,7 @@ function EditBudget({budgetInfo}) {
 
         if(result)
         {
+            refreshData()
             toast.success('Budget Updated!')
         }
 
