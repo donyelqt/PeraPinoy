@@ -50,6 +50,16 @@ function ExpensesScreen({ params }) {
         console.log(result)
     }
 
+
+    // used to delete budget
+    const deleteBudget=async()=>{
+        const result=await db.delete(Budgets)
+        .where(eq(Budgets.id,params.id))
+        .returning();
+
+        console.log(result);
+    }
+
     return (
         <div className='text-blue-600 p-10'>
             <div className='mt-4'>
@@ -92,7 +102,7 @@ function ExpensesScreen({ params }) {
                                     </button>
                                 </AlertDialog.Cancel>
                                 <AlertDialog.Action asChild>
-                                    <button className="block w-full rounded-lg bg-secondary px-12 py-3 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring active:bg-red-500 sm:w-auto">
+                                    <button onClick={()=>deleteBudget()} className="block w-full rounded-lg bg-secondary px-12 py-3 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring active:bg-red-500 sm:w-auto">
                                         Confirm
                                     </button>
                                 </AlertDialog.Action>
