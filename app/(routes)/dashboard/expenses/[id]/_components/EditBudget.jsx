@@ -28,7 +28,6 @@ function EditBudget() {
 
     return (
         <div>
-
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
                 <DialogTrigger className="rounded p-10 bg-primary" asChild>
                     <button className='rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring active:bg-red-500 sm:px-6 sm:py-3 md:px-8 md:py-4 lg:px-10 lg:py-5 flex gap-1'><UserPen />Edit</button>
