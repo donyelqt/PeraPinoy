@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/PeraPinoy.png"/>
       </head>
       <body className={montserrat.className}>
-        <Toaster className=""/>
+        <Toaster richColors />
         {children}</body>
     </html>
     </ClerkProvider>
