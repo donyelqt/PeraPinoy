@@ -9,7 +9,7 @@ import AddExpense from './_components/AddExpense';
 import { coins, expense, accounting } from '../../../../../public';
 import Image from 'next/image';
 import ExpenseListTable from './_components/ExpenseListTable'
-import { PenBox, PenSquareIcon, Trash2 } from 'lucide-react';
+import { PenBox, PenSquareIcon, Trash2, UserPen } from 'lucide-react';
 import * as AlertDialog from '@radix-ui/react-alert-dialog';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
@@ -76,7 +76,7 @@ function ExpensesScreen({ params }) {
     }
 
     return (
-        <div className='text-blue-600 p-10'>
+        <div className='text-tertiary p-10'>
             <div className='mt-4'>
                 <div className='flex items-center'>
                     <h2 className='font-bold text-6xl'>Recent Expenses</h2>
@@ -93,7 +93,7 @@ function ExpensesScreen({ params }) {
                     src={expense}
                     alt="expense" />
                 <div className='flex gap-2 items-center ml-auto'>
-                <button className='rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring active:bg-red-500 sm:px-6 sm:py-3 md:px-8 md:py-4 lg:px-10 lg:py-5 flex gap-1'><PenSquareIcon />Edit</button>
+                <button className='rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring active:bg-red-500 sm:px-6 sm:py-3 md:px-8 md:py-4 lg:px-10 lg:py-5 flex gap-1'><UserPen />Edit</button>
                 <AlertDialog.Root>
                     <AlertDialog.Trigger asChild>
                         <button className='rounded-lg bg-secondary px-4 py-2 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring active:bg-red-500 sm:px-6 sm:py-3 md:px-8 md:py-4 lg:px-10 lg:py-5 flex gap-2 ml-auto'>
