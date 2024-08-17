@@ -11,12 +11,16 @@ import Image from 'next/image';
 import ExpenseListTable from './_components/ExpenseListTable'
 import { Trash2 } from 'lucide-react';
 import * as AlertDialog from '@radix-ui/react-alert-dialog';
+import { toast } from 'sonner';
+import { useRouter } from 'next/navigation';
+
 
 
 function ExpensesScreen({ params }) {
     const { user } = useUser();
     const [budgetInfo, setbudgetInfo] = useState();
     const [expensesList, setExpensesList] = useState([]);
+    const route=useRouter();
     useEffect(() => {
 
         user && getBudgetInfo();
@@ -64,6 +68,8 @@ function ExpensesScreen({ params }) {
             .where(eq(Budgets.id,params.id))
             .returning();
         }
+        toast.success('Budget Deleted!');
+        route.replace('/dashboard/budgets');
         
 
         
