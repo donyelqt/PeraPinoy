@@ -1,6 +1,6 @@
 "use client"
 import { UserPen, XIcon } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Dialog, DialogOverlay, DialogPortal } from "@radix-ui/react-dialog";
 import { DialogTrigger } from "@radix-ui/react-dialog";
 import { DialogContent } from "@radix-ui/react-dialog";
@@ -23,6 +23,9 @@ function EditBudget({budgetInfo, refreshData}) {
 
     const { user } = useUser();
 
+    useEffect(()=>{
+        setEmojiIcon(budgetInfo?.icon)
+    },[budgetInfo])
     const onUpdateBudget=async()=>{
         const result=await db.update(Budgets).set({
             name:name,
