@@ -110,7 +110,7 @@ function CreateBudget({ refreshData }) {
                 <button
                   disabled={!(name && amount)}
                   onClick={() => onCreateBudget()}
-                  className="rounded-lg bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring w-full mt-5">Create Budget</button>
+                  className="rounded-lg cursor-pointer bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring w-full mt-5">Create Budget</button>
               </DialogClose>
             </DialogContent>
           </DialogOverlay>

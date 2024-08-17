@@ -24,7 +24,7 @@ function ExpensesScreen({ params }) {
     const route = useRouter();
     useEffect(() => {
 
-        user && getBudgetInfo();
+        user&&getBudgetInfo();
 
     }, [user]);
 
@@ -93,7 +93,7 @@ function ExpensesScreen({ params }) {
                     src={expense}
                     alt="expense" />
                 <div className='flex gap-2 items-center ml-auto'>
-                    <EditBudget />
+                    <EditBudget budgetInfo={budgetInfo} />
                     <AlertDialog.Root>
                         <AlertDialog.Trigger asChild>
                             <button className='rounded-lg bg-secondary px-4 py-2 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring active:bg-red-500 sm:px-6 sm:py-3 md:px-8 md:py-4 lg:px-10 lg:py-5 flex gap-2 ml-auto'>

@@ -45,7 +45,7 @@ function AddExpense({budgetId,user,refreshData}) {
             </div>
             <button disabled={!(name && amount)}
             onClick={()=>addNewExpense()}
-                className='rounded-lg bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring w-full mt-3'>Add Your New Expenses</button>
+                className='rounded-lg cursor-pointer bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring w-full mt-3'>Add Your New Expenses</button>
         </div>
     )
 }
