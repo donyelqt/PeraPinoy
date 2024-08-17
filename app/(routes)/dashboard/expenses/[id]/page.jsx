@@ -55,14 +55,18 @@ function ExpensesScreen({ params }) {
     const deleteBudget=async()=>{
 
         const deleteExpenseResult=await db.delete(Expenses)
-        .where
-
-
-        const result=await db.delete(Budgets)
-        .where(eq(Budgets.id,params.id))
+        .where(eq(Expenses.budgetId,params.id))
         .returning();
 
-        console.log(result);
+        if(deleteExpenseResult)
+        {
+            const result=await db.delete(Budgets)
+            .where(eq(Budgets.id,params.id))
+            .returning();
+        }
+        
+
+        
     }
 
     return (
