@@ -18,14 +18,18 @@ function EditBudget({budgetInfo, refreshData}) {
     const [emojiIcon, setEmojiIcon] = useState(budgetInfo?.icon);
     const [openEmojiPicker, setOpenEmojiPicker] = useState(false)
 
-    const [name, setName] = useState(budgetInfo?.name);
-    const [amount, setAmount] = useState(budgetInfo?.amount);
+    const [name, setName] = useState();
+    const [amount, setAmount] = useState();
 
     const { user } = useUser();
 
     useEffect(()=>{
         setEmojiIcon(budgetInfo?.icon)
+        setAmount(budgetInfo?.amount);
+        setName(budgetInfo?.name)
+
     },[budgetInfo])
+
     const onUpdateBudget=async()=>{
         const result=await db.update(Budgets).set({
             name:name,
