@@ -1,9 +1,9 @@
 import React from 'react'
 
-function CardInfo() {
+function CardInfo({budgetList}) {
   return (
     <div>
-        
+
     </div>
   )
 }

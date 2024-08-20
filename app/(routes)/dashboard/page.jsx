@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import CardInfo from "./_components/CardInfo"
 import { db } from '../../../utils/dbConfig';
 import { desc, eq, getTableColumns, sql } from 'drizzle-orm';
-import { Budgets } from '../../../utils/schema';
+import { Budgets, Expenses } from '../../../utils/schema';
 
 function Dashboard() {
   const {user}=useUser();
@@ -34,9 +34,9 @@ function Dashboard() {
   }
   return (
     <div className='p-10'>
-        <h2 className='font-bold text-tertiary text-3xl'>Hello, {user?.fullName}! 👋</h2>
+        <h2 className='font-bold text-secondary text-4xl'><span className='text-blue-600'>Hello, </span>{user?.fullName}! 👋</h2>
         <p className='text-gray-500'>Empower Your Finances with PeraPinoy</p>
-        <CardInfo />
+        <CardInfo budgetList={budgetList} />
     </div>
   )
 }
