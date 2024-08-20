@@ -35,7 +35,7 @@ function Dashboard() {
   return (
     <div className='p-10'>
         <h2 className='font-bold text-tertiary text-4xl'><span className='text-blue-600'>Hello, </span>{user?.fullName}!👋</h2>
-        <p className='text-gray-500'>Empower Your Finances with PeraPinoy</p>
+        <p className='text-gray-500'>Empower Your Finances with PeraPinoy!</p>
         <CardInfo budgetList={budgetList} />
     </div>
   )
