@@ -113,7 +113,7 @@ function ExpensesScreen({ params }) {
                                 </AlertDialog.Description>
                                 <div className="flex justify-end gap-[25px]">
                                     <AlertDialog.Cancel asChild>
-                                        <button className="text-mauve11 bg-gray-500 bg-mauve4 hover:bg-mauve5 focus:shadow-mauve7 px-12 py-3 inline-flex h-[50px] items-center justify-center rounded-lg font-medium leading-none outline-none hover:bg-slate-300">
+                                        <button className="text-mauve11 text-white bg-blue-600 text-sm bg-mauve4 hover:bg-mauve5 focus:shadow-mauve7 px-12 py-3 inline-flex h-[50px] items-center justify-center rounded-lg font-medium leading-none outline-none hover:bg-yellow-600">
                                             Cancel
                                         </button>
                                     </AlertDialog.Cancel>
