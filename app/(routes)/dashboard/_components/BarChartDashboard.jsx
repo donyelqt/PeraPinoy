@@ -9,6 +9,9 @@ function BarChartDashboard({ budgetList }) {
                 width={500}
                 height={300}
                 data={budgetList}
+                margin={{
+                    top:7
+                }}
             >
                 <XAxis dataKey="name" />
                 <YAxis />
