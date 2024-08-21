@@ -6,7 +6,7 @@ import { useUser } from '@clerk/nextjs';
 import { db } from '../../../../utils/dbConfig';
 import { Budgets, Expenses } from '../../../../utils/schema';
 
-function ExpensesScreen1() {
+function ExpensesScreenMain() {
 
   const [expensesList,setExpensesList]=useState([]);
     const {user}=useUser();
@@ -41,4 +41,4 @@ function ExpensesScreen1() {
   )
 }
 
-export default ExpensesScreen1
+export default ExpensesScreenMain
