@@ -6,7 +6,7 @@ function BarChartDashboard({ budgetList }) {
         <div className='border rounded-lg p-10 hover:bg-slate-900'>
             <h2 className='text-tertiary font-bold text-3xl'>Expenses Breakdown</h2>
             <div className="w-full h-64">
-            <ResponsiveContainer width={730} height={250}>
+            <ResponsiveContainer width="100%" height="100%">
             <BarChart
                 width={500}
                 height={300}
