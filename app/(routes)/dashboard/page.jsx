@@ -35,6 +35,7 @@ function Dashboard() {
       ;
 
     setBudgetList(result);
+    getAllExpenses();
 
   }
 
@@ -45,7 +46,11 @@ function Dashboard() {
       amount:Expenses.amount,
       createdAt:Expenses.createdAt
     }).from(Budgets)
-    
+    .rightJoin(Expenses,eq(Budgets.id,Expenses.budgetId))
+    .where(eq(Budgets.createdBy,user?.primaryEmailAddress))
+    .orderBy(desc(Expenses.id));
+
+    console.log(result);
   }
 
   return (
