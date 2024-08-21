@@ -9,6 +9,7 @@ import BarChartDashboard from './_components/BarChartDashboard'
 import BudgetItem from './budgets/_components/BudgetItem';
 import Image from 'next/image';
 import { calcu } from '../../../public';
+import ExpenseListTable from './expenses/[id]/_components/ExpenseListTable';
 
 function Dashboard() {
   const { user } = useUser();
@@ -51,7 +52,6 @@ function Dashboard() {
     .where(eq(Budgets.createdBy,user?.primaryEmailAddress))
     .orderBy(desc(Expenses.id));
     setExpensesList(result);
-    console.log(result);
   }
 
   return (
@@ -74,6 +74,11 @@ function Dashboard() {
         <div className='md:col-span-2 text-blue-600'>
           <BarChartDashboard
             budgetList={budgetList}
+          />
+
+          <ExpenseListTable 
+          expensesList={expensesList}
+          refreshData={()=>getBudgetList()}
           />
         </div>
       </div>
