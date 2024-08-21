@@ -52,9 +52,9 @@ function AddExpense({ budgetId, user, refreshData }) {
                     value={amount}
                     onChange={(e) => setAmount(e.target.value)} />
             </div>
-            <button disabled={!(name && amount)}
+            <button disabled={!(name && amount)||loading}
                 onClick={() => addNewExpense()}
-                className='rounded-lg cursor-pointer bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring w-full mt-3'>
+                className='rounded-lg cursor-pointer bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring w-full mt-3 flex justify-center items-center'>
                 {loading ?
                     <Loader className='animate-spin' /> : "Add Your New Expenses"
                 }
