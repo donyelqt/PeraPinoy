@@ -27,15 +27,16 @@ function SideNav() {
     },
     {
       id:4,
-      name:'Premium',
-      icon:LucideShieldPlus,
-      path:'/dashboard/premium'
-    },
-    {
-      id:5,
       name:'PeraPinoy - GPT',
       icon:BrainCog,
       path:'/dashboard/chatbot'
+      
+    },
+    {
+      id:5,
+      name:'Premium',
+      icon:LucideShieldPlus,
+      path:'/dashboard/premium'
     }
   ]
   const path=usePathname();
