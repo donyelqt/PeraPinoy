@@ -14,7 +14,7 @@ function Dashboard() {
   const { user } = useUser();
 
   const [budgetList, setBudgetList] = useState([]);
-
+  const [expensesList, setExpensesList] = useState([]);
   useEffect(() => {
     user && getBudgetList();
   }, [user])
