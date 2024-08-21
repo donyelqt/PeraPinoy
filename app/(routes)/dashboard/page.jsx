@@ -41,16 +41,16 @@ function Dashboard() {
   }
 
   // used to get all expenses belong to users
-  const getAllExpenses=async()=>{
-    const result=await db.select({
-      id:Expenses.id,
-      name:Expenses.name,
-      amount:Expenses.amount,
-      createdAt:Expenses.createdAt
+  const getAllExpenses = async () => {
+    const result = await db.select({
+      id: Expenses.id,
+      name: Expenses.name,
+      amount: Expenses.amount,
+      createdAt: Expenses.createdAt
     }).from(Budgets)
-    .rightJoin(Expenses,eq(Budgets.id,Expenses.budgetId))
-    .where(eq(Budgets.createdBy,user?.primaryEmailAddress))
-    .orderBy(desc(Expenses.id));
+      .rightJoin(Expenses, eq(Budgets.id, Expenses.budgetId))
+      .where(eq(Budgets.createdBy, user?.primaryEmailAddress.emailAddress))
+      .orderBy(desc(Expenses.id));
     setExpensesList(result);
   }
 
@@ -62,10 +62,10 @@ function Dashboard() {
       <div className='grid grid-cols-1 md:grid-cols-3 mt-6 gap-5'>
         <div className='text-blue-600 grid gap-5'>
           <div className='flex items-center'>
-          <h2 className='text-tertiary font-bold text-4xl'>Recent Budgets</h2>
-          <Image className="w-10 h-10 object-contain ml-4"
-          src={calcu}
-          alt="calculator" />
+            <h2 className='text-tertiary font-bold text-4xl'>Recent Budgets</h2>
+            <Image className="w-10 h-10 object-contain ml-4"
+              src={calcu}
+              alt="calculator" />
           </div>
           {budgetList.map((budget, index) => (
             <BudgetItem budget={budget} key={index} />
@@ -76,9 +76,9 @@ function Dashboard() {
             budgetList={budgetList}
           />
 
-          <ExpenseListTable 
-          expensesList={expensesList}
-          refreshData={()=>getBudgetList()}
+          <ExpenseListTable
+            expensesList={expensesList}
+            refreshData={() => getBudgetList()}
           />
         </div>
       </div>
