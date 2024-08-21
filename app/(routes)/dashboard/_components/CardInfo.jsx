@@ -31,7 +31,7 @@ function CardInfo({ budgetList }) {
     <PiggyBankIcon
           className='bg-tertiary p-3 h-12 w-12 rounded-lg text-white' />
         <div>
-          <h2 className='text-md text-white font-bold'>Total Budgets</h2>
+          <h2 className='text-md text-white font-bold'>Total Budget</h2>
           <h2 className='font-bold text-2xl text-blue-600'>₱{totalBudget}</h2>
         </div>
         
@@ -49,7 +49,7 @@ function CardInfo({ budgetList }) {
       <Wallet2
           className='bg-tertiary p-3 h-12 w-12 rounded-lg text-white' />
         <div>
-          <h2 className='text-md text-white font-bold'>No. of Budgets</h2>
+          <h2 className='text-md text-white font-bold'>Budget Count</h2>
           <h2 className='font-bold text-2xl text-blue-600'>{budgetList?.length}</h2>
         </div>
         
