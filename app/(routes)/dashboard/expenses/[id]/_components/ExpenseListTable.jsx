@@ -23,7 +23,7 @@ function ExpenseListTable({ expensesList, refreshData }) {
     return (
         <div className='mt-5'>
             <div className='flex items-center'>
-                <h2 className='font-bold text-6xl'>Recent Expenses</h2>
+                <h2 className='font-bold text-6xl text-tertiary'>Recent Expenses</h2>
                 <Image className="w-10 h-10 object-contain ml-4"
                     src={accounting}
                     alt="accounting" />
@@ -35,7 +35,7 @@ function ExpenseListTable({ expensesList, refreshData }) {
                 <h2 className='font-bold'>Delete</h2>
             </div>
             {expensesList.map((expenses, index) => (
-                <div className='grid grid-cols-4 bg-transparent border p-2'>
+                <div className='grid grid-cols-4 bg-transparent border p-2 text-tertiary'>
                     <h2>{expenses.name}</h2>
                     <h2>{expenses.amount}</h2>
                     <h2>{expenses.createdAt}</h2>
