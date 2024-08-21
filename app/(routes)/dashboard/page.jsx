@@ -38,7 +38,7 @@ function Dashboard() {
         <h2 className='font-bold text-tertiary text-4xl'><span className='text-blue-600'>Hello, </span>{user?.fullName}!👋</h2>
         <p className='text-gray-500'>Empower Your Finances with PeraPinoy!</p>
         <CardInfo budgetList={budgetList} />
-        <div className='grid grid-cols-1 md:grid-cols-3'>
+        <div className='grid grid-cols-1 md:grid-cols-3 mt-6'>
           <div className='md:col-span-2 text-blue-600'>
             Chart
           </div>
