@@ -10,17 +10,21 @@ function AddExpense({budgetId,user,refreshData}) {
 
     const [name, setName] = useState();
     const [amount, setAmount] = useState();
+    const [loading, setLoading] = useState(false);
 
+    // used to get add new expenses
     const addNewExpense=async()=>{
         const result=await db.insert(Expenses).values({
             name:name,
             amount:amount,
+            loading:loading,
             budgetId:budgetId,
             createdAt:moment().format('MM/DD/yyy')
         }).returning({insertedId:Budgets.id});
 
         setAmount('');
         setName('');
+        setLoading('');
         if(result)
         {
             refreshData()
