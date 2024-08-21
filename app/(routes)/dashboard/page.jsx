@@ -31,14 +31,15 @@ function Dashboard() {
       .leftJoin(Expenses, eq(Budgets.id, Expenses.budgetId))
       .where(eq(Budgets.createdBy, user?.primaryEmailAddress?.emailAddress))
       .groupBy(Budgets.id)
-      .orderBy(desc(Budgets.id))
-      ;
+      .orderBy(desc(Budgets.id));
+
 
     setBudgetList(result);
     getAllExpenses();
 
   }
 
+  // used to get all expenses belong to users
   const getAllExpenses=async()=>{
     const result=await db.select({
       id:Expenses.id,
@@ -49,7 +50,7 @@ function Dashboard() {
     .rightJoin(Expenses,eq(Budgets.id,Expenses.budgetId))
     .where(eq(Budgets.createdBy,user?.primaryEmailAddress))
     .orderBy(desc(Expenses.id));
-
+    setExpensesList(result);
     console.log(result);
   }
 
