@@ -1,6 +1,6 @@
 "use client"
 import { UserButton } from '@clerk/nextjs';
-import { LayoutDashboard, LayoutGrid, LucideShieldPlus, PiggyBankIcon, ReceiptIcon } from 'lucide-react';
+import { BrainCog, LayoutDashboard, LayoutGrid, LucideShieldPlus, PiggyBankIcon, ReceiptIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -30,6 +30,12 @@ function SideNav() {
       name:'Premium',
       icon:LucideShieldPlus,
       path:'/dashboard/premium'
+    },
+    {
+      id:5,
+      name:'PeraPinoy - GPT',
+      icon:BrainCog,
+      path:'/dashboard/chatbot'
     }
   ]
   const path=usePathname();
