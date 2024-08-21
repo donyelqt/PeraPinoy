@@ -37,6 +37,17 @@ function Dashboard() {
     setBudgetList(result);
 
   }
+
+  const getAllExpenses=async()=>{
+    const result=await db.select({
+      id:Expenses.id,
+      name:Expenses.name,
+      amount:Expenses.amount,
+      createdAt:Expenses.createdAt
+    }).from(Budgets)
+    
+  }
+
   return (
     <div className='p-10'>
       <h2 className='font-bold text-tertiary text-4xl'><span className='text-blue-600'>Hello, </span>{user?.fullName}!👋</h2>
