@@ -46,7 +46,7 @@ function Dashboard() {
             budgetList={budgetList} 
             />
           </div>
-          <div className='text-blue-600 grid gap-3'>
+          <div className='text-blue-600 grid gap-5'>
             {budgetList.map((budget,index)=>(
               <BudgetItem budget={budget} key={index} />
             ))}
