@@ -4,7 +4,7 @@ import { Bar, BarChart, Legend, Tooltip, XAxis, YAxis } from 'recharts'
 function BarChartDashboard({ budgetList }) {
     return (
         <div className='border rounded-lg p-10'>
-            <h2 className='text-tertiary font-bold text-2xl'>Activity</h2>
+            <h2 className='text-tertiary font-bold text-2xl'>Expense Breakdown</h2>
             <BarChart
                 width={500}
                 height={300}
