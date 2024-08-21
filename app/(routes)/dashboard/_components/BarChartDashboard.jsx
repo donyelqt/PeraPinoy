@@ -1,5 +1,5 @@
 import React from 'react'
-import { BarChart, Legend, Tooltip, XAxis, YAxis } from 'recharts'
+import { Bar, BarChart, Legend, Tooltip, XAxis, YAxis } from 'recharts'
 
 function BarChartDashboard({budgetList}) {
   return (
@@ -19,6 +19,8 @@ function BarChartDashboard({budgetList}) {
             <YAxis />
             <Tooltip />
             <Legend />
+            <Bar dataKey="totalSpend" stackId="a" fill='#4845d2' />
+            <Bar dataKey="amount" stackId="a" fill='#4845d2' />
 
         </BarChart>
     </div>
