@@ -18,6 +18,9 @@ function CardInfo({ budgetList }) {
       totalBudget_=totalBudget_+Number(element.amount)
       totalSpend_=totalSpend_+element.totalSpend
     });
+
+    setTotalBudget(totalBudget_);
+    setTotalSpend(totalSpend_);
     console.log(totalBudget_,totalSpend_)
   }
   return (
@@ -25,7 +28,7 @@ function CardInfo({ budgetList }) {
       <div className='p-7 border rounded-lg flex items-center justify-between'>
         <div>
           <h2 className='text-sm text-slate-300'>Total Budgets</h2>
-          <h2 className='font-bold text-2xl text-blue-600'>₱15000</h2>
+          <h2 className='font-bold text-2xl text-blue-600'>₱{totalBudget}</h2>
         </div>
         <PiggyBankIcon
           className='bg-tertiary p-3 h-12 w-12 rounded-lg text-white' />
@@ -33,7 +36,7 @@ function CardInfo({ budgetList }) {
       <div className='p-7 border rounded-lg flex items-center justify-between'>
         <div>
           <h2 className='text-sm text-slate-300'>Total Spend</h2>
-          <h2 className='font-bold text-2xl text-blue-600'>₱15000</h2>
+          <h2 className='font-bold text-2xl text-blue-600'>₱{totalSpend}</h2>
         </div>
         <ReceiptIcon
           className='bg-tertiary p-3 h-12 w-12 rounded-lg text-white' />
