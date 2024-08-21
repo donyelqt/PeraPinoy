@@ -44,7 +44,7 @@ function CardInfo({ budgetList }) {
       <div className='p-7 border rounded-lg flex items-center justify-between'>
         <div>
           <h2 className='text-sm text-slate-300'>No. of Budgets</h2>
-          <h2 className='font-bold text-2xl text-blue-600'>₱15000</h2>
+          <h2 className='font-bold text-2xl text-blue-600'>₱{budgetList?.length}</h2>
         </div>
         <Wallet2
           className='bg-tertiary p-3 h-12 w-12 rounded-lg text-white' />
