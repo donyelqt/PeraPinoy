@@ -1,6 +1,6 @@
 "use client"
 import { UserButton } from '@clerk/nextjs';
-import { BrainCog, LayoutDashboard, LayoutGrid, LucideShieldPlus, PiggyBankIcon, ReceiptIcon } from 'lucide-react';
+import { Book, BookOpenCheck, BrainCog, LayoutDashboard, LayoutGrid, LucideShieldPlus, PiggyBankIcon, ReceiptIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -34,6 +34,12 @@ function SideNav() {
     },
     {
       id:5,
+      name:'Financial Blogs',
+      icon:BookOpenCheck,
+      path:'/dashboard/blogs'
+    },
+    {
+      id:6,
       name:'Premium',
       icon:LucideShieldPlus,
       path:'/dashboard/premium'
