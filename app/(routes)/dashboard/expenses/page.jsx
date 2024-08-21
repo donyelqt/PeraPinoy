@@ -32,7 +32,7 @@ function ExpensesScreenMain() {
   }
   return (
     <div className='p-10'>
-      <h2 className='font-bold text-3xl'>My Expenses</h2>
+      <h2 className='font-bold text-3xl'></h2>
 
         <ExpenseListTable refreshData={()=>getAllExpenses()}
         expensesList={expensesList}
