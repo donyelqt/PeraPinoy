@@ -40,13 +40,13 @@ function Dashboard() {
         <h2 className='font-bold text-tertiary text-4xl'><span className='text-blue-600'>Hello, </span>{user?.fullName}!👋</h2>
         <p className='text-gray-500'>Empower Your Finances with PeraPinoy!</p>
         <CardInfo budgetList={budgetList} />
-        <div className='grid grid-cols-1 md:grid-cols-3 mt-6'>
+        <div className='grid grid-cols-1 md:grid-cols-3 mt-6 gap-5'>
           <div className='md:col-span-2 text-blue-600'>
             <BarChartDashboard
             budgetList={budgetList} 
             />
           </div>
-          <div className='text-blue-600'>
+          <div className='text-blue-600 grid gap-3'>
             {budgetList.map((budget,index)=>(
               <BudgetItem budget={budget} key={index} />
             ))}
