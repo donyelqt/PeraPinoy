@@ -1,13 +1,22 @@
 import { PiggyBankIcon, ReceiptCentIcon, ReceiptIcon, Wallet2 } from 'lucide-react'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function CardInfo({ budgetList }) {
 
+  const [totalBudget,setTotalBudget]=useState(0);
   useEffect(()=>{
     CalculateCardInfo();
   },[])
   const CalculateCardInfo=()=>{
     console.log(budgetList);
+    let totalBudget_=0;
+    let totalSpend_=0;
+
+    budgetList.forEach(element =>{
+      totalBudget_=totalBudget_+Number(element.amount)
+      totalSpend_=totalSpend_+element.totalSpend
+    });
+    console.log(totalBudget_,totalSpend_)
   }
   return (
     <div className='mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
