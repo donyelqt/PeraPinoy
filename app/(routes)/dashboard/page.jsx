@@ -6,6 +6,7 @@ import { db } from '../../../utils/dbConfig';
 import { desc, eq, getTableColumns, sql } from 'drizzle-orm';
 import { Budgets, Expenses } from '../../../utils/schema';
 import BarChartDashboard from './_components/BarChartDashboard'
+import BudgetItem from './budgets/_components/BudgetItem';
 
 function Dashboard() {
   const {user}=useUser();
@@ -46,7 +47,9 @@ function Dashboard() {
             />
           </div>
           <div className='text-blue-600'>
-            Other Content
+            {budgetList.map((budget,index)=>(
+              <BudgetItem budget={budget} key={index} />
+            ))}
           </div>
         </div>
     </div>
