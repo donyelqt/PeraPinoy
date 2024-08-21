@@ -41,7 +41,9 @@ function Dashboard() {
         <CardInfo budgetList={budgetList} />
         <div className='grid grid-cols-1 md:grid-cols-3 mt-6'>
           <div className='md:col-span-2 text-blue-600'>
-            <BarChartDashboard />
+            <BarChartDashboard
+            budgetList={budgetList} 
+            />
           </div>
           <div className='text-blue-600'>
             Other Content

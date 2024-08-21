@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BarChartDashboard() {
+function BarChartDashboard({budgetList}) {
   return (
     <div>BarChartDashboard</div>
   )
