@@ -4,7 +4,7 @@ import { Bar, BarChart, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } fro
 function BarChartDashboard({ budgetList }) {
     return (
         <div className='border rounded-lg p-10'>
-            <h2 className='text-tertiary font-bold text-3xl'>Expense Breakdown</h2>
+            <h2 className='text-tertiary font-bold text-3xl'>Expenses Breakdown</h2>
             <div className="w-full h-64">
             <ResponsiveContainer width="100%" height="100%">
             <BarChart
