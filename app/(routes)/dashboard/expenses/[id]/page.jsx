@@ -78,12 +78,12 @@ function ExpensesScreen({ params }) {
     return (
         <div className='text-tertiary p-10'>
             <div className='mt-4'>
-                <div className='flex items-center'>
+               {/* <div className='flex items-center'>
                     <h2 className='font-bold text-6xl'>Recent Expenses</h2>
                     <Image className="w-10 h-10 object-contain ml-4"
                         src={accounting}
                         alt="accounting" />
-                </div>
+                </div> */}
                 <ExpenseListTable expensesList={expensesList}
                     refreshData={() => getBudgetInfo()} />
             </div>

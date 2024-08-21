@@ -4,24 +4,31 @@ import { db } from '../../../../../../utils/dbConfig'
 import { Expenses } from '../../../../../../utils/schema'
 import { eq } from 'drizzle-orm'
 import { toast } from 'sonner'
+import { accounting } from '../../../../../../public'
+import Image from 'next/image'
 
 function ExpenseListTable({ expensesList, refreshData }) {
 
-    const deleteExpense=async(expense)=>{
-        const result=await db.delete(Expenses)
-        .where(eq(Expenses.id,expense.id))
-        .returning();
+    const deleteExpense = async (expense) => {
+        const result = await db.delete(Expenses)
+            .where(eq(Expenses.id, expense.id))
+            .returning();
 
 
-        if(result)
-        {
+        if (result) {
             toast.success('Expenses Deleted!');
             refreshData()
         }
     }
     return (
         <div className='mt-5'>
-            <div className='grid grid-cols-4 bg-slate-900 border p-2 text-white'>
+            <div className='flex items-center'>
+                <h2 className='font-bold text-6xl'>Recent Expenses</h2>
+                <Image className="w-10 h-10 object-contain ml-4"
+                    src={accounting}
+                    alt="accounting" />
+            </div>
+            <div className='grid grid-cols-4 bg-slate-900 border p-2 mt-3 text-white'>
                 <h2 className='font-bold'>Name</h2>
                 <h2 className='font-bold'>Amount</h2>
                 <h2 className='font-bold'>Date</h2>
@@ -33,8 +40,8 @@ function ExpenseListTable({ expensesList, refreshData }) {
                     <h2>{expenses.amount}</h2>
                     <h2>{expenses.createdAt}</h2>
                     <h2>
-                        <Trash2 className='text-red-600 cursor-pointer' 
-                        onClick={()=>deleteExpense(expenses)}
+                        <Trash2 className='text-red-600 cursor-pointer'
+                            onClick={() => deleteExpense(expenses)}
                         />
                     </h2>
                 </div>
