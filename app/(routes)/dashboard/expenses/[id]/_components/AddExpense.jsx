@@ -4,32 +4,34 @@ import { db } from '../../../../../../utils/dbConfig';
 import { Budgets, Expenses } from '../../../../../../utils/schema';
 import { toast } from 'sonner';
 import moment from 'moment';
+import { Loader } from 'lucide-react';
 
 
-function AddExpense({budgetId,user,refreshData}) {
+function AddExpense({ budgetId, user, refreshData }) {
 
     const [name, setName] = useState();
     const [amount, setAmount] = useState();
     const [loading, setLoading] = useState(false);
 
     // used to get add new expenses
-    const addNewExpense=async()=>{
-        const result=await db.insert(Expenses).values({
-            name:name,
-            amount:amount,
-            loading:loading,
-            budgetId:budgetId,
-            createdAt:moment().format('MM/DD/yyy')
-        }).returning({insertedId:Budgets.id});
+    const addNewExpense = async () => {
+        setLoading(true)
+        const result = await db.insert(Expenses).values({
+            name: name,
+            amount: amount,
+            loading: loading,
+            budgetId: budgetId,
+            createdAt: moment().format('MM/DD/yyy')
+        }).returning({ insertedId: Budgets.id });
 
         setAmount('');
         setName('');
-        setLoading('');
-        if(result)
-        {
+        if (result) {
+            setLoading(false)
             refreshData()
             toast.success('New Expenses Added!')
         }
+        setLoading(false);
     }
     return (
         <div className='border p-5 rounded-lg'>
@@ -51,8 +53,12 @@ function AddExpense({budgetId,user,refreshData}) {
                     onChange={(e) => setAmount(e.target.value)} />
             </div>
             <button disabled={!(name && amount)}
-            onClick={()=>addNewExpense()}
-                className='rounded-lg cursor-pointer bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring w-full mt-3'>Add Your New Expenses</button>
+                onClick={() => addNewExpense()}
+                className='rounded-lg cursor-pointer bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring w-full mt-3'>
+                {loading ?
+                    <Loader className='animate-spin' /> : "Add Your New Expenses"
+                }
+            </button>
         </div>
     )
 }
