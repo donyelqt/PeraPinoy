@@ -28,28 +28,31 @@ function CardInfo({ budgetList }) {
     {budgetList?.length>0? 
     <div className='mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
     <div className='p-7 border rounded-lg flex items-center justify-between hover:bg-slate-900'>
+    <PiggyBankIcon
+          className='bg-tertiary p-3 h-12 w-12 rounded-lg text-white' />
         <div>
           <h2 className='text-md text-white font-bold'>Total Budgets</h2>
           <h2 className='font-bold text-2xl text-blue-600'>₱{totalBudget}</h2>
         </div>
-        <PiggyBankIcon
-          className='bg-tertiary p-3 h-12 w-12 rounded-lg text-white' />
+        
       </div>
       <div className='p-7 border rounded-lg flex items-center justify-between hover:bg-slate-900'>
-        <div>
+      <ReceiptIcon
+          className='bg-tertiary p-3 h-12 w-12 rounded-lg text-white' />
+       <div>
           <h2 className='text-md text-white font-bold'>Total Spend</h2>
           <h2 className='font-bold text-2xl text-blue-600'>₱{totalSpend}</h2>
         </div>
-        <ReceiptIcon
-          className='bg-tertiary p-3 h-12 w-12 rounded-lg text-white' />
+        
       </div>
       <div className='p-7 border rounded-lg flex items-center justify-between hover:bg-slate-900'>
+      <Wallet2
+          className='bg-tertiary p-3 h-12 w-12 rounded-lg text-white' />
         <div>
           <h2 className='text-md text-white font-bold'>No. of Budgets</h2>
           <h2 className='font-bold text-2xl text-blue-600'>{budgetList?.length}</h2>
         </div>
-        <Wallet2
-          className='bg-tertiary p-3 h-12 w-12 rounded-lg text-white' />
+        
       </div>
       </div>
     :
