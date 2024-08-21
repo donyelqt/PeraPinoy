@@ -1,5 +1,5 @@
 import React from 'react'
-import { BarChart, XAxis } from 'recharts'
+import { BarChart, XAxis, YAxis } from 'recharts'
 
 function BarChartDashboard({budgetList}) {
   return (
@@ -15,7 +15,8 @@ function BarChartDashboard({budgetList}) {
             bottom:5
         }}
         >
-            <XAxis />
+            <XAxis dataKey="name" />
+            <YAxis />
 
         </BarChart>
     </div>
