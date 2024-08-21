@@ -43,6 +43,7 @@ function AddExpense({budgetId,user,refreshData}) {
                 <input className="flex text-blue-900 h-10 w-full rounded-md border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-blue-600 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
                   disabled:cursor-not-allowed disabled:opacity-50"
                     placeholder="e.g. 1000"
+                    value={amount}
                     onChange={(e) => setAmount(e.target.value)} />
             </div>
             <button disabled={!(name && amount)}
