@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react'
 function CardInfo({ budgetList }) {
 
   const [totalBudget,setTotalBudget]=useState(0);
+  const [totalSpend,setTotalSpend]=useState(0);
+  
   useEffect(()=>{
     budgetList&&CalculateCardInfo();
   },[budgetList])
