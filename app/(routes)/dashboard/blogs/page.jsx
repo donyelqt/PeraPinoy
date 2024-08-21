@@ -3,7 +3,7 @@ import React from 'react'
 function FinancialBlogsPage() {
     return (
         <section class="text-gray-400 bg-transparent body-font p-10">
-            <div className='font-bold text-tertiary text-6xl'>Financial Blogs</div>
+            <div className='font-bold text-tertiary text-6xl'>Financial Blogs test</div>
             <div class="container px-5 py-24 mx-auto">
                 <div class="flex flex-col">
                     <div class="h-1 bg-gray-800 rounded overflow-hidden">
@@ -21,7 +21,7 @@ function FinancialBlogsPage() {
                         </div>
                         <h2 class="text-xl font-medium title-font text-white mt-5">Shooting Stars</h2>
                         <p class="text-base leading-relaxed mt-2">Swag shoindxgoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-                        <a class="text-indigo-400 inline-flex items-center mt-3">Learn More
+                        <a class="text-blue-600 inline-flex items-center mt-3 cursor-pointer">Learn More
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg>
@@ -33,7 +33,7 @@ function FinancialBlogsPage() {
                         </div>
                         <h2 class="text-xl font-medium title-font text-white mt-5">The Catalyzer</h2>
                         <p class="text-base leading-relaxed mt-2">Swag shoindxigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-                        <a class="text-indigo-400 inline-flex items-center mt-3">Learn More
+                        <a class="text-blue-600 inline-flex items-center mt-3 cursor-pointer">Learn More
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg>
@@ -45,7 +45,7 @@ function FinancialBlogsPage() {
                         </div>
                         <h2 class="text-xl font-medium title-font text-white mt-5">The 400 Blows</h2>
                         <p class="text-base leading-relaxed mt-2">Swag shoindegoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-                        <a class="text-indigo-400 inline-flex items-center mt-3">Learn More
+                        <a class="text-blue-600 inline-flex items-center mt-3 cursor-pointer">Learn More
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg>
