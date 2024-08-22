@@ -1,5 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
-import { SparklesIcon } from "lucide-react";
+import { BotMessageSquare, SparklesIcon } from "lucide-react";
 
 
 
@@ -11,7 +11,7 @@ export function Chatbot() {
         className="bg-slate-900 w-full text-primary-foreground py-4 px-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="p-2 border bg-slate-900 rounded-full">
-            <SparklesIcon className="size-6 text-blue-600" />
+            <BotMessageSquare className="size-6 text-blue-600" />
           </div>
           <h2 className="text-lg font-medium">PeraPinoy - GPT</h2>
         </div>
@@ -19,7 +19,7 @@ export function Chatbot() {
       <div className="flex-1 overflow-y-auto p-6 space-y-4">
         <div className="flex items-start gap-4">
           <div className="p-2 border bg-slate-900 rounded-full">
-            <SparklesIcon className="size-5 text-blue-600" />
+            <BotMessageSquare className="size-5 text-blue-600" />
           </div>
           <div className="bg-yellow-600 text-white rounded-2xl p-4 max-w-[70%]">
             <p>Hello, how can I assist you today?</p>
