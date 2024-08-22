@@ -21,7 +21,7 @@ export function Chatbot() {
           <div className="p-2 border bg-slate-900 rounded-full">
             <SparklesIcon className="size-5 text-blue-600" />
           </div>
-          <div className="bg-tertiary text-white rounded-2xl p-4 max-w-[70%]">
+          <div className="bg-yellow-600 text-white rounded-2xl p-4 max-w-[70%]">
             <p>Hello, how can I assist you today?</p>
           </div>
         </div>
