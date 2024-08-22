@@ -29,7 +29,7 @@ export function Chatbot() {
         className="bg-primary w-full text-primary-foreground py-4 px-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Avatar className="w-8 h-8">
-            <AvatarImage src="/placeholder-user.jpg" alt="Chatbot Avatar" />
+            <AvatarImage className="rounded-full" src="/placeholder-user.jpg" alt="Chatbot Avatar" />
             <AvatarFallback>CB</AvatarFallback>
           </Avatar>
           <h2 className="text-lg font-medium">Chatbot</h2>
