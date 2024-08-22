@@ -1,8 +1,15 @@
+"use client"
 import React from 'react'
+import { Chatbot } from "./component/chatbot";
 
 function PeraPinoyGptPage() {
   return (
-    <div className='font-bold text-tertiary text-6xl p-10'>PeraPinoy - Gpt coming soon...</div>
+    <section>
+    <div className='font-bold text-tertiary text-6xl p-8'>PeraPinoy - Gpt coming soon...</div>
+    <div>
+        <Chatbot />
+    </div>
+    </section>
   )
 }
 
