@@ -34,7 +34,7 @@ export function Chatbot() {
               />
             </div>
             <p className='text-md text-slate-500 mt-4 text-center'>
-              Welcome to PeraPinoy - GPT! Ask me anything about you financial concerns.
+              Welcome to PeraPinoy - GPT! Ask me anything about your financial concerns.
             </p>
           </div>
         )
