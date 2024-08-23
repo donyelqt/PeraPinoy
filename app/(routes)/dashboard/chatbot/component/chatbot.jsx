@@ -18,7 +18,7 @@ export function Chatbot() {
       onSubmit={handleSubmit}
       className="flex flex-col h-[80vh] max-h-[800px] w-full p-3 bg-background rounded-2xl shadow-lg overflow-hidden">
       <header
-        className="bg-blue-600 w-full rounded-md text-primary-foreground py-4 px-6 flex items-center justify-between">
+        className="bg-primary w-full rounded-md text-primary-foreground py-4 px-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="p-2 border bg-slate-900 rounded-full">
             <BotMessageSquare className="size-6 text-blue-600" />
