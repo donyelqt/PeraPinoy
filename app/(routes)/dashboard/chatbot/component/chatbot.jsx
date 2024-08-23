@@ -15,7 +15,7 @@ export function Chatbot() {
       onSubmit={handleSubmit}
       className="flex flex-col h-[80vh] max-h-[800px] w-full p-3 bg-background rounded-2xl shadow-lg overflow-hidden">
       <header
-        className="bg-slate-300 w-full rounded-md text-primary-foreground py-4 px-6 flex items-center justify-between">
+        className="bg-blue-300 w-full rounded-md text-primary-foreground py-4 px-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="p-2 border bg-slate-900 rounded-full">
             <BotMessageSquare className="size-6 text-blue-600" />
@@ -49,7 +49,7 @@ export function Chatbot() {
               <div className="p-2 border bg-slate-900 rounded-full">
                 <BotMessageSquare className="size-5 text-blue-600" />
               </div>
-              <div className="bg-red-800  text-primary-foreground rounded-2xl p-4 max-w-[70%]">
+              <div className="bg-red-400  text-primary-foreground rounded-2xl p-4 max-w-[70%]">
                 <p>{message.content}</p>
               </div>
             </div>
