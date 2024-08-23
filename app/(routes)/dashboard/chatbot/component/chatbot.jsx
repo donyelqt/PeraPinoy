@@ -25,21 +25,25 @@ export function Chatbot() {
       </header>
 
       {
-          messages.length === 0 && (
-            <div className='flex flex-col justify-center items-center h-full'>
-            <BotMessageSquare className="size-10 text-blue-600" 
-            />
-            <p className='text-lg text-slate-300 mt-4'>
+        messages.length === 0 && (
+          <div className='flex flex-col justify-center items-center h-full'>
+            <div className="p-4 border bg-slate-900 rounded-full">
+              <BotMessageSquare className="text-blue-600"
+                height={80}
+                width={80}
+              />
+            </div>
+            <p className='text-lg text-slate-500 mt-4'>
               Welcome to PeraPinoy - GPT! Ask me anything about you financial concerns.
             </p>
-            </div>
-          )
-        }
+          </div>
+        )
+      }
 
       <div className="flex-1 overflow-y-auto p-6 space-y-4">
-        {messages.map((message) => 
+        {messages.map((message) =>
           message.role === "assistant" ? (
-            <div 
+            <div
               key={message.id}
               className="flex items-start gap-4">
               <div className="p-2 border bg-slate-900 rounded-full">
@@ -50,7 +54,7 @@ export function Chatbot() {
               </div>
             </div>
           ) : (
-            <div 
+            <div
               key={message.id}
               className="flex items-start gap-4 justify-end">
               <div className="bg-blue-800 text-primary-foreground rounded-2xl p-4 max-w-[70%]">
@@ -64,7 +68,7 @@ export function Chatbot() {
         <input
           placeholder="Type your message..."
           className="flex h-12 w-full rounded-lg border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-blue-600 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
-                  disabled:cursor-not-allowed disabled:opacity-50" 
+                  disabled:cursor-not-allowed disabled:opacity-50"
           value={input}
           onChange={handleInputChange}
         />
