@@ -20,7 +20,7 @@ export function Chatbot() {
           <div className="p-2 border bg-slate-900 rounded-full">
             <BotMessageSquare className="size-6 text-blue-600" />
           </div>
-          <h2 className="text-lg text-slate-300 font-medium">PeraPinoy - GPT</h2>
+          <h2 className="text-lg text-slate-300 font-medium">PeraPinoyGPT</h2>
         </div>
       </header>
 
@@ -34,7 +34,7 @@ export function Chatbot() {
               />
             </div>
             <p className='text-md text-slate-500 mt-4 text-center'>
-              Welcome to PeraPinoy - GPT! Ask me anything about your financial concerns.
+              Welcome to PeraPinoyGPT! Ask me anything about your financial concerns.
             </p>
           </div>
         )

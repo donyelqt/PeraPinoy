@@ -27,7 +27,7 @@ function SideNav() {
     },
     {
       id:4,
-      name:'PeraPinoy - GPT',
+      name:'PeraPinoyGPT',
       icon:Brain,
       path:'/dashboard/chatbot'
       
