@@ -1,12 +1,14 @@
 "use client"
 import { useChat } from 'ai/react'
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
-import { ArrowUp, BotMessageSquare, SparklesIcon } from "lucide-react";
+import { ArrowUp, BotMessageSquare, SparklesIcon, SquareIcon } from "lucide-react";
 
 
 
 export function Chatbot() {
-  const { messages, input, handleInputChange, handleSubmit } = useChat({
+  const { messages, input, handleInputChange, handleSubmit,
+    isLoading, stop
+  } = useChat({
     api: "/dashboard/chat/api",
   });
 
@@ -73,14 +75,30 @@ export function Chatbot() {
           rows={1}
           onChange={handleInputChange}
         />
-        <button
-          type="submit"
-          className="bg-primary rounded-full text-primary-foreground px-6 py-5 text-md font-medium shadow-sm hover:bg-yellow-600 focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-          disabled={!input}
-        >
-          <ArrowUp className="w-6 h-6" />
-          <span className="sr-only">Send</span>
-        </button>
+
+        {!isLoading ? (
+          <button
+            type="submit"
+            className="bg-primary rounded-full text-primary-foreground px-6 py-5 text-md font-medium shadow-sm hover:bg-yellow-600 focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+            disabled={!input || isLoading}
+          >
+            <ArrowUp className="w-6 h-6" />
+            <span className="sr-only">Send</span>
+          </button>
+        ) :
+          (
+            <button
+              type="button"
+              disabled={!isLoading}
+              onClick={stop}
+              className="bg-primary rounded-full text-primary-foreground px-6 py-5 text-md font-medium shadow-sm hover:bg-yellow-600 focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+              
+            >
+              <SquareIcon className="w-6 h-6" fill="white" />
+              <span className="sr-only">Send</span>
+            </button>
+          )}
+
       </div>
     </form>
   );
