@@ -2,6 +2,7 @@
 import { useChat } from 'ai/react'
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { ArrowUp, BotMessageSquare, SparklesIcon, SquareIcon } from "lucide-react";
+import Markdown from 'react-markdown'
 
 
 
@@ -51,8 +52,9 @@ export function Chatbot() {
               <div className="p-2 border bg-slate-900 rounded-full">
                 <BotMessageSquare className="size-5 text-blue-600" />
               </div>
-              <div className="bg-red-400  text-primary-foreground rounded-2xl p-4 max-w-[70%]">
-                <p>{message.content}</p>
+              <div className="bg-red-400 text-primary-foreground rounded-2xl p-4 max-w-[70%]">
+                {/*<p>{message.content}</p>*/}
+                <Markdown className='text-sm text-white'>{message.content}</Markdown>
               </div>
             </div>
           ) : (
