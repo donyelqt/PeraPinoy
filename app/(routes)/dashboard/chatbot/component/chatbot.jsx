@@ -27,13 +27,13 @@ export function Chatbot() {
       {
         messages.length === 0 && (
           <div className='flex flex-col justify-center items-center h-full'>
-            <div className="p-4 border bg-slate-900 rounded-full">
+            <div className="p-4 border bg-slate-900 rounded-full max-w-xs mx-auto">
               <BotMessageSquare className="text-blue-600"
-                height={80}
-                width={80}
+                height={70}
+                width={70}
               />
             </div>
-            <p className='text-lg text-slate-500 mt-4'>
+            <p className='text-md text-slate-500 mt-4 text-center'>
               Welcome to PeraPinoy - GPT! Ask me anything about you financial concerns.
             </p>
           </div>
