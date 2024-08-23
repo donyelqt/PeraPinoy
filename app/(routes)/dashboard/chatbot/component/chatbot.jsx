@@ -24,6 +24,18 @@ export function Chatbot() {
         </div>
       </header>
 
+      {
+          messages.length === 0 && (
+            <div className='flex flex-col justify-center items-center h-full'>
+            <BotMessageSquare className="size-10 text-blue-600" 
+            />
+            <p className='text-lg text-slate-300 mt-4'>
+              Welcome to PeraPinoy - GPT! Ask me anything about you financial concerns.
+            </p>
+            </div>
+          )
+        }
+
       <div className="flex-1 overflow-y-auto p-6 space-y-4">
         {messages.map((message) => 
           message.role === "assistant" ? (
