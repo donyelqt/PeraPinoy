@@ -23,7 +23,7 @@ function ExpenseListTable({ expensesList, refreshData }) {
     return (
         <div className='mt-5'>
             <div className='flex items-center'>
-                <h2 className='font-bold text-6xl text-tertiary'>Recent Expenses</h2>
+                <h2 className='font-bold text-5xl md:text-6xl lg:text-6xl text-tertiary'>Recent Expenses</h2>
                 <Image className="w-10 h-10 object-contain ml-4"
                     src={accounting}
                     alt="accounting" />
