@@ -13,17 +13,18 @@ export function Chatbot() {
     api: "/dashboard/chat/api",
   });
 
+  // h-[80vh]
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col h-[80vh] max-h-[800px] w-full p-3 bg-background rounded-2xl shadow-lg overflow-hidden">
+      className="flex flex-col h-screen max-h-[800px] w-full p-3 bg-background rounded-2xl shadow-lg overflow-hidden">
       <header
-        className="bg-primary w-full rounded-md text-primary-foreground py-4 px-6 flex items-center justify-between">
+        className="bg-slate-900 w-full rounded-md text-primary-foreground py-4 px-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="p-2 border bg-slate-900 rounded-full">
             <BotMessageSquare className="size-6 text-blue-600" />
           </div>
-          <h2 className="text-lg text-white font-medium">PeraPinoyGPT</h2>
+          <h2 className="text-lg text-slate-300 font-medium">PeraPinoyGPT</h2>
         </div>
       </header>
 
