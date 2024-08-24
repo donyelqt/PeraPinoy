@@ -76,7 +76,7 @@ function SideNav() {
           <div className='fixed bottom-10 p-5 flex gap-2
           items-center'>
             <UserButton />
-            Profile
+            User Profile
           </div>
     </div>
   )
