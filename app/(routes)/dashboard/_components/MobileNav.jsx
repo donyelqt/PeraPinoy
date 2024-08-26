@@ -54,15 +54,15 @@ function MobileNav() {
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
-                <div className={`fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-95 z-50 ${isOpen ? 'block' : 'hidden'} lg:hidden`} id="navbar-hamburger">
+                <div className={`fixed top-0 left-0 w-[70%] h-full bg-gray-900 bg-opacity-95 z-50 ${isOpen ? 'block' : 'hidden'} lg:hidden`} id="navbar-hamburger">
                     <nav className='h-full p-4 text-blue-600'>
-                        <div className='p-8 pb-2 flex justify-between items-center'>
+                        <div className='p-2 pb-2 flex justify-between items-center'>
                             <Image src={'/PeraPinoy1.png'} alt='logo' width={100} height={80} />
                             <button
                                 onClick={toggleMenu}
                                 className="text-white"
                             >
-                                <XIcon size={30} className='' />
+                                <XIcon size={30} className='hover:text-red-600' />
                             </button>
                         </div>
                         <div className='mt-5'>
