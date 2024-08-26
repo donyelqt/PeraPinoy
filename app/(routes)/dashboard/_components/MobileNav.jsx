@@ -36,7 +36,7 @@ function MobileNav() {
     ];
 
     return (
-        <nav className="bg-transparent dark:bg-gray-800 dark:border-gray-700">
+        <nav className="bg-transparent lg:hidden md:hidden dark:bg-gray-800 dark:border-gray-700">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
@@ -45,7 +45,7 @@ function MobileNav() {
                     onClick={toggleMenu}
                     data-collapse-toggle="navbar-hamburger"
                     type="button"
-                    className="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-blue-600 rounded-lg hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden"
+                    className="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-blue-600 rounded-lg hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="navbar-hamburger"
                     aria-expanded={isOpen ? "true" : "false"}
                 >
@@ -54,7 +54,7 @@ function MobileNav() {
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
-                <div className={`fixed top-0 left-0 w-[70%] h-full bg-gray-900 bg-opacity-95 z-50 ${isOpen ? 'block' : 'hidden'}`} id="navbar-hamburger">
+                <div className={`fixed top-0 left-0 w-[70%] h-full bg-gray-900 bg-opacity-95 z-50 ${isOpen ? 'block' : 'hidden'} lg:hidden`} id="navbar-hamburger">
                     <nav className='h-full p-4 text-blue-600'>
                         <div className='p-2 pb-2 flex justify-between items-center'>
                             <Image src={'/PeraPinoy1.png'} alt='logo' width={100} height={80} />
