@@ -62,7 +62,7 @@ function MobileNav() {
                                 onClick={toggleMenu}
                                 className="text-white"
                             >
-                                <XIcon size={30} className='hover:text-red-600' />
+                                <XIcon size={30} className='hover:text-red-600 text-primary' />
                             </button>
                         </div>
                         <div className='mt-5'>
