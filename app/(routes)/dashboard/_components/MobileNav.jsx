@@ -81,9 +81,9 @@ function MobileNav() {
                                 </Link>
                             ))}
                         </div>
-                        <div className='fixed bottom-10 p-5 flex gap-2 items-center'>
+                        <div className='fixed bottom-10 p-5 flex gap-2 items-center text-blue-600'>
                             <UserButton afterSignOutUrl='/' />
-                            <span className="text-white">Profile</span>
+                            <span className="text-blue-600">Profile</span>
                         </div>
                     </nav>
                 </div>
