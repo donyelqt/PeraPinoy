@@ -1,5 +1,7 @@
 import { UserButton } from '@clerk/nextjs'
 import React from 'react'
+import SideNav from './SideNav'
+import MobileNav from './MobileNav'
 
 function DashboardHeader() {
   return (
@@ -8,7 +10,7 @@ function DashboardHeader() {
             
         </div>
         <div>
-            <UserButton afterSignOutUrl='/' />
+            <MobileNav />
         </div>
     </div>
   )
