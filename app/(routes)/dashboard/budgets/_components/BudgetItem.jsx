@@ -16,7 +16,7 @@ function BudgetItem({ budget }) {
                     <div className='flex gap-2 items-center'>
                         <h2 className='text-2xl p-3 px-4 bg-yellow-500 rounded-xl'>{budget?.icon}</h2>
                         <div>
-                            <h2 className='text-white font-bold'>{budget.name}</h2>
+                            <h2 className='text-white text-sm font-bold'>{budget.name}</h2>
                             <h2 className='text-gray-500 text-sm'>{budget.totalItem} Items</h2>
                         </div>
                     </div>
