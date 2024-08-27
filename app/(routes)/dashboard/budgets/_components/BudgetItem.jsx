@@ -28,7 +28,7 @@ function BudgetItem({ budget }) {
                         <h2 className='text-xs text-red-600'>₱{budget.totalSpend ? budget.totalSpend : 0} Expense</h2>
                         <h2 className='text-xs text-slate-400'>₱{budget.amount - budget.totalSpend} Balance</h2>
                     </div>
-                    <div className='w-full bg-slate-300 h-2 rounded-full'>
+                    <div className='w-full bg-red-400 h-2 rounded-full'>
                         <div className=' bg-blue-600 h-2 rounded-full'
                             style={{
                                 width: `${calculateProgressPerc()}%`
