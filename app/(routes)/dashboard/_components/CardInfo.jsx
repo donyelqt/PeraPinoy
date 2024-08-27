@@ -42,7 +42,7 @@ function CardInfo({ budgetList }) {
             key="icon"
               className='bg-tertiary p-3 h-12 w-12 rounded-lg text-white' />
             <div>
-              <h2 className='text-md text-white font-bold'>Total Spend</h2>
+              <h2 className='text-md text-white font-bold'>Total Expense</h2>
               <h2 className='font-bold text-2xl text-blue-600'>₱{totalSpend}</h2>
             </div>
 
