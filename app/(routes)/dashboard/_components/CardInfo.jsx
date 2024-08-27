@@ -30,7 +30,7 @@ function CardInfo({ budgetList }) {
           <div className='p-7 border rounded-lg flex items-center justify-between hover:bg-slate-900'>
             <PiggyBankIcon
             key="icon"
-              className='bg-tertiary p-3 h-12 w-12 rounded-lg text-white' />
+              className='bg-red-600 p-3 h-12 w-12 rounded-lg text-white' />
             <div>
               <h2 className='text-md text-white font-bold'>Total Budget</h2>
               <h2 className='font-bold text-2xl text-blue-600'>₱{totalBudget}</h2>
@@ -40,7 +40,7 @@ function CardInfo({ budgetList }) {
           <div className='p-7 border rounded-lg flex items-center justify-between hover:bg-slate-900'>
             <ReceiptIcon
             key="icon"
-              className='bg-tertiary p-3 h-12 w-12 rounded-lg text-white' />
+              className='bg-red-600 p-3 h-12 w-12 rounded-lg text-white' />
             <div>
               <h2 className='text-md text-white font-bold'>Total Expense</h2>
               <h2 className='font-bold text-2xl text-blue-600'>₱{totalSpend}</h2>
@@ -49,7 +49,7 @@ function CardInfo({ budgetList }) {
           </div>
           <div className='p-7 border rounded-lg flex items-center justify-between hover:bg-slate-900'>
             <Wallet2
-              className='bg-tertiary p-3 h-12 w-12 rounded-lg text-white' />
+              className='bg-red-600 p-3 h-12 w-12 rounded-lg text-white' />
             <div>
               <h2 className='text-md text-white font-bold'>Budget Count No.</h2>
               <h2 className='font-bold text-2xl text-blue-600'>{budgetList?.length}</h2>
