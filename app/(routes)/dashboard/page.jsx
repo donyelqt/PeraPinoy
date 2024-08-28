@@ -62,7 +62,7 @@ function Dashboard() {
       <div className='grid grid-cols-1 md:grid-cols-3 mt-6 gap-5'>
         <div className='text-blue-600 grid gap-5'>
           <div className='flex items-center'>
-            <h2 className='text-tertiary font-bold text-4xl'>Recent Budgets</h2>
+            <h2 className='text-tertiary font-bold text-3xl md:text-4xl lg:text-4xl'>Recent Budgets</h2>
             <Image className="w-10 h-10 object-contain ml-4"
               src={calcu}
               alt="calculator" />

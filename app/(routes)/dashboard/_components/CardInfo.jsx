@@ -25,7 +25,7 @@ function CardInfo({ budgetList }) {
   }
   return (
     <div className='mt-4'>
-      <p className='text-tertiary font-bold text-3xl'>User Financial Information</p>
+      <p className='text-tertiary font-bold flex items-center justify-center text-3xl md:text-4xl lg:text-4xl'>Financial Information</p>
       {budgetList?.length > 0 ?
         <div className='mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
           <div className='p-7 border rounded-lg flex items-center justify-between hover:bg-slate-900'>
