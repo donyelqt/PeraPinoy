@@ -3,6 +3,6 @@ import calcu from "./calcu.png"
 import coins from "./coins.png"
 import expense from "./expense.png"
 import accounting from "./accounting.png"
+import userfinanceinfo from "./userfinanceinfo.png"
 
-
-export {adddocs, calcu, coins, expense, accounting}
+export {adddocs, calcu, coins, expense, accounting, userfinanceinfo}
