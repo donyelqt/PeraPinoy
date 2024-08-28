@@ -1,5 +1,5 @@
 import React from 'react'
-import { Bar, BarChart, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import { Bar, BarChart, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 
 function BarChartDashboard({ budgetList }) {
     return (
@@ -7,7 +7,7 @@ function BarChartDashboard({ budgetList }) {
             <h2 className='text-tertiary font-bold text-3xl'>Expenses Breakdown</h2>
             <div className="w-full h-64">
             <ResponsiveContainer width="100%" height="100%">
-            <BarChart
+            <LineChart
                 width={500}
                 height={300}
                 data={budgetList}
@@ -19,10 +19,9 @@ function BarChartDashboard({ budgetList }) {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="totalSpend" name="Total Expenses" stackId="a" fill='#0000cd'  /> //fill='#4169e1'
-                <Bar dataKey="amount" name="Amount"  stackId="a" fill='#f08080' /> //fill='#87cefa'
-
-            </BarChart>
+                <Line type='monotoneX' dataKey="totalSpend" name="Total Expenses" stackId="a" stroke='#0000cd'  /> //fill='#4169e1'
+                <Line type='monotoneY' dataKey="amount" name="Budgets"  stackId="a" stroke='#f08080' /> //fill='#87cefa'
+            </LineChart>
             </ResponsiveContainer>
             </div>
         </div>
