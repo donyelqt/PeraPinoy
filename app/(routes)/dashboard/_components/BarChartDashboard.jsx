@@ -4,7 +4,7 @@ import { Bar, BarChart, Legend, Line, LineChart, ResponsiveContainer, Tooltip, X
 function BarChartDashboard({ budgetList }) {
     return (
         <div className='border rounded-lg p-10 hover:bg-slate-900'>
-            <h2 className='text-tertiary font-bold text-3xl'>Expenses Breakdown</h2>
+            <h2 className='text-tertiary font-bold text-3xl'>Expenses Statistics</h2>
             <div className="w-full h-64">
             <ResponsiveContainer width="100%" height="100%">
             <LineChart
