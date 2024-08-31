@@ -85,7 +85,7 @@ export function Chatbot() {
             className="bg-primary rounded-full text-primary-foreground px-6 py-5 text-md font-medium shadow-sm hover:bg-yellow-600 focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
             disabled={!input || isLoading}
           >
-            <ArrowUp className="w-6 h-6" />
+            <ArrowUp className="w-5 h-5" />
             <span className="sr-only">Send</span>
           </button>
         ) :
@@ -97,7 +97,7 @@ export function Chatbot() {
               className="bg-primary rounded-full text-primary-foreground px-6 py-5 text-md font-medium shadow-sm hover:bg-yellow-600 focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
               
             >
-              <SquareIcon className="w-6 h-6" fill="white" />
+              <SquareIcon className="w-5 h-5" fill="white" />
               <span className="sr-only">Send</span>
             </button>
           )}
