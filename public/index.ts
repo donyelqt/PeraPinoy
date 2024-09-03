@@ -4,5 +4,6 @@ import coins from "./coins.png"
 import expense from "./expense.png"
 import accounting from "./accounting.png"
 import userfinanceinfo from "./userfinanceinfo.png"
+import membercard from "./membercard.png"
 
-export {adddocs, calcu, coins, expense, accounting, userfinanceinfo}
+export {adddocs, calcu, coins, expense, accounting, userfinanceinfo, membercard}
