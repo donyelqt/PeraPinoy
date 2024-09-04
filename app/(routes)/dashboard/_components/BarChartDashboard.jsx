@@ -15,7 +15,7 @@ function BarChartDashboard({ budgetList }) {
                     top:7
                 }}
             >
-                <XAxis dataKey="amount" />
+                <XAxis dataKey="name" />
                 <YAxis dataKey="totalSpend" />
                 <Tooltip />
                 <Legend />
