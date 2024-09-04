@@ -19,12 +19,12 @@ export function Chatbot() {
       onSubmit={handleSubmit}
       className="flex flex-col h-screen max-h-[800px] w-full p-3 bg-background rounded-2xl shadow-lg overflow-hidden">
       <header
-        className="bg-tertiary w-full rounded-md text-primary-foreground py-4 px-6 flex items-center justify-between">
+        className="bg-blue-950 w-full rounded-md text-primary-foreground py-4 px-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="p-2 border bg-slate-900 rounded-full">
             <BotMessageSquare className="size-6 text-blue-600" />
           </div>
-          <h2 className="text-lg text-dark font-medium">PeraPinoyGPT</h2>
+          <h2 className="text-lg text-white font-medium">PeraPinoyGPT</h2>
         </div>
       </header>
 
