@@ -56,7 +56,7 @@ function AddExpense({ budgetId, user, refreshData }) {
                 onClick={() => addNewExpense()}
                 className='rounded-lg cursor-pointer bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring w-full mt-3 flex justify-center items-center'>
                 {loading ?
-                    <Loader className='animate-spin' /> : "Add Your New Expenses"
+                    <Loader className='animate-spin' /> : "Add New"
                 }
             </button>
         </div>
