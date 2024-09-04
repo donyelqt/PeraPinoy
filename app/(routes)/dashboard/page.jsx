@@ -57,7 +57,7 @@ function Dashboard() {
   return (
     <div className="p-10 space-y-8">
       <div className="bg-blue-950 text-white p-7 rounded-3xl shadow-lg">
-        <h2 className='font-bold text-tertiary text-2xl md:text-4xl lg:text-4xl'><span className='text-blue-600'>Hello, </span>{user?.fullName}!👋</h2>
+        <h2 className='font-bold text-tertiary text-2xl md:text-4xl lg:text-4xl'><span className='text-red-800'>Hello, </span>{user?.fullName}!👋</h2>
         <p className='text-gray-500'>Empower Your Finances with PeraPinoy!</p>
       </div>
       <CardInfo budgetList={budgetList} />
