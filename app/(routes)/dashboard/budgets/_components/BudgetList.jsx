@@ -43,7 +43,7 @@ function BudgetList() {
         <BudgetItem budget={budget} />
       ))
     :[1,2,3,4,5].map((item,index)=>(
-      <div key={index} className='w-full bg-slate-900 rounded-lg
+      <div key={index} className='w-full bg-slate-900 rounded-3xl
       h-[150px] animate-pulse'>
 
       </div>
