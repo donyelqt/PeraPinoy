@@ -15,12 +15,12 @@ function BarChartDashboard({ budgetList }) {
                     top:7
                 }}
             >
-                <XAxis dataKey="name" />
-                <YAxis />
+                <XAxis dataKey="amount" />
+                <YAxis dataKey="totalSpend" />
                 <Tooltip />
                 <Legend />
-                <Line type='monotoneX' dataKey="totalSpend" name="Total Expenses" stackId="a" stroke='#4169e1'  /> //fill='#4169e1'
-                <Line type='monotoneY' dataKey="amount" name="Budgets"  stackId="a" stroke='#f08080' /> //fill='#87cefa'
+                <Line type='monotoneY' dataKey="totalSpend" name="Total Expenses" stackId="a" stroke='#4169e1'  /> //fill='#4169e1'
+                <Line type='monotoneX' dataKey="amount" name="Budgets"  stackId="a" stroke='#f08080' /> //fill='#87cefa'
             </LineChart>
             </ResponsiveContainer>
             </div>
