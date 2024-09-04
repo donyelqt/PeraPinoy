@@ -5,7 +5,7 @@ function BarChartDashboard({ budgetList }) {
     return (
         <div className='border rounded-lg p-10 hover:bg-slate-900'>
             <h2 className='text-tertiary font-bold text-3xl'>Expenses Statistics</h2>
-            <div className="w-full h-64">
+            <div className="w-full h-80">
             <ResponsiveContainer width="100%" height="100%">
             <LineChart
                 width={500}
