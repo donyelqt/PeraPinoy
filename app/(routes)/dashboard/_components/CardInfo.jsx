@@ -1,4 +1,4 @@
-import { PiggyBankIcon, ReceiptCentIcon, ReceiptIcon, Wallet2 } from 'lucide-react'
+import { PiggyBankIcon, Receipt, Wallet2 } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 import { userfinanceinfo } from '../../../../public';
 import Image from 'next/image';
@@ -28,7 +28,7 @@ function CardInfo({ budgetList }) {
   return (
     <div className='mt-4'>
       <div className='flex'>
-        <p className='text-tertiary font-bold text-3xl md:text-4xl lg:text-4xl'>Financial Information</p>
+        <p className='text-tertiary font-bold text-3xl md:text-4xl lg:text-4xl'>Financial Overview</p>
         <Image className="w-10 h-10 object-contain ml-4"
           src={userfinanceinfo}
           alt="userfinanceinfo" />
@@ -46,7 +46,7 @@ function CardInfo({ budgetList }) {
 
           </div>
           <div className='p-7 border rounded-3xl flex items-center justify-between hover:bg-slate-900'>
-            <ReceiptIcon
+            <Receipt
               key="icon"
               className='bg-red-700 p-3 h-20 w-20 rounded-full text-white' />
             <div>

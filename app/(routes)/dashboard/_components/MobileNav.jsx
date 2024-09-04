@@ -71,7 +71,7 @@ function MobileNav() {
                                     <h2 className={`flex gap-2 items-center
                                         text-blue-600 font-medium
                                         mb-2 
-                                        p-4 cursor-pointer rounded-lg
+                                        p-4 cursor-pointer rounded-3xl
                                         hover:text-blue-600 hover:bg-dark
                                         ${path === menu.path && 'text-blue-600 bg-dark'}
                                     `}>
