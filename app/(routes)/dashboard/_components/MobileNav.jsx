@@ -1,5 +1,5 @@
 "use client"
-import { UserButton } from '@clerk/nextjs';
+import { UserButton, useUser } from '@clerk/nextjs';
 import { BookOpenCheck, Brain, LayoutDashboard, LucideShieldPlus, PiggyBankIcon, ReceiptIcon, XIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,6 +7,8 @@ import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
 function MobileNav() {
+    const { user } = useUser();
+
     const [isOpen, setIsOpen] = useState(false);
     const path = usePathname();
 
@@ -81,9 +83,9 @@ function MobileNav() {
                                 </Link>
                             ))}
                         </div>
-                        <div className='fixed bottom-10 p-5 flex gap-2 items-center'>
+                        <div className='fixed bottom-10 p-4 flex gap-2 items-center'>
                             <UserButton afterSignOutUrl='/' />
-                            <span className="text-white font-semibold">User Profile</span>
+                            <span className='text-slate-300 text-sm semi-bold'>{user?.fullName}</span>
                         </div>
                     </nav>
                 </div>

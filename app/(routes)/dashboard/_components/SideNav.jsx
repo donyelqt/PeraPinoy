@@ -1,5 +1,5 @@
 "use client"
-import { UserButton } from '@clerk/nextjs';
+import { UserButton, useUser } from '@clerk/nextjs';
 import { Book, BookOpenCheck, Brain, BrainCog, LayoutDashboard, LayoutGrid, LucideShieldPlus, Menu, MenuSquare, PiggyBankIcon, ReceiptIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,6 +8,8 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 function SideNav() {
+  const { user } = useUser();
+
   const menuList = [
     {
       id: 1,
@@ -77,10 +79,10 @@ function SideNav() {
           </Link>
         ))}
       </div>
-      <div className='fixed bottom-10 p-5 flex gap-2
+      <div className='fixed bottom-10 p-4 flex gap-2
           items-center'>
         <UserButton afterSignOutUrl='/' />
-        <span className="text-white font-semibold">User Profile</span>
+        <span className='text-slate-300 text-sm semi-bold'>{user?.fullName}</span>
       </div>
     </nav>
   )
