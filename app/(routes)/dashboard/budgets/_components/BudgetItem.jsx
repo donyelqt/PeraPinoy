@@ -14,8 +14,8 @@ function BudgetItem({ budget }) {
             <div className='p-5 border rounded-3xl hover:bg-slate-900 cursor-pointer h-[160px]'>
                 <div className='flex gap-2 items-center justify-between'>
                     <div>
-                    <h2 className='font-bold text-blue-600 text-lg'>₱{budget.amount}</h2>
-                    <h2 className='text-sm text-gray-500 font-semibold'>Amount</h2>
+                        <h2 className='font-bold text-blue-600 text-lg'>₱{budget.amount}</h2>
+                        <h2 className='text-sm text-gray-500 font-semibold'>Amount</h2>
                     </div>
                     <div className='flex gap-2 items-center'>
                         <div className='text-right'>
