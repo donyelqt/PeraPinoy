@@ -28,7 +28,7 @@ function CardInfo({ budgetList }) {
   return (
     <div className='mt-4'>
       <div className='flex'>
-        <p className='text-tertiary font-bold text-3xl md:text-4xl lg:text-4xl'>Financial Overview</p>
+        <p className='text-tertiary font-bold text-3xl md:text-4xl lg:text-4xl'>Overview</p>
         <Image className="w-10 h-10 object-contain ml-4"
           src={userfinanceinfo}
           alt="userfinanceinfo" />
