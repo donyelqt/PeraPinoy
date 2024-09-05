@@ -67,7 +67,7 @@ function CreateBudget({ refreshData }) {
               <DialogDescription>
                 <div className="flex justify-end mb-2">
                   <button className="text-gray-500 hover:text-red-700" onClick={() => setIsOpen(false)}>
-                    <XIcon className="w-5 h-5" />
+                    <XIcon className="w-6 h-6" />
                   </button>
                 </div>
                 <div className="mt-5">
