@@ -62,8 +62,8 @@ function CreateBudget({ refreshData }) {
         </DialogTrigger>
         <DialogPortal>
           <DialogOverlay className="fixed inset-0 bg-black/50">
-            <DialogContent className="fixed left-1/2 top-1/2 w-full -translate-x-1/2 p-4 -translate-y-1/2 rounded-3xl text-gray-900 shadow max-w-lg bg-dark2">
-              <DialogTitle className="fixed text-lg font-bold text-gray-400 bg-dark2 mb-2 max-w-lg">Create New Budget</DialogTitle>
+            <DialogContent className="fixed left-1/2 top-1/2 w-full -translate-x-1/2 p-4 -translate-y-1/2 rounded-3xl shadow max-w-lg bg-dark2">
+              <DialogTitle className="fixed text-lg font-bold text-blue-600 bg-dark2 mb-2 max-w-lg">Create New Budget</DialogTitle>
               <DialogDescription>
                 <div className="flex justify-end mb-2">
                   <button className="text-gray-500 hover:text-red-700" onClick={() => setIsOpen(false)}>
