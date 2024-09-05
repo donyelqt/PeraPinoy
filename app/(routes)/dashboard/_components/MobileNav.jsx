@@ -1,6 +1,6 @@
 "use client"
 import { UserButton, useUser } from '@clerk/nextjs';
-import { BookOpenCheck, Brain, LayoutDashboard, LucideShieldPlus, PiggyBankIcon, ReceiptIcon, XIcon } from 'lucide-react';
+import { BookOpenCheck, BotMessageSquare, Brain, LayoutDashboard, LucideShieldPlus, PiggyBankIcon, ReceiptIcon, XIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -32,7 +32,7 @@ function MobileNav() {
         { id: 1, name: 'Dashboard', icon: LayoutDashboard, path: '/dashboard' },
         { id: 2, name: 'Budget Creation', icon: PiggyBankIcon, path: '/dashboard/budgets' },
         { id: 3, name: 'Expense Tracking', icon: ReceiptIcon, path: '/dashboard/expenses' },
-        { id: 4, name: 'PeraPinoyGPT', icon: Brain, path: '/dashboard/chatbot' },
+        { id: 4, name: 'PeraPinoyGPT', icon: BotMessageSquare, path: '/dashboard/chatbot' },
         { id: 5, name: 'Financial Blogs', icon: BookOpenCheck, path: '/dashboard/blogs' },
         { id: 6, name: 'Premium', icon: LucideShieldPlus, path: '/dashboard/premium' }
     ];
