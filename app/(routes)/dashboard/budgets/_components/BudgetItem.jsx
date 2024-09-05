@@ -13,15 +13,16 @@ function BudgetItem({ budget }) {
         <Link href={`/dashboard/expenses/${budget.id}`} >
             <div className='p-5 border rounded-3xl hover:bg-slate-900 cursor-pointer h-[160px]'>
                 <div className='flex gap-2 items-center justify-between'>
+                    <h2 className='font-bold text-blue-600 text-lg'>₱{budget.amount}</h2>
                     <div className='flex gap-2 items-center'>
-                        <h2 className='text-2xl p-3 px-4 bg-tertiary rounded-xl'>{budget?.icon}</h2>
-                        <div>
+                        <div className='text-right'>
                             <h2 className='text-white text-sm font-bold'>{budget.name}</h2>
                             <h2 className='text-gray-500 text-sm'>{budget.totalItem} Items</h2>
                         </div>
+                        <h2 className='text-2xl p-3 px-4 bg-tertiary rounded-xl'>{budget?.icon}</h2>
                     </div>
-                    <h2 className='font-bold text-blue-600 text-lg'> ₱{budget.amount}</h2>
                 </div>
+
 
                 <div className='mt-5'>
                     <div className='flex items-center justify-between mb-3'>
