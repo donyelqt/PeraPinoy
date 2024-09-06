@@ -1,6 +1,6 @@
 "use client"
 import { UserButton, useUser } from '@clerk/nextjs';
-import { Book, BookOpenCheck, BotMessageSquare, Brain, BrainCog, LayoutDashboard, LayoutGrid, LucideShieldPlus, Menu, MenuSquare, PiggyBankIcon, ReceiptIcon } from 'lucide-react';
+import { Book, BookOpenCheck, BotMessageSquare, Brain, BrainCog, LayoutDashboard, LayoutGrid, LucideShieldPlus, Menu, MenuSquare, PiggyBankIcon, ReceiptIcon, User, User2, UserCheck2 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -81,7 +81,7 @@ function SideNav() {
       </div>
       <div className='fixed bottom-5 p-14 flex gap-1
           items-center'>
-        <span className='text-tertiary rounded-2xl mb-2 text-sm font-bold bg-dark p-2 flex items-center justify-center'>User Profile</span>
+        <span className='text-blue-600 rounded-2xl mb-2 text-sm font-bold bg-dark p-2 flex items-center justify-center'><User2 className='h-5 w-5' /> User Profile</span>
       </div>
       <div className='fixed bottom-10 p-4 flex gap-2
           items-center'>
