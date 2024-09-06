@@ -11,7 +11,7 @@ function BudgetItem({ budget }) {
     }
     return (
         <Link href={`/dashboard/expenses/${budget.id}`} >
-            <div className='p-5 border rounded-3xl hover:bg-slate-900 cursor-pointer h-[160px]'>
+            <div className='p-5 border rounded-3xl hover:bg-slate-900 cursor-pointer h-[210px]'>
                 <div className='flex gap-2 items-center justify-between'>
                     <div>
                         <h2 className='font-bold text-blue-600 text-lg'>₱{budget.amount}</h2>
@@ -29,11 +29,47 @@ function BudgetItem({ budget }) {
 
                 <div className='mt-5'>
                     <div className='flex items-center justify-between mb-3'>
-                        <h2 className='text-xs text-red-600'>₱{budget.totalSpend ? budget.totalSpend : 0} Expense</h2>
-                        <h2 className='text-xs text-slate-400'>₱{budget.amount - budget.totalSpend} Balance</h2>
+                        <div className="relative w-16 h-16">
+                            {/* SVG for Circular Progress */}
+                            <svg className="w-full h-full transform text-right -rotate-90">
+                                <circle
+                                    className="text-blue-500"
+                                    strokeWidth="4"
+                                    stroke="currentColor"
+                                    fill="transparent"
+                                    r="30"
+                                    cx="32"
+                                    cy="32"
+                                />
+                                <circle
+                                    className="text-red-500"
+                                    strokeWidth="4"
+                                    strokeDasharray="188"
+                                    strokeDashoffset={188 - (188 * (budget.totalSpend / budget.amount))}
+                                    strokeLinecap="round"
+                                    stroke="currentColor"
+                                    fill="transparent"
+                                    r="30"
+                                    cx="32"
+                                    cy="32"
+                                />
+                            </svg>
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <h2 className="text-xs font-bold text-gray-500">
+                                    {Math.round((budget.totalSpend / budget.amount) * 100)}%
+                                </h2>
+                            </div>
+                        </div>
+
+                        {/* Expense and Balance Info */}
+                        <div>
+                            <h2 className='text-xs text-red-500'>₱{budget.totalSpend ? budget.totalSpend : 0} Expense</h2>
+                            <h2 className='text-xs text-blue-300'>₱{budget.amount - budget.totalSpend} Balance</h2>
+                        </div>
                     </div>
-                    <div className='w-full bg-red-400 h-2 rounded-full'>
-                        <div className=' bg-blue-600 h-2 rounded-full'
+
+                    <div className='w-full bg-blue-500 h-2 rounded-full'>
+                        <div className=' bg-red-500 h-2 rounded-full'
                             style={{
                                 width: `${calculateProgressPerc()}%`
                             }}
