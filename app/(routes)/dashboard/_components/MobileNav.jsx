@@ -84,7 +84,7 @@ function MobileNav() {
                             ))}
                         </div>
                         <div className='fixed bottom-5 p-14 flex gap-1items-center'>
-                            <span className='text-tertiary rounded-2xl mb-2 text-sm font-bold bg-blue-950 p-2 flex items-center justify-center'>User Profile</span>
+                            <span className='text-tertiary rounded-2xl mb-2 text-sm font-bold bg-dark p-2 flex items-center justify-center'>User Profile</span>
                         </div>
                         <div className='fixed bottom-10 p-4 flex gap-2 items-center'>
                             <UserButton afterSignOutUrl='/' />
