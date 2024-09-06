@@ -79,9 +79,9 @@ function SideNav() {
           </Link>
         ))}
       </div>
-      <div className='fixed bottom-5 p-14 flex gap-1
+      <div className='fixed bottom-5 p-12 flex gap-1
           items-center'>
-        <span className='text-blue-600 rounded-2xl mb-2 text-sm font-bold bg-dark p-2 flex items-center justify-center'><User2 className='h-5 w-5' /> User Profile</span>
+        <span className='text-blue-600 rounded-2xl mb-4 text-sm font-bold bg-dark p-2 flex items-center justify-center'><User2 className='h-5 w-5' /> User Profile</span>
       </div>
       <div className='fixed bottom-10 p-4 flex gap-2
           items-center'>
