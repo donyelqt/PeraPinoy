@@ -80,7 +80,8 @@ function CreateBudget({ refreshData }) {
                   >
                     {emojiIcon}
                   </button>
-                  <div className="absolute w-full h-full z-10 flex justify-center items-center inset-x-10 md:inset-x-28 lg:inset-28">
+                  {/*flex justify-center items-center inset-x-10 md:inset-x-28 lg:inset-28*/}
+                  <div className="absolute z-10 flex justify-center items-center inset-x-10 md:inset-x-28 lg:inset-28">
                     <EmojiPicker
                       theme="dark"
                       open={openEmojiPicker}
