@@ -55,7 +55,7 @@ function BudgetItem({ budget }) {
                                 />
                             </svg>
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <h2 className="text-xs font-bold text-gray-500">
+                                <h2 className="text-xs font-bold text-yellow-200">
                                     {Math.round((budget.totalSpend / budget.amount) * 100)}%
                                 </h2>
                             </div>
