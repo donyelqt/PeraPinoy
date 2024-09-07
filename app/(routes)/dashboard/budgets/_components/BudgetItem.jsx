@@ -34,7 +34,7 @@ function BudgetItem({ budget }) {
                             <svg className="w-full h-full transform -rotate-180">
                                 <circle
                                     className="text-blue-400"
-                                    strokeWidth="5"
+                                    strokeWidth="4"
                                     stroke="currentColor"
                                     fill="transparent"
                                     r="30"
@@ -43,7 +43,7 @@ function BudgetItem({ budget }) {
                                 />
                                 <circle
                                     className="text-red-500"
-                                    strokeWidth="5"
+                                    strokeWidth="4"
                                     strokeDasharray="188"
                                     strokeDashoffset={188 - (188 * (budget.totalSpend / budget.amount))}
                                     strokeLinecap="round"
