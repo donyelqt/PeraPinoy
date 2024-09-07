@@ -33,8 +33,8 @@ function BudgetItem({ budget }) {
                             {/* SVG for Circular Progress */}
                             <svg className="w-full h-full transform -rotate-180">
                                 <circle
-                                    className="text-blue-500"
-                                    strokeWidth="4"
+                                    className="text-blue-400"
+                                    strokeWidth="5"
                                     stroke="currentColor"
                                     fill="transparent"
                                     r="30"
@@ -43,7 +43,7 @@ function BudgetItem({ budget }) {
                                 />
                                 <circle
                                     className="text-red-500"
-                                    strokeWidth="4"
+                                    strokeWidth="5"
                                     strokeDasharray="188"
                                     strokeDashoffset={188 - (188 * (budget.totalSpend / budget.amount))}
                                     strokeLinecap="round"
@@ -68,7 +68,7 @@ function BudgetItem({ budget }) {
                         </div>
                     </div>
 
-                    <div className='w-full bg-blue-500 h-2 rounded-full'>
+                    <div className='w-full bg-blue-400 h-2 rounded-full'>
                         <div className=' bg-red-500 h-2 rounded-full'
                             style={{
                                 width: `${calculateProgressPerc()}%`
