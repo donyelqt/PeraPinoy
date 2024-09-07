@@ -64,7 +64,7 @@ function BudgetItem({ budget }) {
                         {/* Expense and Balance Info */}
                         <div>
                             <h2 className='text-xs text-red-500'>₱{budget.totalSpend ? budget.totalSpend : 0} Expense</h2>
-                            <h2 className='text-xs text-blue-500'>₱{budget.amount - budget.totalSpend} Balance</h2>
+                            <h2 className='text-xs text-gray-500'>₱{budget.amount - budget.totalSpend} Balance</h2>
                         </div>
                     </div>
 
