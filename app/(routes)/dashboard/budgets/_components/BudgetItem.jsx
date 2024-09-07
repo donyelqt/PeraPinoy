@@ -31,7 +31,7 @@ function BudgetItem({ budget }) {
                     <div className='flex items-center justify-between mb-3'>
                         <div className="relative w-16 h-16">
                             {/* SVG for Circular Progress */}
-                            <svg className="w-full h-full transform -rotate-90">
+                            <svg className="w-full h-full transform -rotate-180">
                                 <circle
                                     className="text-blue-500"
                                     strokeWidth="4"
