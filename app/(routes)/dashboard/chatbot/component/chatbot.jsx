@@ -37,7 +37,7 @@ export function Chatbot() {
                 width={70}
               />
             </div>
-            <p className='text-md text-slate-500 mt-4 text-center'>
+            <p className='text-md text-gray-500 mt-4 text-center'>
               Welcome to PeraPinoyGPT! Ask me anything about your financial concerns.
             </p>
           </div>
