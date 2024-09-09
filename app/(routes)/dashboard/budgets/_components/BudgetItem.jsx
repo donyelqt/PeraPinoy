@@ -15,12 +15,12 @@ function BudgetItem({ budget }) {
                 <div className='flex gap-2 items-center justify-between'>
                     <div>
                         <h2 className='font-bold text-blue-600 text-lg'>₱{budget.amount}</h2>
-                        <h2 className='text-sm text-gray-500'>Amount</h2>
+                        <h2 className='text-sm text-gray-500 font-semibold'>Amount</h2>
                     </div>
                     <div className='flex gap-2 items-center'>
                         <div className='text-right'>
-                            <h2 className='text-white text-sm font-bold'>{budget.name}</h2>
-                            <h2 className='text-gray-500 text-sm'>{budget.totalItem} Items</h2>
+                            <h2 className='text-slate-300 text-sm font-bold'>{budget.name}</h2>
+                            <h2 className='text-gray-500 text-sm font-semibold'>{budget.totalItem} Items</h2>
                         </div>
                         <h2 className='text-2xl p-3 px-4 bg-tertiary rounded-xl'>{budget?.icon}</h2>
                     </div>
