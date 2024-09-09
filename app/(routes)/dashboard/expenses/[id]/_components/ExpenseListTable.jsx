@@ -28,7 +28,7 @@ function ExpenseListTable({ expensesList, refreshData }) {
                     src={accounting}
                     alt="accounting" />
             </div>
-            <div className='rounded-lg grid grid-cols-4 bg-slate-900 border p-2 mt-10 text-white'>
+            <div className='rounded-lg grid grid-cols-4 bg-slate-900 border p-2 mt-10 text-slate-300'>
                 <h2 className='font-bold text-sm'>Name</h2>
                 <h2 className='font-bold text-sm'>Amount</h2>
                 <h2 className='font-bold text-sm'>Date</h2>
