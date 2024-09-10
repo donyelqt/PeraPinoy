@@ -13,11 +13,11 @@ export function Chatbot() {
     api: "/dashboard/chat/api",
   });
 
-  // h-[80vh]
+  // h-[80vh] // max-h-[800px]
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col h-screen max-h-[800px] w-full p-3 bg-background rounded-2xl shadow-lg overflow-hidden">
+      className="flex flex-col h-screen w-full p-3 bg-background rounded-2xl shadow-lg overflow-hidden">
       <header
         className="bg-blue-950 w-full rounded-lg text-primary-foreground py-4 px-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
