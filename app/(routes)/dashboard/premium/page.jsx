@@ -151,7 +151,7 @@ function PremiumPage() {
 
             <a
               href="#"
-              className="mt-8 block rounded-full border border-blue-600 bg-blue-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-indigo-700 hover:ring-1 hover:ring-indigo-700 focus:outline-none focus:ring active:text-indigo-500"
+              className="mt-8 block rounded-full border border-yellow-300 bg-blue-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-blue-600 hover:ring-1 hover:ring-yellow-300 focus:outline-none focus:ring active:text-yellow-300"
             >
               Get Started
             </a>
@@ -256,7 +256,7 @@ function PremiumPage() {
 
             <a
               href="#"
-              className="mt-8 block rounded-full border border-yellow-300 bg-secondary px-12 py-3 text-center text-sm font-medium text-white hover:ring-1 hover:ring-yellow-300 focus:outline-none focus:ring active:text-red-600"
+              className="mt-8 block rounded-full border border-yellow-300 bg-secondary px-12 py-3 text-center text-sm font-medium text-white hover:ring-1 hover:bg-blue-600 hover:ring-yellow-300 focus:outline-none focus:ring active:text-yellow-300"
             >
               Get Started
             </a>
