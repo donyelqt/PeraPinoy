@@ -256,7 +256,7 @@ function PremiumPage() {
 
             <a
               href="#"
-              className="mt-8 block rounded-full border border-blue-600 bg-white px-12 py-3 text-center text-sm font-medium text-blue-600 hover:ring-1 hover:ring-blue-600 focus:outline-none focus:ring active:text-indigo-500"
+              className="mt-8 block rounded-full border border-yellow-300 bg-secondary px-12 py-3 text-center text-sm font-medium text-white hover:ring-1 hover:ring-yellow-300 focus:outline-none focus:ring active:text-red-600"
             >
               Get Started
             </a>
