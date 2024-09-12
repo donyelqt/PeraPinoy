@@ -14,7 +14,7 @@ function PremiumPage() {
       <div className="">
       <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center md:gap-8">
-          <div className="rounded-2xl border p-6 shadow-sm sm:order-last sm:px-8 lg:p-12">
+          <div className="rounded-2xl border border-primary p-6 shadow-sm sm:order-last sm:px-8 lg:p-12">
             <div className="text-center">
               <h2 className="text-lg font-medium text-blue-600">
                 Pro
@@ -170,7 +170,7 @@ function PremiumPage() {
                   ₱1,500{" "}
                 </strong>
 
-                <span className="text-sm font-medium text-gray-700">
+                <span className="text-sm font-medium text-gray-500">
                   /month
                 </span>
               </p>
