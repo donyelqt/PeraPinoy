@@ -157,17 +157,17 @@ function PremiumPage() {
             </a>
           </div>
 
-          <div className="rounded-2xl border border-gray-200 p-6 shadow-sm sm:px-8 lg:p-12">
+          <div className="rounded-2xl border border-secondary p-6 shadow-sm sm:px-8 lg:p-12">
             <div className="text-center">
-              <h2 className="text-lg font-medium text-gray-900">
+              <h2 className="text-lg font-medium text-secondary">
                 Starter
                 <span className="sr-only">Plan</span>
               </h2>
 
               <p className="mt-2 sm:mt-4">
-                <strong className="text-3xl font-bold text-gray-900 sm:text-4xl">
+                <strong className="text-3xl font-bold text-tertiary sm:text-4xl">
                   {" "}
-                  20${" "}
+                  ₱1,500{" "}
                 </strong>
 
                 <span className="text-sm font-medium text-gray-700">
