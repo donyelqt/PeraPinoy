@@ -24,7 +24,7 @@ function PremiumPage() {
               <p className="mt-2 sm:mt-4">
                 <strong className="text-3xl font-bold text-tertiary sm:text-4xl">
                   {" "}
-                  ₱2,500{" "}
+                  ₱3,500{" "}
                 </strong>
 
                 <span className="text-sm font-medium text-gray-500">
