@@ -79,7 +79,7 @@ function PremiumPage() {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="size-5 text-indigo-700"
+                  className="size-5 text-blue-600"
                 >
                   <path
                     strokeLinecap="round"
@@ -98,7 +98,7 @@ function PremiumPage() {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="size-5 text-indigo-700"
+                  className="size-5 text-blue-600"
                 >
                   <path
                     strokeLinecap="round"
@@ -117,7 +117,7 @@ function PremiumPage() {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="size-5 text-indigo-700"
+                  className="size-5 text-blue-600"
                 >
                   <path
                     strokeLinecap="round"
@@ -136,7 +136,7 @@ function PremiumPage() {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="size-5 text-indigo-700"
+                  className="size-5 text-blue-600"
                 >
                   <path
                     strokeLinecap="round"
@@ -151,7 +151,7 @@ function PremiumPage() {
 
             <a
               href="#"
-              className="mt-8 block rounded-full border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-indigo-700 hover:ring-1 hover:ring-indigo-700 focus:outline-none focus:ring active:text-indigo-500"
+              className="mt-8 block rounded-full border border-blue-600 bg-blue-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-indigo-700 hover:ring-1 hover:ring-indigo-700 focus:outline-none focus:ring active:text-indigo-500"
             >
               Get Started
             </a>
