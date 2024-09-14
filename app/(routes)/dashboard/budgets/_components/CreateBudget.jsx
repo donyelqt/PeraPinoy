@@ -72,10 +72,10 @@ function CreateBudget({ refreshData }) {
                 </div>
                 <div className="mt-5">
                   <button
-                    className={`inline-flex items-center justify-center whitespace-nowrap rounded-3xl text-lg font-medium border border-blue-600 p-2 h-11 px-8 transition-colors duration-300 ${openEmojiPicker
-                        ? 'bg-blue-400 text-white'
+                    className={`inline-flex items-center justify-center whitespace-nowrap rounded-3xl text-lg font-medium border border-blue-600 w-[20%] p-6 h-11 px-8 transition-colors duration-300 ${openEmojiPicker
+                        ? 'bg-blue-300 text-white'
                         : 'bg-transparent text-gray-700'
-                      } hover:bg-blue-500 hover:text-white`}
+                      } hover:bg-blue-400 hover:text-white`}
                     onClick={() => setOpenEmojiPicker(!openEmojiPicker)}
                   >
                     {emojiIcon}
