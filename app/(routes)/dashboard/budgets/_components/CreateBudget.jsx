@@ -63,7 +63,7 @@ function CreateBudget({ refreshData }) {
         <DialogPortal>
           <DialogOverlay className="fixed inset-0 bg-black/50">
             <DialogContent className="fixed left-1/2 top-1/2 w-full -translate-x-1/2 p-4 -translate-y-1/2 rounded-3xl shadow max-w-lg bg-dark2">
-              <DialogTitle className="fixed text-lg font-bold text-blue-600 bg-dark2 mb-2 max-w-lg">Create New Budget</DialogTitle>
+              <DialogTitle className="fixed text-lg font-bold text-tertiary bg-dark2 mb-2 max-w-lg">Create New Budget</DialogTitle>
               <DialogDescription>
                 <div className="flex justify-end mb-2">
                   <button className="text-gray-500 hover:text-red-700" onClick={() => setIsOpen(false)}>
@@ -72,7 +72,7 @@ function CreateBudget({ refreshData }) {
                 </div>
                 <div className="mt-5">
                   <button
-                    className={`inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium border-2 border-gray-400 p-2 h-11 px-8 transition-colors duration-300 ${openEmojiPicker
+                    className={`inline-flex items-center justify-center whitespace-nowrap rounded-3xl text-lg font-medium border border-blue-600 p-2 h-11 px-8 transition-colors duration-300 ${openEmojiPicker
                         ? 'bg-blue-400 text-white'
                         : 'bg-transparent text-gray-700'
                       } hover:bg-blue-500 hover:text-white`}
