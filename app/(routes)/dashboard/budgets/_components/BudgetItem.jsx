@@ -11,7 +11,7 @@ function BudgetItem({ budget }) {
     }
     return (
         <Link href={`/dashboard/expenses/${budget.id}`} >
-            <div className='p-5 border rounded-3xl hover:bg-slate-900 cursor-pointer h-[210px]'>
+            <div className='p-10 border rounded-3xl hover:bg-slate-900 cursor-pointer h-[275px]'>
                 <div className='flex gap-2 items-center justify-between'>
                     <div>
                         <h2 className='font-bold text-blue-600 text-lg'>₱{budget.amount}</h2>
@@ -27,7 +27,7 @@ function BudgetItem({ budget }) {
                 </div>
 
 
-                <div className='mt-5'>
+                <div className='mt-10'>
                     <div className='flex items-center justify-between mb-3'>
                         <div className="relative w-16 h-16">
                             {/* SVG for Circular Progress */}
