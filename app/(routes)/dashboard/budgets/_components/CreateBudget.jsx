@@ -51,9 +51,9 @@ function CreateBudget({ refreshData }) {
   return (
     <div>
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogTrigger className="rounded-3xl p-24 hover:bg-slate-900 hover:text-blue-500 bg-transparent" asChild>
-          <div className='bg-slate-200 p-24 rounded-3xl items-center 
-            flex flex-col border-2 border-dotted h-[275px] cursor-pointer hover:slate-900 hover:text-black'>
+        <DialogTrigger className="rounded-3xl p-20 hover:bg-slate-900 hover:text-blue-500 bg-transparent" asChild>
+          <div className='bg-slate-200 p-20 rounded-3xl items-center 
+            flex flex-col border-2 border-dotted h-[250px] cursor-pointer hover:slate-900 hover:text-black'>
             <h2 className='text-3xl text-black-600'><Image className="w-10 h-10 object-contain"
               src={adddocs}
               alt="adddocs" /></h2>
