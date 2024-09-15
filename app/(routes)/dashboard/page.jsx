@@ -1,5 +1,5 @@
 "use client"
-import { UserButton, useUser } from '@clerk/nextjs'
+import { UserButton, UserProfile, useUser } from '@clerk/nextjs'
 import React, { useEffect, useState } from 'react'
 import CardInfo from "./_components/CardInfo"
 import { db } from '../../../utils/dbConfig';
