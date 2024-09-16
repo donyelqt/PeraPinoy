@@ -22,7 +22,7 @@ function BudgetItem({ budget }) {
                             <h2 className='text-blue-300 text-sm font-bold'>{budget.name}</h2>
                             <h2 className='text-gray-500 text-sm font-semibold'>{budget.totalItem} Items</h2>
                         </div>
-                        <h2 className='text-2xl p-3 px-4 bg-tertiary rounded-xl'>{budget?.icon}</h2>
+                        <h2 className='text-2xl p-4 px-5 bg-tertiary rounded-3xl'>{budget?.icon}</h2>
                     </div>
                 </div>
 
