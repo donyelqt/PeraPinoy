@@ -6,7 +6,7 @@ import { DialogContent } from "@radix-ui/react-dialog";
 import { DialogTitle } from "@radix-ui/react-dialog";
 import { DialogDescription } from "@radix-ui/react-dialog";
 import { DialogClose } from "@radix-ui/react-dialog";
-import { CrossIcon, XIcon } from "lucide-react";
+import { CrossIcon, PiggyBank, XIcon } from "lucide-react";
 import EmojiPicker from "emoji-picker-react";
 import { db } from "../../../../../utils/dbConfig";
 import { Budgets } from "../../../../../utils/schema";
@@ -63,7 +63,7 @@ function CreateBudget({ refreshData }) {
         <DialogPortal>
           <DialogOverlay className="fixed inset-0 bg-black/50">
             <DialogContent className="fixed left-1/2 top-1/2 w-full -translate-x-1/2 p-4 -translate-y-1/2 rounded-3xl shadow max-w-lg bg-dark2">
-              <DialogTitle className="fixed text-lg font-bold text-tertiary bg-dark2 mb-2 max-w-lg">Create New Budget</DialogTitle>
+              <DialogTitle className="fixed flex items-center justify-center gap-2 text-lg font-bold text-tertiary bg-dark2 mb-2 max-w-lg">Create New Budget<PiggyBank /></DialogTitle>
               <DialogDescription>
                 <div className="flex justify-end mb-2">
                   <button className="text-gray-500 hover:text-red-700" onClick={() => setIsOpen(false)}>
