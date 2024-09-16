@@ -66,15 +66,15 @@ function CreateBudget({ refreshData }) {
               <DialogTitle className="fixed flex items-center justify-center gap-2 text-lg font-bold text-tertiary bg-dark2 mb-2 max-w-lg">Create New Budget<PiggyBank /></DialogTitle>
               <DialogDescription>
                 <div className="flex justify-end mb-2">
-                  <button className="text-gray-500 hover:text-red-700" onClick={() => setIsOpen(false)}>
+                  <button className="text-red-500 hover:text-red-900" onClick={() => setIsOpen(false)}>
                     <XIcon className="w-6 h-6" />
                   </button>
                 </div>
                 <div className="mt-5">
                   <button
                     className={`inline-flex items-center justify-center whitespace-nowrap rounded-3xl text-lg font-medium border border-blue-600 w-[20%] p-6 h-11 px-8 transition-colors duration-300 ${openEmojiPicker
-                        ? 'bg-blue-300 text-white'
-                        : 'bg-transparent text-gray-700'
+                      ? 'bg-blue-300 text-white'
+                      : 'bg-transparent text-gray-700'
                       } hover:bg-blue-400 hover:text-white`}
                     onClick={() => setOpenEmojiPicker(!openEmojiPicker)}
                   >
