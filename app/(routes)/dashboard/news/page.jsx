@@ -1,7 +1,7 @@
 import { ArrowRight, ArrowRightCircleIcon } from 'lucide-react'
 import React from 'react'
 
-function FinancialBlogsPage() {
+function FinancialNewsPage() {
     return (
         <section class="text-gray-400 bg-transparent body-font p-10">
             <div className='font-bold text-tertiary text-6xl'>Financial Blogs test</div>
@@ -55,4 +55,4 @@ function FinancialBlogsPage() {
     )
 }
 
-export default FinancialBlogsPage
+export default FinancialNewsPage

@@ -38,9 +38,9 @@ function SideNav() {
     },
     {
       id: 5,
-      name: 'Financial Blogs',
+      name: 'Financial News',
       icon: BookOpenCheck,
-      path: '/dashboard/blogs'
+      path: '/dashboard/news'
     },
     {
       id: 6,
