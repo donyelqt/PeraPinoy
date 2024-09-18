@@ -33,7 +33,7 @@ function MobileNav() {
         { id: 2, name: 'Budget Creation', icon: PiggyBankIcon, path: '/dashboard/budgets' },
         { id: 3, name: 'Expense Tracking', icon: ReceiptIcon, path: '/dashboard/expenses' },
         { id: 4, name: 'PeraPinoyGPT', icon: BotMessageSquare, path: '/dashboard/chatbot' },
-        { id: 5, name: 'Financial News', icon: BookOpenCheck, path: '/dashboard/news' },
+        { id: 5, name: 'Business News', icon: BookOpenCheck, path: '/dashboard/news' },
         { id: 6, name: 'Premium', icon: LucideShieldPlus, path: '/dashboard/premium' }
     ];
 

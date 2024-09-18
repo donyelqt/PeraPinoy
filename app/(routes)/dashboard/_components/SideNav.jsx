@@ -38,7 +38,7 @@ function SideNav() {
     },
     {
       id: 5,
-      name: 'Financial News',
+      name: 'Business News',
       icon: BookOpenCheck,
       path: '/dashboard/news'
     },
