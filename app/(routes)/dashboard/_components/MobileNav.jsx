@@ -30,8 +30,8 @@ function MobileNav() {
 
     const menuList = [
         { id: 1, name: 'Dashboard', icon: LayoutDashboard, path: '/dashboard' },
-        { id: 2, name: 'Budget Creation', icon: PiggyBankIcon, path: '/dashboard/budgets' },
-        { id: 3, name: 'Expense Tracking', icon: ReceiptIcon, path: '/dashboard/expenses' },
+        { id: 2, name: 'Budget', icon: PiggyBankIcon, path: '/dashboard/budgets' },
+        { id: 3, name: 'Expenses', icon: ReceiptIcon, path: '/dashboard/expenses' },
         { id: 4, name: 'PeraPinoyGPT', icon: BotMessageSquare, path: '/dashboard/chatbot' },
         { id: 5, name: 'Business News', icon: BookOpenCheck, path: '/dashboard/news' },
         { id: 6, name: 'Premium', icon: LucideShieldPlus, path: '/dashboard/premium' }

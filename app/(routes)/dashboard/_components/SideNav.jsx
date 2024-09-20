@@ -19,13 +19,13 @@ function SideNav() {
     },
     {
       id: 2,
-      name: 'Budget Creation',
+      name: 'Budget',
       icon: PiggyBankIcon,
       path: '/dashboard/budgets'
     },
     {
       id: 3,
-      name: 'Expense Tracking',
+      name: 'Expenses',
       icon: ReceiptIcon,
       path: '/dashboard/expenses'
     },
