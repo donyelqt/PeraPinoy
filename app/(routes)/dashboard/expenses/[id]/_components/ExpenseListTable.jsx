@@ -38,7 +38,7 @@ function ExpenseListTable({ expensesList, refreshData }) {
             {expensesList.map((expenses, index) => (
                 <div className='rounded-lg grid text-xs md:text-sm lg:text-sm grid-cols-4 bg-transparent border p-2 text-tertiary'>
                     <h2>{expenses.name}</h2>
-                    <h2>{expenses.amount}</h2>
+                    <h2>₱{expenses.amount}</h2>
                     <h2>{expenses.createdAt}</h2>
                     <h2>
                         <Trash2 className='text-red-600 cursor-pointer'
