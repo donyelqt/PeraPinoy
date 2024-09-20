@@ -4,7 +4,7 @@ import React from 'react'
 function FinancialNewsPage() {
     return (
         <section class="text-gray-400 bg-transparent body-font p-10">
-            <div className='font-bold text-tertiary text-6xl'>Business News in progress...</div>
+            <div className='font-bold text-tertiary text-4xl md:text-6xl'>Business News in progress...</div>
             <div class="container px-5 py-24 mx-auto">
                 <div class="flex flex-col">
                     <div class="h-1 bg-gray-800 rounded overflow-hidden">
