@@ -38,9 +38,9 @@ function SideNav() {
     },
     {
       id: 5,
-      name: 'Business News',
+      name: 'Forecasting',
       icon: BookOpenCheck,
-      path: '/dashboard/news'
+      path: '/dashboard/forecasting'
     },
     {
       id: 6,
@@ -61,7 +61,7 @@ function SideNav() {
     console.log(path)
   }, [path])
   return (
-    <nav className='h-screen p-4 border shadow-md text-orange bg-gray-900'>
+    <nav className='h-screen p-4 border shadow-md text-blue-600 bg-gray-900'>
       <div className='p-2 pb-2 flex justify-between items-center'>
         <Image src={'/NewLogo.png'}
           alt='logo'
@@ -76,8 +76,8 @@ function SideNav() {
           text-blue-600 font-medium
           mb-2 
           p-4 cursor-pointer rounded-3xl
-          hover:text-orange hover:bg-dark
-          ${path == menu.path && 'text-orange bg-dark'}
+          hover:text-tertiary hover:bg-dark
+          ${path == menu.path && 'text-tertiary bg-dark'}
           `}>
               <menu.icon />
               {menu.name}

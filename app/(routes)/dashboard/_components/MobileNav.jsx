@@ -1,6 +1,6 @@
 "use client"
 import { UserButton, useUser } from '@clerk/nextjs';
-import { BookOpenCheck, BotMessageSquare, Brain, LayoutDashboard, LucideShieldPlus, PiggyBankIcon, ReceiptIcon, User2, XIcon } from 'lucide-react';
+import { BookOpenCheck, BotMessageSquare, Brain, Coins, LayoutDashboard, LucideShieldPlus, PiggyBankIcon, ReceiptIcon, User2, XIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -33,8 +33,8 @@ function MobileNav() {
         { id: 2, name: 'Budget', icon: PiggyBankIcon, path: '/dashboard/budgets' },
         { id: 3, name: 'Expenses', icon: ReceiptIcon, path: '/dashboard/expenses' },
         { id: 4, name: 'PeraPinoyGPT', icon: BotMessageSquare, path: '/dashboard/chatbot' },
-        { id: 5, name: 'Business News', icon: BookOpenCheck, path: '/dashboard/news' },
-        { id: 6, name: 'Coins', icon: LucideShieldPlus, path: '/dashboard/savingsreward' },
+        { id: 5, name: 'Forecast and Trends', icon: BookOpenCheck, path: '/dashboard/forecasting' },
+        { id: 6, name: 'Savings Reward', icon: Coins, path: '/dashboard/savingsreward' },
         { id: 7, name: 'Premium', icon: LucideShieldPlus, path: '/dashboard/premium' }
     ];
 
@@ -75,8 +75,8 @@ function MobileNav() {
                                         text-blue-600 font-medium
                                         mb-2 
                                         p-4 cursor-pointer rounded-3xl
-                                        hover:text-blue-600 hover:bg-dark
-                                        ${path === menu.path && 'text-blue-600 bg-dark'}
+                                        hover:text-tertiary hover:bg-dark
+                                        ${path === menu.path && 'text-tertiary bg-dark'}
                                     `}>
                                         <menu.icon />
                                         {menu.name}
