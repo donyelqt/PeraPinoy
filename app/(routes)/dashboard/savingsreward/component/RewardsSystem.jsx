@@ -1,6 +1,6 @@
 const RewardsSystem = () => {
     return (
-      <div className="bg-slate-900 shadow-lg rounded-lg p-6">
+      <div className="bg-slate-900 shadow-lg rounded-3xl p-6">
         <h2 className="text-xl text-tertiary font-semibold mb-2">Your Savings Rewards</h2>
         <p className="text-gray-500">Current Savings: <span className="font-bold text-green-600">1,000</span></p>
         <p className="text-gray-500">Meet Savings: <span className="font-bold text-green-600">5,000</span></p>
