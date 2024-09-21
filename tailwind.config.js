@@ -18,13 +18,13 @@ module.exports = {
     },
     extend: {
       colors: {
-        border: "#0038a7",
+        border: "#0038a7", //
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "#080808", // hsl(var(--background))
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#0038a7", //blue
+          DEFAULT: "#0038a7", //blue #3c1968
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -33,6 +33,10 @@ module.exports = {
         },
         tertiary: {
           DEFAULT: "#Fecb00", //yellow
+          foreground: "hsl(var(--tertiary-foreground))",
+        },
+        orange: {
+          DEFAULT: "#ff8200", //yellow
           foreground: "hsl(var(--tertiary-foreground))",
         },
         black: {
