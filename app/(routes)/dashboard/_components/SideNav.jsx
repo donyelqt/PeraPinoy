@@ -1,6 +1,6 @@
 "use client"
 import { UserButton, useUser } from '@clerk/nextjs';
-import { Book, BookOpenCheck, BotMessageSquare, Brain, BrainCog, LayoutDashboard, LayoutGrid, LucideShieldPlus, Menu, MenuSquare, PiggyBankIcon, ReceiptIcon, User, User2, UserCheck2 } from 'lucide-react';
+import { Book, BookOpenCheck, BotMessageSquare, Brain, BrainCog, Coins, LayoutDashboard, LayoutGrid, LucideShieldPlus, Menu, MenuSquare, PiggyBankIcon, ReceiptIcon, User, User2, UserCheck2 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -44,6 +44,12 @@ function SideNav() {
     },
     {
       id: 6,
+      name: 'Savings Reward',
+      icon: Coins,
+      path: '/dashboard/savingsreward'
+    },
+    {
+      id: 7,
       name: 'Premium',
       icon: LucideShieldPlus,
       path: '/dashboard/premium'
