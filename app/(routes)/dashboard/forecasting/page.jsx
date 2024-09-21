@@ -23,7 +23,7 @@ ChartJS.register(
   Legend
 );
 
-const FinancialForecastingPage = () => {
+const ForecastingPage = () => {
   const [selectedCommodity, setSelectedCommodity] = useState('🍚');
   const [chartData, setChartData] = useState({
     labels: [
@@ -108,7 +108,7 @@ const FinancialForecastingPage = () => {
   );
 };
 
-export default FinancialForecastingPage;
+export default ForecastingPage;
 
 
 
