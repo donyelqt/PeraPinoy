@@ -10,7 +10,7 @@ function Header() {
   return (
     <div className='p-4 flex justify-between items-center shadow-2xl border bg-black'>
       <Image
-        src={'/PeraPinoy1.png'} // Note the leading slash
+        src={'/NewLogo.png'} // Note the leading slash
         alt='logo'
         width={100}
         height={80}

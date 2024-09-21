@@ -57,7 +57,7 @@ function SideNav() {
   return (
     <nav className='h-screen p-4 border shadow-md text-blue-600 bg-gray-900'>
       <div className='p-2 pb-2 flex justify-between items-center'>
-        <Image src={'/PeraPinoy1.png'}
+        <Image src={'/NewLogo.png'}
           alt='logo'
           width={100}
           height={80}
