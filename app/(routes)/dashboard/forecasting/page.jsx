@@ -68,7 +68,7 @@ const ForecastingPage = () => {
   };
 
   return (
-    <section className="text-gray-200 p-8 md:p-12 lg:p-16">
+    <section className="text-gray-200 p-8 md:p-16 lg:p-16">
       <h1 className='font-bold text-3xl text-tertiary md:text-5xl mb-6 text-center'>Commodity Forecasting</h1>
       <div className="container bg-transparent border p-10 rounded-3xl mx-auto">
         <div className="mb-8">
