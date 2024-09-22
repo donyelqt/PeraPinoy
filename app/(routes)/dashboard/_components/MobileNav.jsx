@@ -73,7 +73,7 @@ function MobileNav() {
                             {menuList.map((menu) => (
                                 <Link href={menu.path} key={menu.id}>
                                     <h2 className={`flex gap-2 items-center
-                                        text-blue-600 font-medium
+                                        text-blue-600 text-sm font-medium
                                         mb-2 
                                         p-4 cursor-pointer rounded-3xl
                                         hover:text-tertiary hover:bg-dark
