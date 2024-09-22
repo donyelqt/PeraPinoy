@@ -87,7 +87,7 @@ const ExpenseAlerts = () => {
             <div className="text-xl text-blue-600 font-bold">{alert.amount}</div>
             <button
               onClick={() => handleDeleteAlert(alert.id)}
-              className="mt-2 py-2 p-2 text-sm font-medium rounded-md bg-red-500 hover:bg-yellow-600 text-slate-300 flex items-center"
+              className="mt-2 py-2 p-2 text-sm font-medium rounded-md bg-red-700 hover:bg-yellow-600 text-slate-300 flex items-center"
             >
               <MdDelete className='flex items-center' size={16} />
               <span>Delete</span>
