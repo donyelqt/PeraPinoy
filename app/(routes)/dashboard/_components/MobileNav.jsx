@@ -74,7 +74,7 @@ function MobileNav() {
                                 <Link href={menu.path} key={menu.id}>
                                     <h2 className={`flex gap-2 items-center
                                         text-blue-600 text-sm font-medium
-                                        mb-2 
+                                        mb-1 
                                         p-4 cursor-pointer rounded-3xl
                                         hover:text-tertiary hover:bg-dark
                                         ${path === menu.path && 'text-tertiary bg-dark'}
