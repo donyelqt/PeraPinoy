@@ -1,35 +1,14 @@
 "use client"; // This marks the component as a Client Component
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MdElectricalServices, MdCreditCard, MdWaterDrop, MdDelete } from 'react-icons/md'; // Importing icons
 
 const ExpenseAlerts = () => {
-  const [alerts, setAlerts] = useState([
-    {
-      id: 1,
-      type: 'Electricity Bill',
-      amount: '₱ 3,500',
-      dueDate: 'Due in 3 days',
-      urgency: 'soon',
-      icon: <MdElectricalServices className="text-yellow-500" size={24} />,
-    },
-    {
-      id: 2,
-      type: 'Credit Card Payment',
-      amount: '₱ 8,000',
-      dueDate: 'Due in 5 days',
-      urgency: 'normal',
-      icon: <MdCreditCard className="text-blue-500" size={24} />,
-    },
-    {
-      id: 3,
-      type: 'Water Bill',
-      amount: '₱ 1,200',
-      dueDate: 'Due tomorrow',
-      urgency: 'overdue',
-      icon: <MdWaterDrop className="text-blue-400" size={24} />,
-    },
-  ]);
+  const [alerts, setAlerts] = useState(() => {
+    // Get alerts from localStorage or set to an empty array
+    const savedAlerts = localStorage.getItem('alerts');
+    return savedAlerts ? JSON.parse(savedAlerts) : [];
+  });
 
   const [newAlert, setNewAlert] = useState({
     type: '',
@@ -38,31 +17,33 @@ const ExpenseAlerts = () => {
     urgency: 'normal',
   });
 
+  useEffect(() => {
+    // Save alerts to localStorage whenever alerts change
+    localStorage.setItem('alerts', JSON.stringify(alerts));
+  }, [alerts]);
+
   const handleAddAlert = () => {
     const id = alerts.length + 1;
-    let icon;
-
-    switch (newAlert.type.toLowerCase()) {
-      case 'electricity':
-        icon = <MdElectricalServices className="text-yellow-500" size={24} />;
-        break;
-      case 'credit card':
-        icon = <MdCreditCard className="text-blue-500" size={24} />;
-        break;
-      case 'water':
-        icon = <MdWaterDrop className="text-blue-400" size={24} />;
-        break;
-      default:
-        icon = null;
-    }
-
-    const alertToAdd = { id, ...newAlert, icon };
+    const alertToAdd = { id, ...newAlert };
     setAlerts([...alerts, alertToAdd]);
     setNewAlert({ type: '', amount: '', dueDate: '', urgency: 'normal' });
   };
 
   const handleDeleteAlert = (id) => {
     setAlerts(alerts.filter(alert => alert.id !== id));
+  };
+
+  const getIcon = (type) => {
+    switch (type.toLowerCase()) {
+      case 'electricity':
+        return <MdElectricalServices className="text-yellow-500" size={24} />;
+      case 'credit card':
+        return <MdCreditCard className="text-blue-500" size={24} />;
+      case 'water':
+        return <MdWaterDrop className="text-blue-400" size={24} />;
+      default:
+        return null;
+    }
   };
 
   return (
@@ -77,7 +58,7 @@ const ExpenseAlerts = () => {
           }`}
         >
           <div className="flex items-center">
-            {alert.icon}
+            {getIcon(alert.type)} {/* Render the icon based on the alert type */}
             <div className="ml-3">
               <div className="text-lg text-blue-300 font-semibold">{alert.type}</div>
               <div className="text-gray-400">{alert.dueDate}</div>
@@ -142,3 +123,4 @@ const ExpenseAlerts = () => {
 };
 
 export default ExpenseAlerts;
+
