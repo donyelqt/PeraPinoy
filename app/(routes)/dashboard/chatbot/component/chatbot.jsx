@@ -38,7 +38,7 @@ export function Chatbot() {
               />
             </div>
             <p className='text-md text-gray-500 mt-4 text-center'>
-              Welcome to PeraPinoyGPT! Ask me anything about your financial concerns.
+              Welcome to PeraPinoyGPT! Your AI assistant for your groceries.
             </p>
           </div>
         )
@@ -95,7 +95,7 @@ export function Chatbot() {
               disabled={!isLoading}
               onClick={stop}
               className="bg-primary rounded-full text-primary-foreground px-6 py-5 text-md font-medium shadow-sm hover:bg-yellow-600 focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-              
+
             >
               <SquareIcon className="w-5 h-5" fill="white" />
               <span className="sr-only">Send</span>

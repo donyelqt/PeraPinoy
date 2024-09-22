@@ -104,26 +104,26 @@ const ExpenseAlerts = () => {
             placeholder="Type (Electricity, Credit Card, Water)"
             value={newAlert.type}
             onChange={(e) => setNewAlert({ ...newAlert, type: e.target.value })}
-            className="w-full p-2 border rounded-md"
+            className="w-full p-2 border rounded-xl"
           />
           <input
             type="text"
             placeholder="Amount (e.g., ₱ 3,500)"
             value={newAlert.amount}
             onChange={(e) => setNewAlert({ ...newAlert, amount: e.target.value })}
-            className="w-full p-2 border rounded-md"
+            className="w-full p-2 border rounded-xl"
           />
           <input
             type="text"
             placeholder="Due Date (e.g., Due in 3 days)"
             value={newAlert.dueDate}
             onChange={(e) => setNewAlert({ ...newAlert, dueDate: e.target.value })}
-            className="w-full p-2 border rounded-md"
+            className="w-full p-2 border rounded-xl"
           />
           <select
             value={newAlert.urgency}
             onChange={(e) => setNewAlert({ ...newAlert, urgency: e.target.value })}
-            className="w-full p-2 border rounded-md"
+            className="w-full p-2 border rounded-xl"
           >
             <option value="normal">Normal</option>
             <option value="soon">Soon</option>
