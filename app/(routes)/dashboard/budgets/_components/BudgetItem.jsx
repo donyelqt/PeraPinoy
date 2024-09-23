@@ -14,8 +14,8 @@ function BudgetItem({ budget }) {
             <div className='p-8 border rounded-3xl hover:bg-slate-900 cursor-pointer h-[250px]'>
                 <div className='flex gap-2 items-center justify-between'>
                     <div>
-                        <h2 className='font-bold text-blue-600 text-lg'>₱{budget.amount}</h2>
-                        <h2 className='text-sm text-gray-500 font-semibold'>Amount</h2>
+                        <h2 className='text-lg font-bold text-blue-600'>₱{budget.amount - budget.totalSpend} </h2>
+                        <h2 className='text-sm text-gray-500 font-semibold'>Balance</h2>
                     </div>
                     <div className='flex gap-2 items-center'>
                         <div className='text-right'>
@@ -64,7 +64,7 @@ function BudgetItem({ budget }) {
                         {/* Expense and Balance Info */}
                         <div>
                             <h2 className='text-xs text-red-500'>₱{budget.totalSpend ? budget.totalSpend : 0} Expense</h2>
-                            <h2 className='text-xs text-blue-400'>₱{budget.amount - budget.totalSpend} Balance</h2>
+                            <h2 className='text-blue-600 text-xs'>₱{budget.amount} <span className='text-xs'>Amount</span></h2> {/* <h2 className='text-xs text-blue-400'>₱{budget.amount - budget.totalSpend} Balance</h2> */}
                         </div>
                     </div>
 

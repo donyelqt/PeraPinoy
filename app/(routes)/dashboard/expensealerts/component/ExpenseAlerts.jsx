@@ -10,6 +10,8 @@ const ExpenseAlerts = () => {
     return savedAlerts ? JSON.parse(savedAlerts) : [];
   });
 
+  
+
   const [newAlert, setNewAlert] = useState({
     type: '',
     amount: '',
