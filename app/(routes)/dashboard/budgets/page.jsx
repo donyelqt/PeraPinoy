@@ -12,7 +12,7 @@ function Budget() {
           src={calcu}
           alt="calculator" />
       </div>
-      <p className='mt-2 text-gray-500'>Create and track your own budget or income here!</p>
+      <p className='mt-2 text-gray-500'>Create and track your own budget here!</p>
       <BudgetList />
     </div>
   )
