@@ -14,12 +14,12 @@ function BudgetItem({ budget }) {
             <div className='p-8 border rounded-3xl hover:bg-slate-900 cursor-pointer h-[250px]'>
                 <div className='flex gap-2 items-center justify-between'>
                     <div>
-                        <h2 className='text-lg font-bold text-blue-600'>₱{budget.amount - budget.totalSpend} </h2>
+                        <h2 className='text-lg font-bold text-tertiary'>₱{budget.amount - budget.totalSpend} </h2>
                         <h2 className='text-sm text-gray-500 font-semibold'>Balance</h2>
                     </div>
                     <div className='flex gap-2 items-center'>
                         <div className='text-right'>
-                            <h2 className='text-blue-300 text-sm font-bold'>{budget.name}</h2>
+                            <h2 className='text-white text-sm font-bold'>{budget.name}</h2>
                             <h2 className='text-gray-500 text-sm font-semibold'>{budget.totalItem} Items</h2>
                         </div>
                         <h2 className='text-xl p-4 px-5 bg-tertiary rounded-3xl'>{budget?.icon}</h2>
@@ -33,7 +33,7 @@ function BudgetItem({ budget }) {
                             {/* SVG for Circular Progress */}
                             <svg className="w-full h-full transform -rotate-180">
                                 <circle
-                                    className="text-blue-400"
+                                    className="text-slate-300"
                                     strokeWidth="4"
                                     stroke="currentColor"
                                     fill="transparent"
@@ -42,7 +42,7 @@ function BudgetItem({ budget }) {
                                     cy="32"
                                 />
                                 <circle
-                                    className="text-red-500"
+                                    className="text-orange"
                                     strokeWidth="4"
                                     strokeDasharray="188"
                                     strokeDashoffset={188 - (188 * (budget.totalSpend / budget.amount))}
@@ -63,13 +63,13 @@ function BudgetItem({ budget }) {
 
                         {/* Expense and Balance Info */}
                         <div>
-                            <h2 className='text-xs text-red-500'>₱{budget.totalSpend ? budget.totalSpend : 0} Expense</h2>
-                            <h2 className='text-blue-600 text-xs'>₱{budget.amount} <span className='text-xs'>Amount</span></h2> {/* <h2 className='text-xs text-blue-400'>₱{budget.amount - budget.totalSpend} Balance</h2> */}
+                            <h2 className='text-xs text-orange'>₱{budget.totalSpend ? budget.totalSpend : 0} Expense</h2>
+                            <h2 className='text-white text-xs'>₱{budget.amount} <span className='text-xs'>Amount</span></h2> {/* <h2 className='text-xs text-blue-400'>₱{budget.amount - budget.totalSpend} Balance</h2> */}
                         </div>
                     </div>
 
-                    <div className='w-full bg-blue-400 h-2 rounded-full'>
-                        <div className=' bg-red-500 h-2 rounded-full'
+                    <div className='w-full bg-orange h-2 rounded-full'>
+                        <div className=' bg-white h-2 rounded-full'
                             style={{
                                 width: `${calculateProgressPerc()}%`
                             }}

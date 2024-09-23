@@ -29,7 +29,7 @@ function ExpenseListTable({ expensesList, refreshData }) {
                     alt="accounting" />
             </div>
             <p className='text-gray-500 mt-2'>Track and control all your expenses here!</p>
-            <div className='rounded-lg grid grid-cols-4 bg-slate-900 border p-2 mt-10 text-blue-300'>
+            <div className='rounded-lg grid grid-cols-4 bg-orange border p-2 mt-10 text-dark'>
                 <h2 className='font-bold text-sm'>Name</h2>
                 <h2 className='font-bold text-sm'>Amount</h2>
                 <h2 className='font-bold text-sm'>Date</h2>

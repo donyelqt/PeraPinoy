@@ -19,10 +19,10 @@ export function Chatbot() {
       onSubmit={handleSubmit}
       className="flex flex-col h-screen w-full p-3 bg-background rounded-2xl shadow-lg overflow-hidden">
       <header
-        className="bg-blue-950 w-full rounded-lg text-primary-foreground py-4 px-6 flex items-center justify-between">
+        className="bg-tertiary w-full rounded-lg text-primary-foreground py-4 px-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="p-2 border bg-slate-900 rounded-full">
-            <BotMessageSquare className="size-6 text-blue-600" />
+          <div className="p-2 border bg-orange-400 rounded-full">
+            <BotMessageSquare className="size-6 text-white" />
           </div>
           <h2 className="text-lg text-white font-medium">PeraPinoyGPT</h2>
         </div>
@@ -31,8 +31,8 @@ export function Chatbot() {
       {
         messages.length === 0 && (
           <div className='flex flex-col justify-center items-center h-full'>
-            <div className="p-4 border bg-slate-900 rounded-full max-w-xs mx-auto">
-              <BotMessageSquare className="text-blue-600"
+            <div className="p-4 border bg-orange rounded-full max-w-xs mx-auto">
+              <BotMessageSquare className="text-white"
                 height={70}
                 width={70}
               />

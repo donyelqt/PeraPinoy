@@ -18,7 +18,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        border: "#c46210", //
+        border: "#ffbf00", //orange
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "#080808", // hsl(var(--background))
@@ -36,7 +36,7 @@ module.exports = {
           foreground: "hsl(var(--tertiary-foreground))",
         },
         orange: {
-          DEFAULT: "#CC5500", //orange
+          DEFAULT: "#ff8c00", //orange
           foreground: "hsl(var(--tertiary-foreground))",
         },
         black: {
