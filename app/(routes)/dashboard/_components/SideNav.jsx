@@ -67,7 +67,7 @@ function SideNav() {
     console.log(path)
   }, [path])
   return (
-    <nav className='h-screen p-4 border shadow-md text-blue-600 bg-gray-900'>
+    <nav className='h-screen p-4 border shadow-md text-orange bg-gray-900'>
       <div className='p-2 pb-2 flex justify-between items-center'>
         <Image src={'/NewLogo.png'}
           alt='logo'
@@ -79,7 +79,7 @@ function SideNav() {
         {menuList.map((menu, index) => (
           <Link href={menu.path} key={menu.id}>
             <h2 className={`flex gap-2 items-center
-          text-blue-600 text-sm font-medium
+          text-orange text-sm font-medium
           mb-1 
           p-4 cursor-pointer rounded-3xl
           hover:text-tertiary hover:bg-dark

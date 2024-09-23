@@ -56,14 +56,14 @@ function Dashboard() {
 
   return (
     <div className="p-10 space-y-8">
-      <div className="bg-slate-900 p-7 rounded-3xl shadow-lg">
+      <div className="bg-gray-900 p-7 rounded-3xl shadow-lg">
         <div className="flex items-center">
           <UserButton afterSignOutUrl='/' />
           <h2 className='font-bold text-tertiary text-xl md:text-3xl lg:text-3xl ml-4'>
-            <span className='text-red-800'>Hello, </span>{user?.fullName}!👋
+            <span className='text-orange'>Hello, </span>{user?.fullName}!👋
           </h2>
         </div>
-        <p className='text-gray-500'>Empower Your Finances with PeraPinoy!</p>
+        <p className='text-gray-300'>Empower Your Finances with PeraPinoy!</p>
       </div>
       <CardInfo budgetList={budgetList} />
       <div className='grid grid-cols-1 md:grid-cols-3 mt-6 gap-5'>

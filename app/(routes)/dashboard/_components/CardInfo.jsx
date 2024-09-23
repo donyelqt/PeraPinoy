@@ -40,7 +40,7 @@ function CardInfo({ budgetList }) {
               key="icon"
               className='bg-red-700 p-3 h-20 w-20 rounded-full text-white' />
             <div>
-              <h2 className='font-bold text-2xl text-blue-600'>₱{totalBudget}</h2>
+              <h2 className='font-bold text-2xl text-tertiary'>₱{totalBudget}</h2>
               <h2 className='text-md text-slate-500 font-semibold'>Total Budget</h2>
             </div>
 
@@ -51,7 +51,7 @@ function CardInfo({ budgetList }) {
             </svg>
 
             <div>
-              <h2 className='font-bold text-2xl text-blue-600'>₱{totalSpend}</h2>
+              <h2 className='font-bold text-2xl text-tertiary'>₱{totalSpend}</h2>
               <h2 className='text-md text-slate-500 font-semibold'>Total Expense</h2>
             </div>
 
@@ -60,7 +60,7 @@ function CardInfo({ budgetList }) {
             <Wallet2
               className='bg-red-700 p-3 h-20 w-20 rounded-full text-white' />
             <div>
-              <h2 className='font-bold text-2xl text-blue-600'>{budgetList?.length}</h2>
+              <h2 className='font-bold text-2xl text-tertiary'>{budgetList?.length}</h2>
               <h2 className='text-md text-slate-500 font-semibold'>Budget Count No.</h2>
             </div>
 

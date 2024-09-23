@@ -96,7 +96,7 @@ function CreateBudget({ refreshData }) {
       color: '#2563eb', // Set color for selected value (text-blue-600)
     }),
   };
-  
+
 
 
 
