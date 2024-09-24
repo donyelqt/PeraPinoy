@@ -72,7 +72,7 @@ export function Chatbot() {
       <div className="p-4 flex items-center gap-2 bg-transparent">
         <input
           placeholder="Type your message..."
-          className="flex h-12 w-full rounded-lg border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-blue-600 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+          className="flex h-12 w-full rounded-lg border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-yellow-600 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
                   disabled:cursor-not-allowed disabled:opacity-50"
           value={input}
           rows={1}
@@ -82,7 +82,7 @@ export function Chatbot() {
         {!isLoading ? (
           <button
             type="submit"
-            className="bg-primary rounded-full text-primary-foreground px-6 py-5 text-md font-medium shadow-sm hover:bg-yellow-600 focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+            className="bg-tertiary rounded-full text-primary-foreground px-6 py-5 text-md font-medium shadow-sm hover:bg-yellow-600 focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
             disabled={!input || isLoading}
           >
             <ArrowUp className="w-5 h-5" />
