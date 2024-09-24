@@ -29,16 +29,16 @@ function ExpenseListTable({ expensesList, refreshData }) {
                     alt="accounting" />
             </div>
             <p className='text-gray-500 mt-2'>Track and control all your expenses here!</p>
-            <div className='rounded-lg grid grid-cols-4 bg-orange border p-2 mt-10 text-dark'>
+            <div className='rounded-lg grid grid-cols-4 bg-secondary border p-2 mt-10 text-dark'>
                 <h2 className='font-bold text-sm'>Name</h2>
                 <h2 className='font-bold text-sm'>Amount</h2>
                 <h2 className='font-bold text-sm'>Date</h2>
                 <h2 className='font-bold text-sm'>Delete</h2>
             </div>
             {expensesList.map((expenses, index) => (
-                <div className='rounded-lg grid text-xs md:text-sm lg:text-sm grid-cols-4 bg-transparent border p-2 text-tertiary'>
+                <div className='rounded-lg grid text-xs md:text-sm lg:text-sm grid-cols-4 bg-transparent border font-semibold p-2 text-slate-700'>
                     <h2>{expenses.name}</h2>
-                    <h2><span className='text-blue-400'>₱</span> {expenses.amount}</h2>
+                    <h2><span className='text-secondary'>₱</span> {expenses.amount}</h2>
                     <h2>{expenses.createdAt}</h2>
                     <h2>
                         <Trash2 className='text-red-600 cursor-pointer'

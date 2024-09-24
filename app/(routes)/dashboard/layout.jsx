@@ -28,7 +28,7 @@ function DashboardLayout({ children }) {
 
   return (
     <div>
-      <div className='fixed md:w-64 hidden md:block bg-black border'>
+      <div className='fixed md:w-64 hidden md:block border'>
         <SideNav />
       </div>
       <div className='md:ml-64'>
