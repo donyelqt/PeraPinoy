@@ -110,7 +110,7 @@ function CreateBudget({ refreshData }) {
             <h2 className='text-3xl text-black-600'><Image className="w-10 h-10 object-contain"
               src={adddocs}
               alt="adddocs" /></h2>
-            <h2 className="text-yellow-400">Create New</h2>
+            <h2 className="text-orange">Create New</h2>
           </div>
         </DialogTrigger>
         <DialogPortal>
