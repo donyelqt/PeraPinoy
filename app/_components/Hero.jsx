@@ -3,7 +3,7 @@ import React from 'react'
 
 function Hero() {
   return (
-    <section className=" flex items-center justify-center flex-col">
+    <section className="flex items-center justify-center flex-col">
       <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
         <div className="mx-auto max-w-2xl text-center pb-20">
           <Image src="/NewLogo.png" alt="logo"
