@@ -19,7 +19,7 @@ function BarChartDashboard({ budgetList }) {
                 <YAxis dataKey="totalSpend" />
                 <Tooltip />
                 <Legend />
-                <Line type='monotoneY' dataKey="totalSpend" name="Total Expenses" stackId="a" stroke='#ff8c00'  /> //fill='#4169e1' #4169e1
+                <Line type='monotoneY' dataKey="totalSpend" name="Total Expenses" stackId="a" stroke='#Ce1127'  /> //fill='#4169e1' #4169e1
                 <Line type='monotoneX' dataKey="amount" name="Budgets"  stackId="a" stroke='#fff' /> //fill='#87cefa' #f08080
             </LineChart>
             </ResponsiveContainer>

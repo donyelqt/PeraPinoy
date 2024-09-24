@@ -31,7 +31,7 @@ module.exports = {
           foreground: "hsl(var(--secondary-foreground))",
         },
         tertiary: {
-          DEFAULT: "#Fecb00", // yellow
+          DEFAULT: "#ff8c00", // yellow
           foreground: "hsl(var(--tertiary-foreground))",
         },
         orange: {

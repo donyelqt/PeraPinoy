@@ -55,11 +55,11 @@ function MobileNav() {
                 >
                     <span className="sr-only">Open main menu</span>
                     <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                        <path stroke="orange" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
-                <div className={`fixed top-0 left-0 w-[70%] h-full bg-indigo-950 bg-opacity-95 z-50 ${isOpen ? 'block' : 'hidden'} lg:hidden`} id="navbar-hamburger">
-                    <nav className='h-full p-4 text-blue-600'>
+                <div className={`fixed top-0 left-0 w-[70%] h-full bg-opacity-95 z-50 ${isOpen ? 'block' : 'hidden'} lg:hidden`} id="navbar-hamburger">
+                    <nav className='h-full p-4 bg-white'>
                         <div className='p-2 pb-2 flex justify-between items-center'>
                             <Image src={'/NewLogo.png'} alt='logo' width={100} height={80} />
                             <button
