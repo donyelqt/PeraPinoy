@@ -17,7 +17,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        border: "", // orange
+        border: "#FB923C", // orange
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "#080808", // black
@@ -46,16 +46,8 @@ module.exports = {
           DEFAULT: "#080808", // eerie black
           foreground: "hsl(var(--tertiary-foreground))",
         },
-        dark1: {
-          DEFAULT: "#141414", // matt black
-          foreground: "hsl(var(--tertiary-foreground))",
-        },
         dark2: {
           DEFAULT: "#121212", // matt black
-          foreground: "hsl(var(--tertiary-foreground))",
-        },
-        dark3: {
-          DEFAULT: "#f8f8ff", // ghost white (not matt black)
           foreground: "hsl(var(--tertiary-foreground))",
         },
         destructive: {
