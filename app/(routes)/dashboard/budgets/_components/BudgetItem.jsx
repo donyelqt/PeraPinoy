@@ -63,8 +63,8 @@ function BudgetItem({ budget }) {
 
                         {/* Expense and Balance Info */}
                         <div>
-                            <h2 className='text-xs text-secondary'>₱{budget.totalSpend ? budget.totalSpend : 0} Expense</h2>
-                            <h2 className='text-orange text-xs'>₱{budget.amount} <span className='text-xs'>Amount</span></h2> {/* <h2 className='text-xs text-blue-400'>₱{budget.amount - budget.totalSpend} Balance</h2> */}
+                            <h2 className='text-xs font-semibold text-secondary'>₱{budget.totalSpend ? budget.totalSpend : 0} Expense</h2>
+                            <h2 className='text-orange font-semibold text-xs'>₱{budget.amount} <span className='text-xs'>Amount</span></h2> {/* <h2 className='text-xs text-blue-400'>₱{budget.amount - budget.totalSpend} Balance</h2> */}
                         </div>
                     </div>
 
