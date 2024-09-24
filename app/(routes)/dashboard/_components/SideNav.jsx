@@ -40,7 +40,7 @@ function SideNav() {
       id: 5,
       name: 'Historical Data',
       icon: BookOpenCheck,
-      path: '/dashboard/historical data'
+      path: '/dashboard/historicaldata'
     },
     {
       id: 6,
