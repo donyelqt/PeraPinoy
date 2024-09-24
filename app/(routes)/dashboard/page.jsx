@@ -56,7 +56,7 @@ function Dashboard() {
 
   return (
     <div className="p-10 space-y-8">
-      <div className="bg-blue-950 p-7 rounded-3xl shadow-lg">
+      <div className="bg-indigo-950 p-7 rounded-3xl shadow-lg">
         <div className="flex items-center">
           <UserButton afterSignOutUrl='/' />
           <h2 className='font-bold text-tertiary text-xl md:text-3xl lg:text-3xl ml-4'>

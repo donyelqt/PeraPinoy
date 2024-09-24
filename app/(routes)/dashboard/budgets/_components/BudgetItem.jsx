@@ -68,8 +68,8 @@ function BudgetItem({ budget }) {
                         </div>
                     </div>
 
-                    <div className='w-full bg-orange h-2 rounded-full'>
-                        <div className=' bg-white h-2 rounded-full'
+                    <div className='w-full bg-white h-2 rounded-full'>
+                        <div className=' bg-orange h-2 rounded-full'
                             style={{
                                 width: `${calculateProgressPerc()}%`
                             }}

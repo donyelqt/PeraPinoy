@@ -67,7 +67,7 @@ function SideNav() {
     console.log(path)
   }, [path])
   return (
-    <nav className='h-screen p-4 border shadow-md text-orange bg-gray-900'>
+    <nav className='h-screen p-4 border bg-indigo-950 shadow-md text-orange '>
       <div className='p-2 pb-2 flex justify-between items-center'>
         <Image src={'/NewLogo.png'}
           alt='logo'

@@ -58,7 +58,7 @@ function MobileNav() {
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
-                <div className={`fixed top-0 left-0 w-[70%] h-full bg-gray-900 bg-opacity-95 z-50 ${isOpen ? 'block' : 'hidden'} lg:hidden`} id="navbar-hamburger">
+                <div className={`fixed top-0 left-0 w-[70%] h-full bg-indigo-950 bg-opacity-95 z-50 ${isOpen ? 'block' : 'hidden'} lg:hidden`} id="navbar-hamburger">
                     <nav className='h-full p-4 text-blue-600'>
                         <div className='p-2 pb-2 flex justify-between items-center'>
                             <Image src={'/NewLogo.png'} alt='logo' width={100} height={80} />
@@ -73,7 +73,7 @@ function MobileNav() {
                             {menuList.map((menu) => (
                                 <Link href={menu.path} key={menu.id}>
                                     <h2 className={`flex gap-2 items-center
-                                        text-blue-600 text-sm font-medium
+                                        text-orange text-sm font-medium
                                         mb-1 
                                         p-4 cursor-pointer rounded-3xl
                                         hover:text-tertiary hover:bg-dark
