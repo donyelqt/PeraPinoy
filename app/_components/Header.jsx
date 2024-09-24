@@ -8,7 +8,7 @@ function Header() {
 
   const {user, isSignedIn}=useUser();
   return (
-    <div className='p-4 flex justify-between items-center shadow-2xl border bg-black'>
+    <div className='p-4 flex justify-between items-center shadow-2xl border'>
       <Image
         src={'/NewLogo.png'} // Note the leading slash
         alt='logo'

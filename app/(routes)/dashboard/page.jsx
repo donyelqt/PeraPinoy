@@ -56,11 +56,11 @@ function Dashboard() {
 
   return (
     <div className="p-10 space-y-8">
-      <div className="bg-indigo-950 p-7 rounded-3xl shadow-lg">
+      <div className="p-7 rounded-3xl shadow-xl border">
         <div className="flex items-center">
           <UserButton afterSignOutUrl='/' />
-          <h2 className='font-bold text-tertiary text-xl md:text-3xl lg:text-3xl ml-4'>
-            <span className='text-orange'>Hello, </span>{user?.fullName}!👋
+          <h2 className='font-bold text-orange text-xl md:text-3xl lg:text-3xl ml-4'>
+            <span className='text-secondary'>Hello, </span>{user?.fullName}!👋
           </h2>
         </div>
         <p className='text-gray-300'>Empower Your Finances with PeraPinoy!</p>

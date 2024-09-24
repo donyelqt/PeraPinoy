@@ -20,7 +20,7 @@ module.exports = {
         border: "#FB923C", // orange
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "#080808", // black
+        background: "#f8f8ff", // black
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "#ffa500", // orange
