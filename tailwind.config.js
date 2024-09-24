@@ -2,12 +2,11 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
+    './pages/**/*.{js,jsx,ts,tsx}',    // Added TypeScript support (ts, tsx)
+    './components/**/*.{js,jsx,ts,tsx}', 
+    './app/**/*.{js,jsx,ts,tsx}', 
+    './src/**/*.{js,jsx,ts,tsx}', 
   ],
-  prefix: "",
   theme: {
     container: {
       center: true,
@@ -18,29 +17,29 @@ module.exports = {
     },
     extend: {
       colors: {
-        border: "#FB923C", //orange
+        border: "#FB923C", // orange
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "#080808", // hsl(var(--background))
+        background: "#080808", // black
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#ffa500", //blue #3c1968 #0038a7
+          DEFAULT: "#ffa500", // orange
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "#Ce1127", //red
+          DEFAULT: "#Ce1127", // red
           foreground: "hsl(var(--secondary-foreground))",
         },
         tertiary: {
-          DEFAULT: "#Fecb00", //yellow
+          DEFAULT: "#Fecb00", // yellow
           foreground: "hsl(var(--tertiary-foreground))",
         },
         orange: {
-          DEFAULT: "#ff8c00", //orange
+          DEFAULT: "#ff8c00", // orange
           foreground: "hsl(var(--tertiary-foreground))",
         },
         black: {
-          DEFAULT: "#000000", //vampire black 
+          DEFAULT: "#000000", // vampire black
           foreground: "hsl(var(--tertiary-foreground))",
         },
         dark: {
@@ -56,7 +55,7 @@ module.exports = {
           foreground: "hsl(var(--tertiary-foreground))",
         },
         dark3: {
-          DEFAULT: "#f8f8ff ",
+          DEFAULT: "#f8f8ff", // ghost white (not matt black)
           foreground: "hsl(var(--tertiary-foreground))",
         },
         destructive: {
@@ -102,4 +101,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
