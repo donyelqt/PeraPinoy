@@ -50,7 +50,7 @@ const ExpenseAlerts = () => {
 
   return (
     <div className="max-w-lg p-5 md:p-10 lg:p-10 mb-40 mx-auto space-y-6">
-      <h2 className="text-4xl md:text-5xl font-semibold text-tertiary text-center">Expense Alerts</h2>
+      {/*<h2 className="text-4xl md:text-5xl font-semibold text-tertiary text-center"></h2>*/}
 
       {alerts.map((alert) => (
         <div
