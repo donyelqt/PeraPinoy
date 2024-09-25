@@ -11,7 +11,7 @@ function BudgetItem({ budget }) {
     }
     return (
         <Link href={`/dashboard/expenses/${budget.id}`} >
-            <div className='p-8 border rounded-3xl hover:bg-slate-900 cursor-pointer h-[250px]'>
+            <div className='p-8 border rounded-3xl hover:bg-slate-900 cursor-pointer h-[260px]'>
                 <div className='flex gap-2 items-center justify-between'>
                     <div>
                         <h2 className='text-lg font-bold text-secondary'>₱{budget.amount - budget.totalSpend} </h2>
@@ -69,8 +69,8 @@ function BudgetItem({ budget }) {
                         </div>
                     </div>
                     {budget.totalSpend > budget.amount && (
-                        <div className="text-orange mb-2 font-semibold text-xs rounded-lg">
-                            <p>You have exceeded your expenses by ₱{budget.totalSpend - budget.amount}!</p>
+                        <div className="text-orange font-semibold text-xs rounded-lg">
+                            <p>Exceeded expenses by ₱{budget.totalSpend - budget.amount}!</p>
                         </div>
                     )}
 
