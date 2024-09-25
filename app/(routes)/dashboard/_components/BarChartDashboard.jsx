@@ -15,8 +15,8 @@ function BarChartDashboard({ budgetList }) {
                     top:7
                 }}
             >
-                <XAxis dataKey="" />
-                <YAxis dataKey="totalSpend" />
+                <XAxis dataKey="name" />
+                <YAxis  />
                 <Tooltip />
                 <Legend />
                 <Line type='monotoneY' dataKey="totalSpend" name="Total Expenses" stackId="a" stroke='#Ce1127'  /> //fill='#4169e1' #4169e1
