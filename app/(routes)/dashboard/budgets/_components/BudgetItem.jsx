@@ -69,7 +69,7 @@ function BudgetItem({ budget }) {
                         </div>
                     </div>
                     {budget.totalSpend > budget.amount && (
-                        <div className="text-orange font-semibold text-xs rounded-lg">
+                        <div className="text-orange font-semibold text-center text-xs rounded-lg">
                             <p>Exceeded expenses by ₱{budget.totalSpend - budget.amount}!</p>
                         </div>
                     )}
