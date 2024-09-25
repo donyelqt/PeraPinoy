@@ -38,7 +38,7 @@ export function Chatbot() {
               />
             </div>
             <p className='text-md text-gray-500 mt-4 text-center'>
-              Welcome to PeraPinoyGPT! Your personalized AI financial advisor.
+              Welcome to PeraPinoyGPT! Your personalized AI assistant for groceries.
             </p>
           </div>
         )
