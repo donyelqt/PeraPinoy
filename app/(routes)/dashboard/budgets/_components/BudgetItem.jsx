@@ -45,7 +45,7 @@ function BudgetItem({ budget }) {
                                     className="text-secondary"
                                     strokeWidth="4"
                                     strokeDasharray="188"
-                                    strokeDashoffset={188 - (188 * (budget.totalSpend / budget.amount))}
+                                    strokeDashoffset={Math.max(0, 188 - (188 * Math.min(budget.totalSpend / budget.amount, 1)))}
                                     strokeLinecap="round"
                                     stroke="currentColor"
                                     fill="transparent"
@@ -56,9 +56,10 @@ function BudgetItem({ budget }) {
                             </svg>
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <h2 className="text-xs font-bold text-secondary">
-                                    {Math.round((budget.totalSpend / budget.amount) * 100)}%
+                                    {Math.round(Math.min((budget.totalSpend / budget.amount) * 100, 100))}%
                                 </h2>
                             </div>
+
                         </div>
 
                         {/* Expense and Balance Info */}
@@ -67,16 +68,21 @@ function BudgetItem({ budget }) {
                             <h2 className='text-orange font-semibold text-xs'>₱{budget.amount} <span className='text-xs'>Amount</span></h2> {/* <h2 className='text-xs text-blue-400'>₱{budget.amount - budget.totalSpend} Balance</h2> */}
                         </div>
                     </div>
+                    {budget.totalSpend > budget.amount && (
+                        <div className="text-orange mb-2 font-semibold text-xs rounded-lg">
+                            <p>You have exceeded your expenses by ₱{budget.totalSpend - budget.amount}!</p>
+                        </div>
+                    )}
 
                     <div className='w-full bg-tertiary h-2 rounded-full'>
-                        <div className='w-full bg-secondary h-2 rounded-full'
+                        <div className='bg-secondary h-2 rounded-full'
                             style={{
-                                width: `${calculateProgressPerc()}%`
+                                width: `${Math.min(calculateProgressPerc(), 100)}%`  // Limit the width to 100%
                             }}
                         >
-
                         </div>
                     </div>
+
                 </div>
             </div>
         </Link>
