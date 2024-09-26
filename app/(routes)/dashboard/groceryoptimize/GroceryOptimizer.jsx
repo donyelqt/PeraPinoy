@@ -18,63 +18,71 @@ const GroceryOptimizer = () => {
   const [totalCost, setTotalCost] = useState(0);
   const [aiSuggestions, setAiSuggestions] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [notification, setNotification] = useState('');
-  const [itemInput, setItemInput] = useState({ category: categories[0].name, cost: '' });
+  const [selectedCategory, setSelectedCategory] = useState(categories[0].name);
+  const [itemCost, setItemCost] = useState('');
   const [userHistory, setUserHistory] = useState([]);
+  const [notification, setNotification] = useState('');
 
   const handleAddItem = useCallback((e) => {
     e.preventDefault();
     const newItem = {
-      category: itemInput.category,
-      cost: parseFloat(itemInput.cost),
+      category: selectedCategory,
+      cost: parseFloat(itemCost),
     };
 
     setUserHistory((prev) => [...prev, newItem]);
     setGroceryItems((prevItems) => [...prevItems, newItem]);
-    setItemInput({ ...itemInput, cost: '' }); // Clear cost only
+    setItemCost('');
 
-    setNotification(`Added ${newItem.category} - Cost: ₱${newItem.cost}`);
+    setNotification(`Added ${selectedCategory} - Cost: ₱${newItem.cost}`);
     setTimeout(() => setNotification(''), 3000);
-  }, [itemInput]);
+  }, [selectedCategory, itemCost]);
 
-  const optimizeGroceryList = useCallback(() => {
-    const filteredList = groceryItems.filter(item => item.cost <= parseFloat(spendingLimit));
+  const optimizeGroceryList = useCallback((groceryList) => {
+    const filteredList = groceryList.filter(item => item.cost <= parseFloat(spendingLimit));
     const optimized = filteredList.sort((a, b) => a.cost - b.cost);
     const total = optimized.reduce((acc, item) => acc + item.cost, 0);
     return { optimized, total };
-  }, [groceryItems, spendingLimit]);
+  }, [spendingLimit]);
 
   const getSuggestionsForItem = (item) => {
     const categoryInfo = categories.find(cat => cat.name === item.category);
     const [minPrice, maxPrice] = categoryInfo.priceRange;
 
-    const suggestions = [`For ${item.category}, consider this:`, 
-      item.cost < minPrice ? "It's very affordable; consider buying more!" :
-      item.cost <= maxPrice ? "It's affordable; consider buying more!" :
-      "This is a bit pricey; look for discounts."];
-
-    // Tailored advice based on cost
-    const advice = item.cost < minPrice
-      ? [
-          "Try to mix in more vegetables for balanced meals.",
-          "Look for seasonal fruits to save money and get fresh produce.",
-          "Consider buying in bulk for non-perishables.",
-          "Use coupons to save on brands you already buy."
-        ]
+    const suggestions = [];
+    const baseSuggestion = `For ${item.category}, consider this:`;
+    const priceSuggestion = item.cost < minPrice 
+      ? "It's very affordable; consider buying more!" 
       : item.cost <= maxPrice
-      ? [
-          "Track prices of items to know when to buy them on sale.",
-          "Check for loyalty programs that offer discounts.",
-          "Consider buying generic brands for savings."
-        ]
-      : [
-          "Consider looking for sales or discounts to reduce costs.",
-          "Evaluate if this item is necessary; it may be better to skip it this time."
-        ];
+      ? "It's affordable; consider buying more!" 
+      : "This is a bit pricey; look for discounts.";
+    
+    suggestions.push(baseSuggestion, priceSuggestion);
 
-    return [...suggestions, ...advice];
+    if (item.cost < minPrice) {
+      suggestions.push(
+        "Try to mix in more vegetables for balanced meals.",
+        "Look for seasonal fruits to save money and get fresh produce.",
+        "Consider buying in bulk for non-perishables.",
+        "Use coupons to save on brands you already buy."
+      );
+    } else if (item.cost <= maxPrice) {
+      suggestions.push(
+        "Track prices of items to know when to buy them on sale.",
+        "Check for loyalty programs that offer discounts.",
+        "Consider buying generic brands for savings."
+      );
+    } else {
+      suggestions.push(
+        "Consider looking for sales or discounts to reduce costs.",
+        "Evaluate if this item is necessary; it may be better to skip it this time."
+      );
+    }
+
+    return suggestions;
   };
 
+  // New function to get recommendations based on user history
   const getMLBasedSuggestions = useCallback(() => {
     const categoryCounts = userHistory.reduce((acc, item) => {
       acc[item.category] = (acc[item.category] || 0) + 1;
@@ -97,11 +105,11 @@ const GroceryOptimizer = () => {
   }, [getSuggestionsForItem, getMLBasedSuggestions]);
 
   const handleOptimize = useCallback(() => {
-    const { optimized, total } = optimizeGroceryList();
+    const { optimized, total } = optimizeGroceryList(groceryItems);
     setOptimizedItems(optimized);
     setTotalCost(total);
     generateAiSuggestions(optimized);
-  }, [optimizeGroceryList, generateAiSuggestions]);
+  }, [groceryItems, optimizeGroceryList, generateAiSuggestions]);
 
   return (
     <div className="container mx-auto p-8">
@@ -113,20 +121,22 @@ const GroceryOptimizer = () => {
         </div>
       )}
       <div className="bg-white shadow-lg rounded-lg p-6 mb-4">
-        <form onSubmit={handleAddItem} className="flex flex-col sm:flex-row">
+        <form onSubmit={handleAddItem} className="flex flex-col gap-2 sm:flex-row">
           <select 
-            value={itemInput.category} 
-            onChange={(e) => setItemInput({ ...itemInput, category: e.target.value })} 
+            value={selectedCategory} 
+            onChange={(e) => setSelectedCategory(e.target.value)} 
             className="border p-2 mr-2 rounded-md flex-1"
           >
             {categories.map((category, index) => (
-              <option key={index} value={category.name}>{category.name}</option>
+              <option key={index} value={category.name}>
+                {category.name}
+              </option>
             ))}
           </select>
           <input 
             type="number" 
-            value={itemInput.cost} 
-            onChange={(e) => setItemInput({ ...itemInput, cost: e.target.value })} 
+            value={itemCost} 
+            onChange={(e) => setItemCost(e.target.value)} 
             className="border p-2 mr-2 rounded-md flex-1" 
             placeholder="Cost" 
             required 
@@ -184,4 +194,3 @@ const GroceryOptimizer = () => {
 };
 
 export default GroceryOptimizer;
-
