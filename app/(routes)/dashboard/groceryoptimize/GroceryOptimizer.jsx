@@ -82,7 +82,7 @@ const GroceryOptimizer = () => {
       <h2 className="text-2xl font-bold mb-4">Grocery List Optimizer</h2>
       <form onSubmit={handleAddItem} className="mb-4">
         <input type="text" name="name" placeholder="Item Name" className="border p-2 mr-2 rounded-3xl" required />
-        <input type="number" name="cost" placeholder="Cost" className="border p-2 mr-2" required />
+        <input type="number" name="cost" placeholder="Cost" className="border p-2 mr-2 rounded-3xl" required />
         <button type="submit" className="bg-blue-500 text-white p-2">Add Item</button>
       </form>
       <div className="mb-4">
@@ -95,7 +95,7 @@ const GroceryOptimizer = () => {
           placeholder="Spending Limit" 
         />
       </div>
-      <button onClick={handleOptimize} className="bg-green-500 text-white p-2 mb-4">Optimize List</button>
+      <button onClick={handleOptimize} className="bg-green-500 text-white p-2 mb-4 rounded-3xl">Optimize List</button>
       <h3 className="text-xl font-semibold">Optimized Grocery List:</h3>
       <ul>
         {optimizedItems.map((item, index) => (
