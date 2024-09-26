@@ -50,8 +50,8 @@ export function Chatbot() {
             <div
               key={message.id}
               className="flex items-start gap-4">
-              <div className="p-2 border bg-slate-900 rounded-full">
-                <BotMessageSquare className="size-5 text-blue-600" />
+              <div className="p-2 border bg-orange rounded-full">
+                <BotMessageSquare className="size-5 text-white" />
               </div>
               <div className="bg-red-500 text-primary-foreground rounded-2xl p-4 max-w-[70%]">
                 {/*<p>{message.content}</p>*/}
