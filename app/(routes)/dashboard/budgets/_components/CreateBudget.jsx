@@ -62,6 +62,7 @@ function CreateBudget({ refreshData }) {
     { value: 'Healthcare', label: 'Healthcare' },
     { value: 'Education', label: 'Education' },
     { value: 'Travel', label: 'Travel' },
+    { value: 'Technology', label: 'Technology' },
     { value: 'Other', label: 'Other' },
   ];
 
