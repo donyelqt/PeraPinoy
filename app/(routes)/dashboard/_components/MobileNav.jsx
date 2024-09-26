@@ -1,6 +1,6 @@
 "use client"
 import { UserButton, useUser } from '@clerk/nextjs';
-import { BellIcon, BookOpenCheck, BotMessageSquare, Brain, Coins, LayoutDashboard, LucideShieldPlus, PiggyBankIcon, ReceiptIcon, User2, XIcon } from 'lucide-react';
+import { BellIcon, BookOpenCheck, BotMessageSquare, Brain, Coins, LayoutDashboard, LucideShieldPlus, PiggyBankIcon, ReceiptIcon, ShoppingBasket, User2, XIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -36,6 +36,7 @@ function MobileNav() {
         { id: 5, name: 'Historical Data', icon: BookOpenCheck, path: '/dashboard/historicaldata' },
         { id: 6, name: 'Savings Reward', icon: Coins, path: '/dashboard/savingsreward' },
         { id: 7, name: 'Expense Alerts', icon: BellIcon, path: '/dashboard/expensealerts' },
+        { id: 8, name: 'AI Grocery', icon: ShoppingBasket, path: '/dashboard/groceryoptimize' },
         // id: 8, name: 'Premium', icon: LucideShieldPlus, path: '/dashboard/premium'
     ];
 
@@ -75,7 +76,7 @@ function MobileNav() {
                                     <h2 className={`flex gap-2 items-center
                                         text-orange text-sm font-medium
                                         mb-1 
-                                        p-4 cursor-pointer rounded-3xl
+                                        p-3 cursor-pointer rounded-3xl
                                         hover:text-tertiary hover:bg-dark
                                         ${path === menu.path && 'text-tertiary bg-dark'}
                                     `}>
