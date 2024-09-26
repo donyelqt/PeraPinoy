@@ -174,7 +174,7 @@ const GroceryOptimizer = () => {
       </div>
 
       <div className="bg-white shadow-lg rounded-lg p-6 mb-4">
-        <h3 className="text-xl font-semibold">AI - Assited Recommendations:</h3>
+        <h3 className="text-xl font-semibold">AI - Assisted Recommendations:</h3>
         {loading ? (
           <p>Loading recommendations...</p>
         ) : (
