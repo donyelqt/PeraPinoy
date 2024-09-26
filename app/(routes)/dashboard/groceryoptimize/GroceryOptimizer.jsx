@@ -1,5 +1,6 @@
 "use client"; // Ensure you are using client-side rendering
 import { useState, useCallback } from 'react';
+import { FaPlus, FaCheckCircle } from 'react-icons/fa'; // Importing icons
 
 const categories = [
   { name: 'Fruits', priceRange: [0, 50] },
@@ -19,7 +20,8 @@ const GroceryOptimizer = () => {
   const [loading, setLoading] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(categories[0].name);
   const [itemCost, setItemCost] = useState('');
-  const [userHistory, setUserHistory] = useState([]); // Store user history
+  const [userHistory, setUserHistory] = useState([]);
+  const [notification, setNotification] = useState('');
 
   const handleAddItem = useCallback((e) => {
     e.preventDefault();
@@ -28,11 +30,12 @@ const GroceryOptimizer = () => {
       cost: parseFloat(itemCost),
     };
 
-    // Save the item to history for potential ML use
     setUserHistory((prev) => [...prev, newItem]);
-
     setGroceryItems((prevItems) => [...prevItems, newItem]);
-    setItemCost(''); // Reset cost input to empty string
+    setItemCost('');
+
+    setNotification(`Added ${selectedCategory} - Cost: ₱${newItem.cost}`);
+    setTimeout(() => setNotification(''), 3000);
   }, [selectedCategory, itemCost]);
 
   const optimizeGroceryList = useCallback((groceryList) => {
@@ -80,13 +83,11 @@ const GroceryOptimizer = () => {
   };
 
   const getMLBasedSuggestions = useCallback(() => {
-    // Basic ML logic to recommend based on purchase history
     const categoryCounts = userHistory.reduce((acc, item) => {
       acc[item.category] = (acc[item.category] || 0) + 1;
       return acc;
     }, {});
 
-    // Recommend the category with the most purchases
     const recommendedCategory = Object.keys(categoryCounts).reduce((a, b) => 
       categoryCounts[a] > categoryCounts[b] ? a : b
     );
@@ -97,7 +98,7 @@ const GroceryOptimizer = () => {
   const generateAiSuggestions = useCallback((items) => {
     setLoading(true);
     const suggestions = items.flatMap(getSuggestionsForItem);
-    const mlSuggestion = getMLBasedSuggestions(); // Get ML-based suggestion
+    const mlSuggestion = getMLBasedSuggestions();
     setAiSuggestions([...suggestions, mlSuggestion]);
     setLoading(false);
   }, [getSuggestionsForItem, getMLBasedSuggestions]);
@@ -111,65 +112,85 @@ const GroceryOptimizer = () => {
 
   return (
     <div className="container mx-auto p-8">
-      <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-orange">Grocery List Optimizer</h2>
-      <form onSubmit={handleAddItem} className="mb-4">
-        <select 
-          value={selectedCategory} 
-          onChange={(e) => setSelectedCategory(e.target.value)} 
-          className="border p-2 mr-2 rounded-3xl"
-        >
-          {categories.map((category, index) => (
-            <option key={index} value={category.name}>
-              {category.name}
-            </option>
-          ))}
-        </select>
-        <input 
-          type="number" 
-          value={itemCost} 
-          onChange={(e) => setItemCost(e.target.value)} 
-          className="border p-2 mr-2 rounded-3xl" 
-          placeholder="Cost" 
-          required 
-        />
-        <button type="submit" className="bg-orange text-white p-2 rounded-3xl mt-2 hover:bg-secondary">Add Item</button>
-      </form>
-      <div className="mb-4">
-        <label className="block mb-2 rounded-3xl">Set Spending Limit:</label>
+      <h2 className="text-3xl font-bold mb-6 text-orange">Grocery List Optimizer</h2>
+      {notification && (
+        <div className="bg-green-500 text-white p-4 rounded-md shadow-md mb-4 flex items-center">
+          <FaCheckCircle className="mr-2" />
+          <span>{notification}</span>
+        </div>
+      )}
+      <div className="bg-white shadow-lg rounded-lg p-6 mb-4">
+        <form onSubmit={handleAddItem} className="flex flex-col sm:flex-row">
+          <select 
+            value={selectedCategory} 
+            onChange={(e) => setSelectedCategory(e.target.value)} 
+            className="border p-2 mr-2 rounded-md flex-1"
+          >
+            {categories.map((category, index) => (
+              <option key={index} value={category.name}>
+                {category.name}
+              </option>
+            ))}
+          </select>
+          <input 
+            type="number" 
+            value={itemCost} 
+            onChange={(e) => setItemCost(e.target.value)} 
+            className="border p-2 mr-2 rounded-md flex-1" 
+            placeholder="Cost" 
+            required 
+          />
+          <button type="submit" className="bg-orange text-white p-2 rounded-md mt-2 sm:mt-0 flex items-center hover:bg-secondary">
+            <FaPlus className="mr-1" /> Add Item
+          </button>
+        </form>
+      </div>
+
+      <div className="bg-white shadow-lg rounded-lg p-6 mb-4">
+        <label className="block mb-2 font-semibold">Set Spending Limit:</label>
         <input 
           type="number" 
           value={spendingLimit} 
           onChange={(e) => setSpendingLimit(e.target.value)} 
-          className="border p-2 mb-2 rounded-3xl" 
+          className="border p-2 mb-4 rounded-md w-full" 
           placeholder="Spending Limit" 
         />
+        <button onClick={handleOptimize} className="bg-orange text-white p-2 rounded-md hover:bg-secondary">
+          Optimize List
+        </button>
       </div>
-      <button onClick={handleOptimize} className="bg-orange text-white p-2 mb-4 rounded-3xl hover:bg-secondary">Optimize List</button>
-      <h3 className="text-xl font-semibold">Optimized Grocery List:</h3>
-      <ul>
-        {optimizedItems.map((item, index) => (
-          <li key={index} className="border-b p-2">
-            {item.category} - Cost: ₱{item.cost}
-          </li>
-        ))}
-      </ul>
-      <h3 className="text-xl font-semibold">Total Cost: <span className='text-orange'>₱{totalCost}</span></h3>
-      <h3 className="text-xl font-semibold">Recommendations:</h3>
-      {loading ? (
-        <p>Loading recommendations...</p>
-      ) : (
+
+      <div className="bg-white shadow-lg rounded-lg p-6 mb-4">
+        <h3 className="text-xl font-semibold">Optimized Grocery List:</h3>
         <ul>
-          {aiSuggestions.length > 0 ? (
-            aiSuggestions.map((suggestion, index) => (
-              <li key={index} className="border-b p-2">{suggestion}</li>
-            ))
-          ) : (
-            <li className="border-b p-2">No recommendations available.</li>
-          )}
+          {optimizedItems.map((item, index) => (
+            <li key={index} className="border-b py-2">
+              {item.category} - Cost: ₱{item.cost}
+            </li>
+          ))}
         </ul>
-      )}
+        <h3 className="text-xl font-semibold mt-4">Total Cost: <span className='text-orange'>₱{totalCost}</span></h3>
+      </div>
+
+      <div className="bg-white shadow-lg rounded-lg p-6 mb-4">
+        <h3 className="text-xl font-semibold">Recommendations:</h3>
+        {loading ? (
+          <p>Loading recommendations...</p>
+        ) : (
+          <ul>
+            {aiSuggestions.length > 0 ? (
+              aiSuggestions.map((suggestion, index) => (
+                <li key={index} className="border-b py-2">{suggestion}</li>
+              ))
+            ) : (
+              <li className="border-b py-2">No recommendations available.</li>
+            )}
+          </ul>
+        )}
+      </div>
     </div>
   );
 };
 
 export default GroceryOptimizer;
+
