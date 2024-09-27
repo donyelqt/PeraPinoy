@@ -120,12 +120,12 @@ const GroceryOptimizer = () => {
           <span>{notification}</span>
         </div>
       )}
-      <div className="bg-white shadow-lg rounded-lg p-6 mb-4">
+      <div className="bg-white shadow-lg rounded-3xl p-6 mb-4">
         <form onSubmit={handleAddItem} className="flex flex-col gap-2 sm:flex-row">
           <select 
             value={selectedCategory} 
             onChange={(e) => setSelectedCategory(e.target.value)} 
-            className="border p-2 mr-2 rounded-md flex-1"
+            className="border p-2 mr-2 rounded-2xl flex-1"
           >
             {categories.map((category, index) => (
               <option key={index} value={category.name}>
@@ -137,26 +137,26 @@ const GroceryOptimizer = () => {
             type="number" 
             value={itemCost} 
             onChange={(e) => setItemCost(e.target.value)} 
-            className="border p-2 mr-2 rounded-md flex-1" 
+            className="border p-2 mr-2 rounded-2xl flex-1" 
             placeholder="Cost" 
             required 
           />
-          <button type="submit" className="bg-orange text-white p-2 rounded-md mt-2 sm:mt-0 flex items-center hover:bg-secondary">
+          <button type="submit" className="bg-orange text-white p-2 rounded-3xl mt-2 sm:mt-0 flex items-center hover:bg-secondary">
             <FaPlus className="mr-1" /> Add Item
           </button>
         </form>
       </div>
 
-      <div className="bg-white shadow-lg rounded-lg p-6 mb-4">
+      <div className="bg-white shadow-lg rounded-3xl p-6 mb-4">
         <label className="block mb-2 font-semibold">Set Spending Limit:</label>
         <input 
           type="number" 
           value={spendingLimit} 
           onChange={(e) => setSpendingLimit(e.target.value)} 
-          className="border p-2 mb-4 rounded-md w-full" 
+          className="border p-2 mb-4 rounded-2xl w-full" 
           placeholder="Spending Limit" 
         />
-        <button onClick={handleOptimize} className="bg-orange text-white p-2 rounded-md hover:bg-secondary">
+        <button onClick={handleOptimize} className="bg-orange text-white p-2 rounded-2xl hover:bg-secondary">
           Optimize List
         </button>
       </div>
