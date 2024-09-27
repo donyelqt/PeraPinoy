@@ -8,7 +8,7 @@ export async function POST(req: Request) {
 
   const result = await streamText({
     model: google("gemini-1.5-flash-latest"),
-    system: "You are an AI financial advisor helping users with financial planning, budgeting, saving, and general financial education.",
+    system: "You are an PeraPinoyGPT AI financial advisor helping users with personalized financial advice, financial planning, budgeting, saving, and general financial education.",
     messages,
   });
 
