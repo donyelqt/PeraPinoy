@@ -120,7 +120,7 @@ const GroceryOptimizer = () => {
           <span>{notification}</span>
         </div>
       )}
-      <div className="bg-white shadow-lg rounded-3xl p-6 mb-4">
+      <div className="bg-white border shadow-lg rounded-3xl p-6 mb-4">
         <form onSubmit={handleAddItem} className="flex flex-col gap-2 sm:flex-row">
           <select 
             value={selectedCategory} 
@@ -161,7 +161,7 @@ const GroceryOptimizer = () => {
         </button>
       </div>
 
-      <div className="bg-white shadow-lg rounded-lg p-6 mb-4">
+      <div className="bg-white shadow-lg rounded-3xl p-6 mb-4">
         <h3 className="text-xl font-semibold">Optimized Grocery List:</h3>
         <ul>
           {optimizedItems.map((item, index) => (
@@ -173,7 +173,7 @@ const GroceryOptimizer = () => {
         <h3 className="text-xl font-semibold mt-4">Total Cost: <span className='text-orange'>₱{totalCost}</span></h3>
       </div>
 
-      <div className="bg-white shadow-lg rounded-lg p-6 mb-4">
+      <div className="bg-white shadow-lg rounded-3xl p-6 mb-4">
         <h3 className="text-xl font-semibold">AI - Assisted Recommendations:</h3>
         {loading ? (
           <p>Loading recommendations...</p>
