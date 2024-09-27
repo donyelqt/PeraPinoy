@@ -120,7 +120,7 @@ const GroceryOptimizer = () => {
           <span>{notification}</span>
         </div>
       )}
-      <div className="bg-white border shadow-lg rounded-3xl p-6 mb-4">
+      <div className="bg-white shadow-lg rounded-3xl p-6 mb-4">
         <form onSubmit={handleAddItem} className="flex flex-col gap-2 sm:flex-row">
           <select 
             value={selectedCategory} 

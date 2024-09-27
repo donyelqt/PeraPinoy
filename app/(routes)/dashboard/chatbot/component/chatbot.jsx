@@ -38,7 +38,7 @@ export function Chatbot() {
               />
             </div>
             <p className='text-md text-gray-500 mt-4 text-center'>
-              Welcome to PeraPinoyGPT! Your personalized AI assistant for groceries.
+              Welcome to PeraPinoyGPT! Your personalized AI financial advisor.
             </p>
           </div>
         )
@@ -71,7 +71,7 @@ export function Chatbot() {
       </div>
       <div className="p-4 flex items-center gap-2 bg-transparent">
         <input
-          placeholder="Type your message..."
+          placeholder="Type your financial questions..."
           className="flex h-12 w-full rounded-lg border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-yellow-600 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
                   disabled:cursor-not-allowed disabled:opacity-50"
           value={input}
