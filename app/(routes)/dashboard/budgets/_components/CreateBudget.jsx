@@ -149,12 +149,17 @@ function CreateBudget({ refreshData }) {
                   </div>
                   <div className="mt-2 text-blue-600">
                     <h2 className="text-blue-600 font-medium my-1">Budget Category</h2>
-                    <Select
+                    <input className="flex h-10 w-full rounded-lg border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-blue-600 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+                  disabled:cursor-not-allowed disabled:opacity-50"
+                      type="name"
+                      placeholder="e.g. Emergency Funds"
+                      onChange={(e) => setName(e.target.value)} />
+                    {/*<Select
                       options={options}
                       placeholder="Select Budget Category"
                       styles={customStyles}
                       onChange={(selectedOption) => setName(selectedOption.value)}
-                    />
+                    />*/}
                   </div>
                   <div className="mt-2 text-blue-600">
                     <h2 className="text-blue-600 font-medium my-1">Allocated Funds</h2>

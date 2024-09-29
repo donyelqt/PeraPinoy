@@ -11,7 +11,7 @@ function BudgetItem({ budget }) {
     }
     return (
         <Link href={`/dashboard/expenses/${budget.id}`} >
-            <div className='p-8 border rounded-3xl hover:bg-slate-900 cursor-pointer h-[260px]'>
+            <div className='p-8 border rounded-3xl hover:bg-slate-900 cursor-pointer h-[280px]'>
                 <div className='flex gap-2 items-center justify-between'>
                     <div>
                         <h2 className='text-lg font-bold text-secondary'>₱{budget.amount - budget.totalSpend} </h2>
@@ -54,6 +54,7 @@ function BudgetItem({ budget }) {
                                     cy="32"
                                 />
                             </svg>
+
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <h2 className="text-xs font-bold text-secondary">
                                     {Math.round(Math.min((budget.totalSpend / budget.amount) * 100, 100))}%
@@ -61,6 +62,8 @@ function BudgetItem({ budget }) {
                             </div>
 
                         </div>
+
+
 
                         {/* Expense and Balance Info */}
                         <div>
@@ -81,8 +84,10 @@ function BudgetItem({ budget }) {
                             }}
                         >
                         </div>
+                        <div className="text-white bg-blue-600 p-1 md:p-1 mt-4 flex justify-center items-center font-semibold text-center text-xs rounded-xl">
+                            <p>Edit here!</p>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </Link>
