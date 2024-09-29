@@ -36,7 +36,7 @@ function MobileNav() {
         { id: 5, name: 'Forecasting', icon: BookOpenCheck, path: '/dashboard/historicaldata' },
         { id: 6, name: 'Savings Reward', icon: Coins, path: '/dashboard/savingsreward' },
         { id: 7, name: 'Expense Alerts', icon: BellIcon, path: '/dashboard/expensealerts' },
-        { id: 8, name: 'AI Grocery', icon: ShoppingBasket, path: '/dashboard/groceryoptimize' },
+        { id: 8, name: 'AI Grocery', icon: ShoppingBasket, path: '/dashboard/shopoptimize' },
         // id: 8, name: 'Premium', icon: LucideShieldPlus, path: '/dashboard/premium'
     ];
 

@@ -58,7 +58,7 @@ function SideNav() {
       id: 8,
       name: 'AI Grocery',
       icon: ShoppingBasket,
-      path: '/dashboard/groceryoptimize'
+      path: '/dashboard/shopoptimize'
     },
     {
       id: 9,

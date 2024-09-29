@@ -7,7 +7,7 @@ function BarChartDashboard({ budgetList }) {
             <h2 className='text-tertiary font-bold text-3xl mb-5'>Expenses Statistics</h2>
             <div className="w-full h-64">
             <ResponsiveContainer width="100%" height="100%">
-            <BarChart
+            <LineChart
                 width={500}
                 height={300}
                 data={budgetList}
@@ -15,13 +15,13 @@ function BarChartDashboard({ budgetList }) {
                     top:7
                 }}
             >
-                <XAxis dataKey="name" />
-                <YAxis dataKey="totalSpend"  />
+                <XAxis dataKey="name"  />
+                <YAxis   />
                 <Tooltip />
                 <Legend />
-                <Bar type='monotoneY' dataKey="totalSpend" name="Total Expenses" stackId="a" fill='#Ce1127'  /> //fill='#4169e1' #4169e1
-                <Bar type='monotoneX' dataKey="amount" name="Budgets"  stackId="a" fill='#ff8c00' /> //fill='#87cefa' #f08080
-            </BarChart>
+                <Line type="monotone"  dataKey="totalSpend" name="Total Expenses" stackId="a" stroke='#Ce1127'  /> //fill='#4169e1' #4169e1
+                <Line type="monotone" dataKey="amount" name="Budgets"  stackId="a" stroke='#ff8c00' /> //fill='#87cefa' #f08080
+            </LineChart>
             </ResponsiveContainer>
             </div>
         </div>
