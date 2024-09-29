@@ -36,7 +36,7 @@ function ExpenseListTable({ expensesList, refreshData }) {
                 <h2 className='font-bold text-sm'>Delete</h2>
             </div>
             {expensesList.map((expenses, index) => (
-                <div className='rounded-lg grid text-xs md:text-sm lg:text-sm grid-cols-4 bg-transparent border font-semibold p-2 text-slate-700'>
+                <div className='rounded-lg grid text-xs md:text-sm lg:text-sm grid-cols-4 bg-transparent border p-2 font-semibold text-slate-700'>
                     <h2>{expenses.name}</h2>
                     <h2><span className='text-secondary'>₱</span> {expenses.amount}</h2>
                     <h2>{expenses.createdAt}</h2>
