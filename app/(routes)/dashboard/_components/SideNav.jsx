@@ -1,6 +1,6 @@
 "use client"
 import { UserButton, useUser } from '@clerk/nextjs';
-import { BellIcon, Book, BookOpenCheck, BotMessageSquare, Brain, BrainCog, Coins, LayoutDashboard, LayoutGrid, LucideShieldPlus, Menu, MenuSquare, PiggyBankIcon, ReceiptIcon, ShoppingBasket, User, User2, UserCheck2 } from 'lucide-react';
+import { BellIcon, Book, BookMarked, BookOpenCheck, BotMessageSquare, Brain, BrainCog, Coins, LayoutDashboard, LayoutGrid, LucideShieldPlus, Menu, MenuSquare, PiggyBankIcon, ReceiptIcon, ShoppingBasket, User, User2, UserCheck2 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -62,10 +62,10 @@ function SideNav() {
     },
     {
       id: 9,
-      name: 'Premium',
-      icon: LucideShieldPlus,
-      path: '/dashboard/premium'
-    }
+      name: 'Financial Forums',
+      icon: BookMarked,
+      path: '/dashboard/forums'
+    },
   ]
   const path = usePathname();
 
@@ -87,7 +87,7 @@ function SideNav() {
             <h2 className={`flex gap-2 items-center
           text-orange text-xs font-medium
           mb-1 
-          p-3 cursor-pointer rounded-3xl
+          p-2 cursor-pointer rounded-3xl
           hover:text-tertiary hover:bg-dark
           ${path == menu.path && 'text-tertiary bg-dark'}
           `}>
