@@ -110,7 +110,7 @@ const ShoppingOptimizer = () => {
       suggestions.push(
         `For ${item.category}, you might want to consider extended warranties.`,
         "Consider using cashback or discount cards for better savings.",
-        "Compare similar items in terms of features and price to get the best value."
+        "Compare similar item prices to get the best value."
       );
     } else {
       suggestions.push(
@@ -189,7 +189,7 @@ const ShoppingOptimizer = () => {
       </div>
 
       <div className="bg-white shadow-lg rounded-3xl p-6 mb-4">
-        <h3 className="text-xl font-semibold mb-4">Items:</h3>
+        <h3 className="text-xl font-semibold text-orange mb-4">Items:</h3>
         {groceryItems.length > 0 ? (
           <ul className="list-disc pl-5">
             {groceryItems.map((item, index) => (
@@ -204,7 +204,7 @@ const ShoppingOptimizer = () => {
       </div>
 
       <div className="bg-white shadow-lg rounded-3xl p-6 mb-4">
-        <h3 className="text-xl font-semibold mb-4">Set Spending Limit:</h3>
+        <h3 className="text-xl font-semibold text-orange mb-4">Set Spending Limit:</h3>
         <input
           type="number"
           value={spendingLimit}
@@ -221,7 +221,7 @@ const ShoppingOptimizer = () => {
 
       {optimizedItems.length > 0 && (
         <div className="bg-white shadow-lg rounded-3xl p-6 mb-4">
-          <h3 className="text-xl font-semibold mb-4">Optimized Shopping List:</h3>
+          <h3 className="text-xl font-semibold mb-4 text-orange">Optimized Shopping List:</h3>
           <ul className="list-disc pl-5">
             {optimizedItems.map((item, index) => (
               <li key={index} className="py-2">
@@ -229,7 +229,7 @@ const ShoppingOptimizer = () => {
               </li>
             ))}
           </ul>
-          <p className="font-bold">Total Cost: ₱{totalCost}</p>
+          <p className="font-bold">Total Cost: <span className='text-orange'>₱{totalCost}</span></p>
         </div>
       )}
 
@@ -254,7 +254,7 @@ const ShoppingOptimizer = () => {
 
             {/* Additional Information Section */}
             <div className="mt-4 p-2 border-t border-gray-300">
-              <h4 className="text-lg font-semibold">Tips:</h4>
+              <h4 className="text-lg font-semibold">Additional Tips:</h4>
               <ul className="list-disc pl-5">
                 <li>Check for seasonal sales to maximize savings.</li>
                 <li>Compare prices across different platforms before purchasing.</li>
