@@ -1,5 +1,5 @@
 "use client"
-import { UserPen, XIcon } from 'lucide-react'
+import { EditIcon, UserPen, XIcon } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 import { Dialog, DialogOverlay, DialogPortal } from "@radix-ui/react-dialog";
 import { DialogTrigger } from "@radix-ui/react-dialog";
@@ -52,7 +52,7 @@ function EditBudget({budgetInfo, refreshData}) {
         <div>
             <Dialog open={isOpen} onOpenChange={setIsOpen}> 
                 <DialogTrigger className="rounded p-8 bg-primary" asChild>
-                    <button className='rounded-lg bg-primary px-2 py-1 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring active:bg-red-500 md:px-8 md:py-4 lg:px-10 lg:py-5 flex gap-1'>Edit<UserPen /></button>
+                    <button className='rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring active:bg-red-500 md:px-8 md:py-4 lg:px-10 lg:py-5 flex gap-1'>Budget<EditIcon /></button>
                 </DialogTrigger>
                 <DialogPortal>
                     <DialogOverlay className="fixed inset-0 bg-black/50">
