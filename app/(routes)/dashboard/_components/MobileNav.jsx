@@ -33,7 +33,7 @@ function MobileNav() {
         { id: 2, name: 'Budget', icon: PiggyBankIcon, path: '/dashboard/budgets' },
         { id: 3, name: 'Expenses', icon: ReceiptIcon, path: '/dashboard/expenses' },
         { id: 4, name: 'PeraPinoyGPT', icon: BotMessageSquare, path: '/dashboard/chatbot' },
-        { id: 5, name: 'Historical Data', icon: BookOpenCheck, path: '/dashboard/historicaldata' },
+        { id: 5, name: 'Forecasting', icon: BookOpenCheck, path: '/dashboard/historicaldata' },
         { id: 6, name: 'Savings Reward', icon: Coins, path: '/dashboard/savingsreward' },
         { id: 7, name: 'Expense Alerts', icon: BellIcon, path: '/dashboard/expensealerts' },
         { id: 8, name: 'AI Grocery', icon: ShoppingBasket, path: '/dashboard/groceryoptimize' },

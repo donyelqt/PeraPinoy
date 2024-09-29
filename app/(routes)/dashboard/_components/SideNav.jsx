@@ -38,7 +38,7 @@ function SideNav() {
     },
     {
       id: 5,
-      name: 'Historical Data',
+      name: 'Forecasting',
       icon: BookOpenCheck,
       path: '/dashboard/historicaldata'
     },
