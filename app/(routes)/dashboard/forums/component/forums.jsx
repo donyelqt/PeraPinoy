@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { ArrowUpIcon, ArrowDownIcon } from "@heroicons/react/24/outline"; // Ensure correct version of heroicons
+import { LucideShare, Share2 } from "lucide-react";
 
 const Forums = () => {
   const [posts, setPosts] = useState([]);
@@ -70,9 +71,10 @@ const Forums = () => {
         />
         <button
           type="submit"
-          className="mt-4 w-full bg-orange text-white font-semibold py-3 rounded-2xl shadow-lg hover:bg-secondary transition duration-300"
+          className="mt-4 w-full flex justify-center gap-2 bg-orange text-white font-semibold py-3 rounded-2xl shadow-lg hover:bg-secondary transition duration-300"
         >
           Share Your Post
+          <Share2 />
         </button>
       </form>
 
