@@ -1,4 +1,4 @@
-import { PiggyBankIcon, Receipt, Wallet2 } from 'lucide-react'
+import { Banknote, PiggyBankIcon, Receipt, Wallet2 } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 import { userfinanceinfo } from '../../../../public';
 import Image from 'next/image';
@@ -36,7 +36,7 @@ function CardInfo({ budgetList }) {
       {budgetList?.length > 0 ?
         <div className='mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
           <div className='p-7 border rounded-3xl flex items-center justify-between hover:bg-slate-900'>
-            <PiggyBankIcon
+            <Banknote
               key="icon"
               className='bg-secondary p-3 h-20 w-20 rounded-full text-white' />
             <div>

@@ -1,6 +1,6 @@
 "use client"
 import { UserButton, useUser } from '@clerk/nextjs';
-import { BellIcon, Book, BookMarked, BookOpenCheck, BotMessageSquare, Brain, BrainCog, Coins, LayoutDashboard, LayoutGrid, LucideShieldPlus, Menu, MenuSquare, PiggyBankIcon, ReceiptIcon, ShoppingBasket, User, User2, UserCheck2 } from 'lucide-react';
+import { Banknote, BellIcon, Book, BookMarked, BookOpenCheck, BotMessageSquare, Brain, BrainCog, Coins, LayoutDashboard, LayoutGrid, LucideShieldPlus, Menu, MenuSquare, PiggyBankIcon, ReceiptIcon, ShoppingBasket, User, User2, UserCheck2 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -20,7 +20,7 @@ function SideNav() {
     {
       id: 2,
       name: 'Budget',
-      icon: PiggyBankIcon,
+      icon: Banknote,
       path: '/dashboard/budgets'
     },
     {
