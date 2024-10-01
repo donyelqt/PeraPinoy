@@ -57,7 +57,7 @@ const Forums = () => {
   return (
     <div className=" mx-auto p-8 bg-gray-50 shadow-lg rounded-lg">
       {/* Header */}
-      <h1 className="text-2xl md:text-4xl lg:text-4xl font-extrabold text-orange mb-8 text-center">
+      <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold text-orange mb-8">
         Share Your Financial Experiences & Tips
       </h1>
 
