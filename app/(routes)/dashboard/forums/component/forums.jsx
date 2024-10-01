@@ -101,7 +101,7 @@ const Forums = () => {
                   onClick={() => handleDownvote(index)}
                   className="p-2 rounded-full hover:bg-gray-100 transition duration-150"
                 >
-                  <ArrowDownIcon className="h-6 w-6 text-gray-500 hover:text-blue-500" />
+                  <ArrowDownIcon className="h-6 w-6 text-gray-500 hover:text-red-600" />
                 </button>
               </div>
 
