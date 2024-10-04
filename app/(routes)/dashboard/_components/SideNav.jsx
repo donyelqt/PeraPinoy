@@ -66,6 +66,12 @@ function SideNav() {
       icon: BookMarked,
       path: '/dashboard/forums'
     },
+    { 
+      id: 10, 
+      name: 'Premium', 
+      icon: LucideShieldPlus, 
+      path: '/dashboard/premium' 
+    }
   ]
   const path = usePathname();
 

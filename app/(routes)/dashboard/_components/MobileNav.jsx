@@ -38,7 +38,7 @@ function MobileNav() {
         { id: 7, name: 'Expense Alerts', icon: BellIcon, path: '/dashboard/expensealerts' },
         { id: 8, name: 'AI Shopping', icon: ShoppingBasket, path: '/dashboard/shopoptimize' },
         { id: 9, name: 'Financial Forums', icon: BookMarked, path: '/dashboard/forums' },
-        // id: 8, name: 'Premium', icon: LucideShieldPlus, path: '/dashboard/premium'
+        { id: 10, name: 'Premium', icon: LucideShieldPlus, path: '/dashboard/premium' }
     ];
 
     return (
