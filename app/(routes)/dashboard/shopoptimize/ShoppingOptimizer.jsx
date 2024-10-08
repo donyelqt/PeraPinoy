@@ -154,7 +154,7 @@ const ShoppingOptimizer = () => {
 
   return (
     <div className="container mx-auto p-8">
-      <h2 className="text-3xl font-bold mb-6 text-orange">AI Shopping List Optimization</h2>
+      <h2 className="text-3xl font-bold mb-6 text-orange">AI Grocery List Optimization</h2>
       {notification && (
         <div className="bg-green-500 text-white p-4 rounded-md shadow-md mb-4 flex items-center">
           <FaCheckCircle className="mr-2" />
@@ -221,7 +221,7 @@ const ShoppingOptimizer = () => {
 
       {optimizedItems.length > 0 && (
         <div className="bg-white shadow-lg rounded-3xl p-6 mb-4">
-          <h3 className="text-xl font-semibold mb-4 text-orange">Optimized Shopping List:</h3>
+          <h3 className="text-xl font-semibold mb-4 text-orange">Optimized Grocery List:</h3>
           <ul className="list-disc pl-5">
             {optimizedItems.map((item, index) => (
               <li key={index} className="py-2">
