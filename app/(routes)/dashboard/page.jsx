@@ -10,6 +10,7 @@ import BudgetItem from './budgets/_components/BudgetItem';
 import Image from 'next/image';
 import { calcu } from '../../../public';
 import ExpenseListTable from './expenses/[id]/_components/ExpenseListTable';
+import HistoricalDataPage from './historicaldata/page';
 
 function Dashboard() {
   const { user } = useUser();
@@ -89,6 +90,8 @@ function Dashboard() {
             expensesList={expensesList}
             refreshData={() => getBudgetList()}
           />
+
+          <HistoricalDataPage />
         </div>
       </div>
     </div>
