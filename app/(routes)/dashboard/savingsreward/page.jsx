@@ -2,7 +2,7 @@
 
 import RewardsSystem from "./component/RewardsSystem";
 
-const Home = () => {
+const RewardsSystem = () => {
   return (
     <div className="container mx-auto p-10">
       <h1 className="text-4xl md:text-5xl lg:text-5xl text-tertiary font-bold mb-4">Savings Reward</h1>
@@ -11,4 +11,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default RewardsSystem;
