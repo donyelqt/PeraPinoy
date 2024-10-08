@@ -81,7 +81,7 @@ function Dashboard() {
           ))}
 
         </div>
-        <div className='md:col-span-2 text-blue-600'>
+        <div className='md:col-span-2'>
           <BarChartDashboard
             budgetList={budgetList}
           />
