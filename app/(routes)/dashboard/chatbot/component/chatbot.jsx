@@ -17,7 +17,7 @@ export function Chatbot() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col h-screen w-full p-3 bg-background rounded-2xl shadow-lg overflow-hidden">
+      className="flex flex-col h-screen w-full p-3  rounded-2xl shadow-lg overflow-hidden">
       <header
         className="bg-orange w-full rounded-lg text-primary-foreground py-4 px-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
