@@ -72,7 +72,7 @@ const HistoricalDataPage = () => {
   return (
     <section className="text-gray-200 p-4 md:p-12 lg:p-12">
       <h1 className='font-bold text-3xl text-tertiary md:text-5xl mb-6'>Commodity Forecasting</h1>
-      <div className="container bg-transparent shadow-lg border p-10 rounded-3xl mx-auto">
+      <div className="bg-transparent shadow-lg border p-10 rounded-3xl mx-auto">
         <div className="mb-8">
           <label className="block mb-2 text-tertiary text-lg">Select Commodity:</label>
           <select onChange={handleCommodityChange} className="border bg-slate-300 text-dark rounded-2xl p-3 mb-4 w-[120px] md:w-[15%]">
