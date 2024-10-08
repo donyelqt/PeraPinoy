@@ -75,8 +75,7 @@ function CardInfo({ budgetList }) {
           ))}
         </div>
       }
-
-    </div>
+      </div>
   )
 }
 

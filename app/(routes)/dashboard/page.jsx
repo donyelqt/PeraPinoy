@@ -90,8 +90,9 @@ function Dashboard() {
             expensesList={expensesList}
             refreshData={() => getBudgetList()}
           />
-
-          <HistoricalDataPage />
+        </div>
+        <div className='md:col-span-3'>
+        <HistoricalDataPage />
         </div>
       </div>
     </div>
