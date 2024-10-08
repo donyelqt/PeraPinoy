@@ -1,4 +1,4 @@
-import ShoppingOptimizer from "./ShoppingOptimizer";
+import ShoppingOptimizer from "./component/ShoppingOptimizer";
 
 export default function Home() {
   return (
