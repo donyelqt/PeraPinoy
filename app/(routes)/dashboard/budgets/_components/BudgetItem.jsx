@@ -84,8 +84,8 @@ function BudgetItem({ budget }) {
                             }}
                         >
                         </div>
-                        <div className="text-white bg-blue-600 p-1 md:p-1 mt-4 flex justify-center items-center font-semibold text-center text-xs rounded-xl">
-                            <p>Edit here!</p>
+                        <div className="text-white bg-blue-600 hover:bg-red-600 p-1 md:p-1 mt-4 flex justify-center items-center font-semibold text-center text-xs rounded-xl">
+                            <p>View</p>
                         </div>
                     </div>
                 </div>
