@@ -75,7 +75,7 @@ const HistoricalDataPage = () => {
       <div className="bg-transparent shadow-lg border p-10 rounded-3xl mx-auto">
         <div className="mb-8">
           <label className="block mb-2 text-tertiary text-lg">Select Commodity:</label>
-          <select onChange={handleCommodityChange} className="border bg-slate-300 text-dark rounded-2xl p-3 mb-4 w-[120px] md:w-[15%]">
+          <select onChange={handleCommodityChange} className="border bg-white text-dark rounded-2xl p-3 mb-4 w-[120px] md:w-[15%]">
             {[ 
               { name: 'Fuel ⛽', value: 'fuel' },
               { name: 'Rice 🍚', value: 'rice' },
@@ -92,7 +92,7 @@ const HistoricalDataPage = () => {
           </select>
         </div>
 
-        <div className="mb-6 h-72 md:h-96 bg-slate-300 p-5 md:p-10 rounded-3xl">
+        <div className="mb-6 h-72 md:h-96 bg-white p-5 md:p-10 rounded-3xl">
           <Line data={chartData} options={{ responsive: true, maintainAspectRatio: false }} />
         </div>
 
