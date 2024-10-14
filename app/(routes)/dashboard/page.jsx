@@ -64,7 +64,7 @@ function Dashboard() {
             <span className='text-secondary'>Hello, </span>{user?.fullName}!👋
           </h2>
         </div>
-        <p className='text-slate-500'>Empower Your Finances with PeraPinoy!</p>
+        <p className='text-slate-500'>Your life partner for smart finances!</p>
       </div>
       <CardInfo budgetList={budgetList} />
       <div className='grid grid-cols-1 md:grid-cols-3 mt-6 gap-5'>
