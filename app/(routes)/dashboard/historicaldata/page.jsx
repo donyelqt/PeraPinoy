@@ -103,7 +103,7 @@ const HistoricalDataPage = () => {
 
         <button 
           onClick={handleSetPriceAlert}
-          className="bg-red-600 text-white rounded-2xl p-4 hover:bg-red-700 transition duration-300"
+          className="bg-red-600 text-white rounded-2xl p-4 hover:bg-dark hover:text-tertiary transition duration-300"
         >
           Set Price Alert
           <ArrowRightCircleIcon className='ml-2 w-4 h-4 inline' />
