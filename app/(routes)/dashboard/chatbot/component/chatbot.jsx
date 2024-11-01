@@ -3,6 +3,8 @@ import { useChat } from "ai/react";
 import { BotMessageSquare, ArrowUp, SquareIcon } from "lucide-react";
 import Markdown from "react-markdown";
 import { useState } from "react";
+import Image from "next/image";
+
 
 export function Chatbot() {
   const { messages, input, handleInputChange, handleSubmit, isLoading, stop } = useChat({
@@ -16,7 +18,7 @@ export function Chatbot() {
     "Explain credit score and how to improve it.",
     "How can I invest in the stock market?",
     "How do I start saving for retirement?",
-   // "What are the current trends in the real estate market?",
+    // "What are the current trends in the real estate market?",
     "What deductions can I claim on my tax return?",
   ];
 
@@ -48,8 +50,12 @@ export function Chatbot() {
 
       {messages.length === 0 && (
         <div className="flex flex-col justify-center items-center h-full">
-          <div className="p-4 border bg-orange rounded-full max-w-xs mx-auto">
-            <BotMessageSquare className="text-white" height={70} width={70} />
+          <div className="p-4 rounded-full max-w-xs mx-auto">
+            <Image src={'/NewLogo.png'}
+              alt='logo'
+              width={200}
+              height={200}
+            />
           </div>
           <p className="text-sm text-orange-400 font-semibold mt-4 text-center">
             Welcome to PeraPinoyGPT! Your personalized AI financial advisor.
