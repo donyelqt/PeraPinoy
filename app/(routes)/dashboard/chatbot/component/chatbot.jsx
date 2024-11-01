@@ -47,7 +47,7 @@ export function Chatbot() {
       </header>
 
       {messages.length === 0 && (
-        <div className="flex mt-20 flex-col justify-center items-center h-full">
+        <div className="flex flex-col justify-center items-center h-full">
           <div className="p-4 border bg-orange rounded-full max-w-xs mx-auto">
             <BotMessageSquare className="text-white" height={70} width={70} />
           </div>
