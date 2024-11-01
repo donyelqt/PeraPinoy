@@ -16,7 +16,7 @@ export function Chatbot() {
     "Explain credit score and how to improve it.",
     "How can I invest in the stock market?",
     "How do I start saving for retirement?",
-    "What are the current trends in the real estate market?",
+   // "What are the current trends in the real estate market?",
     "What deductions can I claim on my tax return?",
   ];
 
@@ -47,7 +47,7 @@ export function Chatbot() {
       </header>
 
       {messages.length === 0 && (
-        <div className="flex flex-col justify-center items-center h-full">
+        <div className="flex mt-20 flex-col justify-center items-center h-full">
           <div className="p-4 border bg-orange rounded-full max-w-xs mx-auto">
             <BotMessageSquare className="text-white" height={70} width={70} />
           </div>
