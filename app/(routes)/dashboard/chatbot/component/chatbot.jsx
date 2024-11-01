@@ -15,6 +15,9 @@ export function Chatbot() {
     "What are some budgeting tips?",
     "Explain credit score and how to improve it.",
     "How can I invest in the stock market?",
+    "How do I start saving for retirement?",
+    "What are the current trends in the real estate market?",
+    "What deductions can I claim on my tax return?",
   ];
 
   const [selectedPrompt, setSelectedPrompt] = useState("");
