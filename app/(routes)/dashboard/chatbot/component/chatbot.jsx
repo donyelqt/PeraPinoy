@@ -79,9 +79,9 @@ export function Chatbot() {
       <div className="p-4">
         <button
           onClick={togglePrompts}
-          className="bg-gray-200 text-black rounded-full px-4 py-2 text-sm hover:bg-gray-300"
+          className="bg-white text-black rounded-full px-4 py-2 text-sm hover:bg-gray-300"
         >
-          {showPrompts ? "Hide Prompts" : "Show Prompts"}
+          {showPrompts ? "Hide" : "Show"}
         </button>
       </div>
 
