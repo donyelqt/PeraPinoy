@@ -47,7 +47,7 @@ export function Chatbot() {
       </header>
 
       {messages.length === 0 && (
-        <div className="flex flex-col justify-center items-center h-full">
+        <div className="flex mt-20 flex-col justify-center items-center h-full">
           <div className="p-4 border bg-orange rounded-full max-w-xs mx-auto">
             <BotMessageSquare className="text-white" height={70} width={70} />
           </div>
@@ -64,13 +64,13 @@ export function Chatbot() {
               <div className="p-2 border bg-orange rounded-full">
                 <BotMessageSquare className="size-5 text-white" />
               </div>
-              <div className="bg-red-500 text-primary-foreground rounded-2xl p-4 max-w-[70%]">
-                <Markdown className="text-sm text-white">{message.content}</Markdown>
+              <div className="bg-white text-primary-foreground rounded-2xl p-4 max-w-[70%]">
+                <Markdown className="text-sm text-gray-700">{message.content}</Markdown>
               </div>
             </div>
           ) : (
             <div key={message.id} className="flex items-start gap-4 justify-end">
-              <div className="bg-blue-500 text-primary-foreground rounded-2xl p-4 max-w-[70%]">
+              <div className="bg-blue-900 text-yellow-500 rounded-2xl p-4 max-w-[70%]">
                 <p>{message.content}</p>
               </div>
             </div>
@@ -94,7 +94,7 @@ export function Chatbot() {
           {prompts.map((prompt, index) => (
             <button
               key={index}
-              className="bg-black text-white rounded-full px-4 py-2 text-xs md:text-sm lg:text-sm hover:bg-blue-950"
+              className="bg-blue-900 text-yellow-500 rounded-full px-4 py-2 text-xs md:text-sm lg:text-sm hover:bg-blue-950"
               onClick={() => handlePromptSelect(prompt)}
             >
               {prompt}
