@@ -106,7 +106,7 @@ export function Chatbot() {
       <div className="p-4 flex items-center gap-2 bg-transparent">
         <input
           placeholder="Type your financial questions..."
-          className="flex h-12 w-full rounded-2xl border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-yellow-600 placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+          className="flex h-12 w-full rounded-2xl border border-input bg-white px-3 py-2 text-sm ring-offset-yellow-600 placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
                   disabled:cursor-not-allowed disabled:opacity-50"
           value={input}
           onChange={handleInputChange}
