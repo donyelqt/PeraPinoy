@@ -51,7 +51,7 @@ export function Chatbot() {
           <div className="p-4 border bg-orange rounded-full max-w-xs mx-auto">
             <BotMessageSquare className="text-white" height={70} width={70} />
           </div>
-          <p className="text-md text-gray-500 mt-4 text-center">
+          <p className="text-sm text-orange-400 font-semibold mt-4 text-center">
             Welcome to PeraPinoyGPT! Your personalized AI financial advisor.
           </p>
         </div>
