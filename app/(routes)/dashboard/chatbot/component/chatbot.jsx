@@ -96,7 +96,7 @@ export function Chatbot() {
 
       {/* Prompt selection buttons */}
       {showPrompts && (
-        <div className="p-4 flex flex-wrap gap-2">
+        <div className="p-4 flex justify-center flex-wrap gap-2">
           {prompts.map((prompt, index) => (
             <button
               key={index}
