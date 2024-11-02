@@ -50,7 +50,7 @@ export function Chatbot() {
       </header>
 
       {messages.length === 0 && (
-        <div className="flex flex-col w-full justify-center items-center h-full">
+        <div className="flex flex-col mt-20 w-full justify-center items-center h-full">
           <div className="border p-4 bg-white rounded-full w-44 h-44 flex items-center justify-center mx-auto">
             <Image
               src={'/NewLogo.png'}
