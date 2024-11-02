@@ -40,9 +40,9 @@ export function Chatbot() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col h-screen w-full p-3 rounded-2xl shadow-lg overflow-hidden">
-      <header className="bg-tertiary w-full rounded-lg text-primary-foreground py-4 px-6 flex items-center justify-between">
+      <header className="bg-secondary w-full rounded-lg text-primary-foreground py-4 px-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="p-2 border bg-orange-400 rounded-full">
+          <div className="p-2 border bg-red-400 rounded-full">
             <BotMessageSquare className="size-6 text-white" />
           </div>
           <h2 className="text-lg text-white font-medium">PeraPinoyGPT</h2>
@@ -59,7 +59,7 @@ export function Chatbot() {
               height={170}
             />
           </div>
-          <p className="text-xs lg:text-sm px-4 py-2 font-semibold bg-orange shadow-lg rounded-3xl text-white mt-4 text-center">
+          <p className="text-xs lg:text-sm px-4 py-2 font-semibold bg-secondary shadow-lg rounded-3xl text-white mt-4 text-center">
             Your personalized AI financial advisor!
           </p>
         </div>
@@ -69,7 +69,7 @@ export function Chatbot() {
         {messages.map((message) =>
           message.role === "assistant" ? (
             <div key={message.id} className="flex items-start gap-4">
-              <div className="p-2 border bg-orange rounded-full">
+              <div className="p-2 border bg-secondary rounded-full">
                 <BotMessageSquare className="size-5 text-white" />
               </div>
               <div className="bg-red-950 text-primary-foreground rounded-2xl p-4 max-w-[70%]">
@@ -90,7 +90,7 @@ export function Chatbot() {
       <div className="p-4">
         <button
           onClick={togglePrompts}
-          className="bg-yellow-600 text-black rounded-full px-4 py-2 text-sm hover:bg-yellow-700"
+          className="bg-red-600 text-black rounded-full px-4 py-2 text-sm hover:bg-yellow-700"
         >
           {showPrompts ? "📝" : "🔐"}
         </button>
@@ -123,7 +123,7 @@ export function Chatbot() {
         {!isLoading ? (
           <button
             type="submit"
-            className="bg-tertiary rounded-full text-primary-foreground px-6 py-5 text-md font-medium shadow-sm hover:bg-yellow-600 focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+            className="bg-secondary rounded-full text-primary-foreground px-6 py-5 text-md font-medium shadow-sm hover:bg-yellow-600 focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
             disabled={!input || isLoading}
           >
             <ArrowUp className="w-5 h-5" />

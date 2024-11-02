@@ -95,7 +95,7 @@ function SideNav() {
           mb-1 
           p-2 cursor-pointer rounded-3xl
           hover:text-orange hover:bg-blue-950
-          ${path == menu.path && 'text-white bg-tertiary'}
+          ${path == menu.path && 'text-white bg-secondary'}
           `}>
               <menu.icon />
               {menu.name}
