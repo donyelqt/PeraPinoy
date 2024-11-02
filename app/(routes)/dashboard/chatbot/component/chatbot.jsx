@@ -59,7 +59,7 @@ export function Chatbot() {
               height={170}
             />
           </div>
-          <p className="text-xs lg:text-sm px-4 py-2 font-semibold bg-orange shadow-sm rounded-3xl text-white mt-4 text-center">
+          <p className="text-xs lg:text-sm px-4 py-2 font-semibold bg-orange shadow-lg rounded-3xl text-white mt-4 text-center">
             Your personalized AI financial advisor!
           </p>
         </div>
@@ -114,7 +114,7 @@ export function Chatbot() {
       <div className="p-4 flex items-center gap-2 bg-transparent">
         <input
           placeholder="Type your financial questions..."
-          className="flex h-12 w-full rounded-2xl border border-input bg-white px-3 py-2 text-sm ring-offset-yellow-600 placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+          className="flex h-12 w-full rounded-2xl border border-input shadow-lg bg-white px-3 py-2 text-sm ring-offset-yellow-600 placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
                   disabled:cursor-not-allowed disabled:opacity-50"
           value={input}
           onChange={handleInputChange}
