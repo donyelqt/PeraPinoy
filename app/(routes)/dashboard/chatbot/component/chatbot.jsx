@@ -40,7 +40,7 @@ export function Chatbot() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col h-screen w-full p-3 rounded-2xl shadow-lg overflow-hidden">
-      <header className="bg-secondary w-full rounded-lg text-primary-foreground py-4 px-6 flex items-center justify-between">
+      <header className="bg-tertiary w-full rounded-lg text-primary-foreground py-4 px-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="p-2 border bg-orange-400 rounded-full">
             <BotMessageSquare className="size-6 text-white" />
@@ -51,14 +51,15 @@ export function Chatbot() {
 
       {messages.length === 0 && (
         <div className="flex flex-col w-full justify-center items-center h-full">
-          <div className="p-4 border bg-white rounded-3xl max-w-xs mx-auto">
-            <Image src={'/NewLogo.png'}
+          <div className="border p-4 bg-white rounded-full w-44 h-44 flex items-center justify-center mx-auto">
+            <Image
+              src={'/NewLogo.png'}
               alt='logo'
-              width={200}
-              height={200}
+              width={170}
+              height={170}
             />
           </div>
-          <p className="text-xs lg:text-sm px-4 py-2 font-semibold bg-tertiary rounded-3xl text-background mt-4 text-center">
+          <p className="text-xs lg:text-sm px-4 py-2 font-semibold bg-orange shadow-sm rounded-3xl text-white mt-4 text-center">
             Your personalized AI financial advisor!
           </p>
         </div>
@@ -101,7 +102,7 @@ export function Chatbot() {
           {prompts.map((prompt, index) => (
             <button
               key={index}
-              className="bg-blue-900 text-yellow-500 rounded-full px-4 py-2 text-xs md:text-sm lg:text-sm hover:bg-blue-950"
+              className="bg-white shadow-lg text-red-700 hover:text-orange rounded-full px-4 py-2 text-xs md:text-sm lg:text-sm hover:bg-blue-950"
               onClick={() => handlePromptSelect(prompt)}
             >
               {prompt}
