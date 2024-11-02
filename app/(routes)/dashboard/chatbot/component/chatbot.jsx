@@ -72,8 +72,8 @@ export function Chatbot() {
               <div className="p-2 border bg-orange rounded-full">
                 <BotMessageSquare className="size-5 text-white" />
               </div>
-              <div className="bg-white text-primary-foreground rounded-2xl p-4 max-w-[70%]">
-                <Markdown className="text-sm text-gray-700">{message.content}</Markdown>
+              <div className="bg-red-950 text-primary-foreground rounded-2xl p-4 max-w-[70%]">
+                <Markdown className="text-sm text-yellow-400">{message.content}</Markdown>
               </div>
             </div>
           ) : (
