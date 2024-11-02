@@ -92,7 +92,7 @@ export function Chatbot() {
           onClick={togglePrompts}
           className="bg-yellow-600 text-black rounded-full px-4 py-2 text-sm hover:bg-yellow-700"
         >
-          {showPrompts ? "🔒" : "🔓"}
+          {showPrompts ? "📝" : "🔐"}
         </button>
       </div>
 
