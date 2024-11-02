@@ -57,7 +57,7 @@ export function Chatbot() {
               height={200}
             />
           </div>
-          <p className="text-xs lg:text-sm px-4 py-2 bg-tertiary rounded-3xl text-background font-semibold mt-4 text-center">
+          <p className="text-xs lg:text-sm px-4 py-2 bg-tertiary rounded-3xl text-background mt-4 text-center">
             Your personalized AI financial advisor.
           </p>
         </div>

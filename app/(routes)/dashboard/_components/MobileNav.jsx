@@ -78,8 +78,8 @@ function MobileNav() {
                                         text-orange text-sm font-medium
                                         mb-1 
                                         p-2 cursor-pointer rounded-3xl
-                                        hover:text-tertiary hover:bg-dark
-                                        ${path === menu.path && 'text-tertiary bg-dark'}
+                                        hover:text-yellow-400 hover:bg-secondary
+                                        ${path === menu.path && 'text-white bg-secondary'}
                                     `}>
                                         <menu.icon />
                                         {menu.name}
