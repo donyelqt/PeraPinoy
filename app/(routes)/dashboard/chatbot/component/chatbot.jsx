@@ -49,8 +49,8 @@ export function Chatbot() {
       </header>
 
       {messages.length === 0 && (
-        <div className="flex flex-col justify-center items-center h-full">
-          <div className="p-4 rounded-full max-w-xs mx-auto">
+        <div className="flex flex-col w-full justify-center items-center h-full">
+          <div className="p-4 border bg-white rounded-3xl max-w-xs mx-auto">
             <Image src={'/NewLogo.png'}
               alt='logo'
               width={200}
@@ -58,7 +58,7 @@ export function Chatbot() {
             />
           </div>
           <p className="text-xs lg:text-sm px-4 py-2 bg-tertiary rounded-3xl text-background mt-4 text-center">
-            Your personalized AI financial advisor.
+            Your personalized AI financial advisor!
           </p>
         </div>
       )}
