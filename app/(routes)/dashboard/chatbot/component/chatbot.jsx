@@ -102,7 +102,7 @@ export function Chatbot() {
           {prompts.map((prompt, index) => (
             <button
               key={index}
-              className="bg-white shadow-lg text-orange-700 hover:text-orange rounded-full px-4 py-2 text-xs md:text-sm lg:text-sm hover:bg-blue-950"
+              className="bg-white shadow-lg text-red-700 hover:text-orange rounded-full px-4 py-2 text-xs md:text-sm lg:text-sm hover:bg-blue-950"
               onClick={() => handlePromptSelect(prompt)}
             >
               {prompt}
