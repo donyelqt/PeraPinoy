@@ -39,7 +39,7 @@ export function Chatbot() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col h-screen w-full p-3 rounded-2xl shadow-lg overflow-hidden">
+    <form onSubmit={handleSubmit} className="flex flex-col h-screen w-full p-3 shadow-lg overflow-hidden">
       <header className="bg-secondary w-full rounded-lg text-primary-foreground py-4 px-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="p-2 border bg-red-400 rounded-full">
@@ -50,13 +50,13 @@ export function Chatbot() {
       </header>
 
       {messages.length === 0 && (
-        <div className="flex flex-col mt-20 w-full justify-center items-center h-full">
-          <div className="border p-4 bg-white rounded-full w-44 h-44 flex items-center justify-center mx-auto">
+        <div className="flex flex-col w-full justify-center items-center h-full">
+          <div className="border p-4 bg-white rounded-full w-40 h-40 flex items-center justify-center mx-auto">
             <Image
               src={'/NewLogo.png'}
               alt='logo'
-              width={170}
-              height={170}
+              width={160}
+              height={160}
             />
           </div>
           <p className="text-xs lg:text-sm px-4 py-2 font-semibold bg-secondary shadow-lg rounded-3xl text-white mt-4 text-center">
@@ -90,7 +90,7 @@ export function Chatbot() {
       <div className="p-4">
         <button
           onClick={togglePrompts}
-          className="bg-red-600 text-black rounded-full px-4 py-2 text-sm hover:bg-yellow-700"
+          className="bg-red-600 text-black rounded-full px-4 py-2 text-sm hover:bg-red-700"
         >
           {showPrompts ? "📝" : "🔐"}
         </button>
