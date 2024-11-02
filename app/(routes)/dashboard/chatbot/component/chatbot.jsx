@@ -13,14 +13,15 @@ export function Chatbot() {
 
   // Predefined prompts
   const prompts = [
-    "How do I start saving money?",
-    "What are some budgeting tips?",
-    "Explain credit score and how to improve it.",
-    "How can I invest in the stock market?",
-    "How do I start saving for retirement?",
-    // "What are the current trends in the real estate market?",
-    "What deductions can I claim on my tax return?",
+    "💰 How do I start saving money?",
+    "📝 What are some budgeting tips?",
+    "🔍 Explain credit score and how to improve it.",
+    "📈 How can I invest in the stock market?",
+    "🏦 How do I start saving for retirement?",
+    // "🏡 What are the current trends in the real estate market?",
+    "🧾 What deductions can I claim on my tax return?",
   ];
+
 
   const [selectedPrompt, setSelectedPrompt] = useState("");
   const [showPrompts, setShowPrompts] = useState(true); // State to toggle pre-prompts
@@ -57,7 +58,7 @@ export function Chatbot() {
               height={200}
             />
           </div>
-          <p className="text-xs lg:text-sm px-4 py-2 bg-tertiary rounded-3xl text-background mt-4 text-center">
+          <p className="text-xs lg:text-sm px-4 py-2 font-semibold bg-tertiary rounded-3xl text-background mt-4 text-center">
             Your personalized AI financial advisor!
           </p>
         </div>
