@@ -73,7 +73,7 @@ export function Chatbot() {
                 <BotMessageSquare className="size-5 text-white" />
               </div>
               <div className="bg-red-950 text-primary-foreground rounded-2xl p-4 max-w-[70%]">
-                <Markdown className="text-sm text-yellow-400">{message.content}</Markdown>
+                <Markdown className="text-sm text-slate-300">{message.content}</Markdown>
               </div>
             </div>
           ) : (
