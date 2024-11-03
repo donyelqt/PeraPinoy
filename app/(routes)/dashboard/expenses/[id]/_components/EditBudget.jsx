@@ -1,12 +1,12 @@
 "use client"
 import { EditIcon, UserPen, XIcon } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
-import { Dialog, DialogOverlay, DialogPortal } from "@radix-ui/react-dialog";
-import { DialogTrigger } from "@radix-ui/react-dialog";
-import { DialogContent } from "@radix-ui/react-dialog";
-import { DialogTitle } from "@radix-ui/react-dialog";
-import { DialogDescription } from "@radix-ui/react-dialog";
-import { DialogClose } from "@radix-ui/react-dialog";
+import {
+    Dialog, DialogOverlay,
+    DialogPortal, DialogTrigger,
+    DialogContent, DialogTitle,
+    DialogDescription, DialogClose
+} from "@radix-ui/react-dialog";
 import EmojiPicker from 'emoji-picker-react';
 import { useUser } from '@clerk/nextjs';
 import { db } from '../../../../../../utils/dbConfig';
