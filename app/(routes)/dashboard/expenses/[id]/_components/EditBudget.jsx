@@ -13,8 +13,9 @@ import { db } from '../../../../../../utils/dbConfig';
 import { Budgets } from '../../../../../../utils/schema';
 import { eq } from 'drizzle-orm';
 import { toast } from 'sonner';
+import Select from 'react-select';
 
-function EditBudget({budgetInfo, refreshData}) {
+function EditBudget({ budgetInfo, refreshData }) {
     const [emojiIcon, setEmojiIcon] = useState(budgetInfo?.icon);
     const [openEmojiPicker, setOpenEmojiPicker] = useState(false)
 
@@ -23,23 +24,70 @@ function EditBudget({budgetInfo, refreshData}) {
 
     const { user } = useUser();
 
-    useEffect(()=>{
+    // select budget category
+    const options = [
+        { value: 'Emergency Funds', label: 'Emergency Funds' },
+        { value: 'Groceries', label: 'Groceries' },
+        { value: 'Utilities', label: 'Utilities' },
+        { value: 'Rent', label: 'Rent' },
+        { value: 'Entertainment', label: 'Entertainment' },
+        { value: 'Savings', label: 'Savings' },
+        { value: 'Transport', label: 'Transport' },
+        { value: 'Healthcare', label: 'Healthcare' },
+        { value: 'Education', label: 'Education' },
+        { value: 'Travel', label: 'Travel' },
+        { value: 'Technology', label: 'Technology' },
+        { value: 'Other', label: 'Other' },
+    ];
+
+    // select budget category styles
+    const customStyles = {
+        placeholder: (provided) => ({
+            ...provided,
+            color: '#4b5563', // Set placeholder color
+        }),
+        control: (provided) => ({
+            ...provided,
+            backgroundColor: '#cbd5e1', // Tailwind's bg-slate-300 equivalent in hex
+            height: '2.5rem', // h-10 equivalent
+            width: '100%', // w-full equivalent
+            borderRadius: '0.5rem', // rounded-lg
+            borderColor: '#e2e8f0', // Adjusting the border color if needed
+        }),
+        menu: (provided) => ({
+            ...provided,
+            width: '100%', // Ensures the dropdown menu is full width
+        }),
+        dropdownIndicator: (provided) => ({
+            ...provided,
+            color: '#4b5563', // Matching arrow color with the placeholder
+            padding: '0.25rem', // Adjust padding if necessary
+        }),
+        indicatorSeparator: () => ({
+            display: 'none', // Hides the default separator
+        }),
+        singleValue: (provided) => ({
+            ...provided,
+            color: '#2563eb', // Set color for selected value (text-blue-600)
+        }),
+    };
+
+    useEffect(() => {
         setEmojiIcon(budgetInfo?.icon)
         setAmount(budgetInfo?.amount);
         setName(budgetInfo?.name)
 
-    },[budgetInfo])
+    }, [budgetInfo])
 
-    const onUpdateBudget=async()=>{
-        const result=await db.update(Budgets).set({
-            name:name,
-            amount:amount,
-            icon:emojiIcon,
-        }).where(eq(Budgets.id,budgetInfo.id))
-        .returning();
+    const onUpdateBudget = async () => {
+        const result = await db.update(Budgets).set({
+            name: name,
+            amount: amount,
+            icon: emojiIcon,
+        }).where(eq(Budgets.id, budgetInfo.id))
+            .returning();
 
-        if(result)
-        {
+        if (result) {
             refreshData()
             toast.success('Budget Updated!')
         }
@@ -50,7 +98,7 @@ function EditBudget({budgetInfo, refreshData}) {
 
     return (
         <div>
-            <Dialog open={isOpen} onOpenChange={setIsOpen}> 
+            <Dialog open={isOpen} onOpenChange={setIsOpen}>
                 <DialogTrigger className="rounded p-8 bg-primary" asChild>
                     <button className='rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white shadow hover:bg-yellow-600 focus:outline-none focus:ring active:bg-red-500 md:px-8 md:py-4 lg:px-10 lg:py-5 flex gap-1'>Edit<EditIcon /></button>
                 </DialogTrigger>
@@ -83,11 +131,17 @@ function EditBudget({budgetInfo, refreshData}) {
                                     </div>
                                     <div className="mt-2 text-blue-900">
                                         <h2 className="text-blue-600 font-medium my-1">Budget Category</h2>
-                                        <input className="flex h-10 w-full rounded-lg border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-blue-600 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+                                        <Select
+                                            options={options}
+                                            placeholder="Select Budget Category"
+                                            styles={customStyles}
+                                            onChange={(selectedOption) => setName(selectedOption.value)}
+                                        />
+                                        {/*<input className="flex h-10 w-full rounded-lg border border-input bg-slate-300 px-3 py-2 text-sm ring-offset-blue-600 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
                   disabled:cursor-not-allowed disabled:opacity-50"
                                             placeholder="e.g. Emergency Funds"
                                             defaultValue={budgetInfo?.name}
-                                            onChange={(e) => setName(e.target.value)} />
+                                            onChange={(e) => setName(e.target.value)} />*/}
                                     </div>
                                     <div className="mt-2 text-blue-900">
                                         <h2 className="text-blue-600 font-medium my-1">Allocated Funds</h2>
@@ -116,4 +170,4 @@ function EditBudget({budgetInfo, refreshData}) {
     )
 }
 
-export default EditBudget
+export default EditBudget;

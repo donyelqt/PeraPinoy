@@ -1,11 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import { Dialog, DialogOverlay, DialogPortal } from "@radix-ui/react-dialog";
-import { DialogTrigger } from "@radix-ui/react-dialog";
-import { DialogContent } from "@radix-ui/react-dialog";
-import { DialogTitle } from "@radix-ui/react-dialog";
-import { DialogDescription } from "@radix-ui/react-dialog";
-import { DialogClose } from "@radix-ui/react-dialog";
+import {
+  Dialog, DialogOverlay,
+  DialogPortal, DialogTrigger,
+  DialogContent, DialogContent,
+  DialogTitle, DialogDescription,
+  DialogDescription, DialogClose
+} from "@radix-ui/react-dialog";
 import { CrossIcon, PiggyBank, XIcon } from "lucide-react";
 import EmojiPicker from "emoji-picker-react";
 import { db } from "../../../../../utils/dbConfig";
