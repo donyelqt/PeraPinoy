@@ -113,7 +113,7 @@ function EditBudget({ budgetInfo, refreshData }) {
                                     </button>
                                 </div>
                                 <div className="mt-5">
-                                    <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-lg font-medium bg-transparent border-2 border-input text-* hover:bg-blue-400 hover:text-accent-foreground p-2 h-11 px-8"
+                                    <button className="inline-flex items-center justify-center whitespace-nowrap rounded-3xl text-lg font-medium bg-transparent border-blue-600 border hover:bg-blue-400 hover:text-accent-foreground p-6 h-11 px-8"
                                         onClick={() => setOpenEmojiPicker(!openEmojiPicker)}
                                     >{emojiIcon}</button>
                                     <div className="absolute z-10">
