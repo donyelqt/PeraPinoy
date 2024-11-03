@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import {
   Dialog, DialogOverlay,
   DialogPortal, DialogTrigger,
-  DialogContent, DialogContent,
-  DialogTitle, DialogDescription,
+  DialogContent, DialogTitle, 
   DialogDescription, DialogClose
 } from "@radix-ui/react-dialog";
 import { CrossIcon, PiggyBank, XIcon } from "lucide-react";
