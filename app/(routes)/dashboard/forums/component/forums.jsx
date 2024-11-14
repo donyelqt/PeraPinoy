@@ -71,7 +71,7 @@ const Forums = () => {
         />
         <button
           type="submit"
-          className="mt-4 w-full flex justify-center gap-2 bg-orange text-white font-semibold py-3 rounded-2xl shadow-lg hover:bg-secondary transition duration-300"
+          className="mt-4 w-full flex justify-center gap-2 bg-orange text-white font-semibold py-3 rounded-lg shadow-lg hover:bg-secondary transition duration-300"
         >
           Share Your Post
           <Share2 />
