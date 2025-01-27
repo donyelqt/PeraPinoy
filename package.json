@@ -13,7 +13,6 @@
   "dependencies": {
     "@ai-sdk/google": "^1.1.4",
     "@clerk/nextjs": "4.30.0",
-    "@google/generative-ai": "^0.21.0",
     "@heroicons/react": "^2.1.5",
     "@neondatabase/serverless": "^0.9.4",
     "@opentelemetry/api": "^1.9.0",
@@ -22,7 +21,7 @@
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-slot": "^1.1.0",
     "@shadcn/ui": "^0.0.4",
-    "ai": "^3.3.14",
+    "ai": "^4.1.7",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.7",
     "chart.js": "^4.4.4",
